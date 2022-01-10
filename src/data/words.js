@@ -10246,6 +10246,9 @@ const words = {
   uasta: true,
   dílse: true,
   draid: true,
+  plúid: true,
+  smúid: true,
+  plúis: true,
 }
 
 
