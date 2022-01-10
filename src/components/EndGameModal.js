@@ -3,6 +3,7 @@ import Success from '../data/Success.png'
 import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
 import { useEffect } from 'react'
+import { ReactComponent as Close } from '../data/Close.svg'
 
 Modal.setAppElement('#root')
 
@@ -18,9 +19,12 @@ export const EndGameModal = ({
   answer,
   playAgain,
   lastCanvas,
+  cellStatuses,
 }) => {
   useEffect(() => {
-    console.log(state.lastCanvas)
+    if(isOpen) {
+      cellStatuses.forEach(function (x) { console.log(x) })
+    }
   })
 
   const PlayAgainButton = () => {
@@ -45,6 +49,12 @@ export const EndGameModal = ({
     >
       <div id="endGameModal"className={darkMode ? 'dark' : ''}>
         <div className="h-full flex flex-col items-center justify-center max-w-[300px] mx-auto">
+          <button
+            className="absolute top-4 right-4 rounded-full nm-flat-background dark:nm-flat-background-dark text-primary dark:text-primary-dark p-1 w-6 h-6 sm:p-2 sm:h-8 sm:w-8"
+            onClick={handleClose}
+          >
+            <Close />
+          </button>
           {gameState === state.won && (
             <>
               <img src={Success} alt="success" height="auto" width="auto" />

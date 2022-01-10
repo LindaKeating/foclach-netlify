@@ -16,8 +16,8 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, styles }) => (
       </button>
       <div className="h-full flex flex-col items-center justify-center max-w-[390px] mx-auto pt-9 text-primary dark:text-primary-dark">
         <div className="flex-1 w-full sm:text-base text-sm">
-          <h1 className="text-center sm:text-3xl text-2xl">{dictionary['HowToPlay']}</h1>
-          <ul className="list-disc pl-5 block sm:text-base text-sm">
+          <h1 className="text-center sm:text-5xl text-2xl">{dictionary['HowToPlay']}</h1>
+          <ul className="list-disc pl-5 block sm:text-2xl text-lg">
             <li className="mt-6 mb-2">{dictionary['SixGuessesLeft']}</li>
             <li className="mb-2">{dictionary['GuessAnyValidWord']}</li>
             <li className="mb-2">
