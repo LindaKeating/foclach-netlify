@@ -1,5 +1,6 @@
 import { ReactComponent as Close } from '../data/Close.svg'
 import Modal from 'react-modal'
+import { dictionary } from '../constants'
 
 Modal.setAppElement('#root')
 
@@ -24,21 +25,21 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
             </button>
             <div className="mt-12">
               <input className="m-2" type="checkbox" checked={darkMode} onClick={toggleDarkMode} />
-              <span>Dark Mode</span>
+              <span>{dictionary['DarkMode']}</span>
             </div>
           </div>
           <div className="flex flex-col items-center">
             <div className="mb-4">
-              If you're enjoying this game, you can show your support by{' '}
-              <a href="https://www.buymeacoffee.com/katherinecodes" target="_blank">
-                buying me a coffee
+              {dictionary['IfYouAreEnjoyingThisGame']}{' '}
+              <a href="https://www.buymeacoffee.com/lindamary" target="_blank">
+                {dictionary['BuyMeACoffee']}
               </a>{' '}
               💛
             </div>
-            <a href="https://www.buymeacoffee.com/katherinecodes" target="_blank">
+            <a href="https://www.buymeacoffee.com/lindamary" target="_blank">
               <img
                 alt="buy me a coffee"
-                src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=katherinecodes&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                src="https://img.buymeacoffee.com/button-api/?text=Ceannaigh beoir domh&emoji=&slug=lindamary&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
               />
             </a>
           </div>

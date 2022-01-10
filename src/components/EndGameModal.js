@@ -1,6 +1,7 @@
 import Modal from 'react-modal'
 import Success from '../data/Success.png'
 import Fail from '../data/Cross.png'
+import { dictionary } from '../constants'
 
 Modal.setAppElement('#root')
 
@@ -24,7 +25,7 @@ export const EndGameModal = ({
           className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
           onClick={playAgain}
         >
-          Play Again
+          {dictionary['PlayAgain']}
         </button>
       </div>
     )
@@ -43,10 +44,10 @@ export const EndGameModal = ({
               <img src={Success} alt="success" height="auto" width="auto" />
               <h1 className="text-primary dark:text-primary-dark text-3xl">Congrats!</h1>
               <p className="mt-6">
-                Current streak: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
+                {dictionary['CurrentStreak']}: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
               </p>
               <p>
-                Longest streak: <strong>{longestStreak}</strong>
+                {dictionary['LongestStreak']}: <strong>{longestStreak}</strong>
               </p>
             </>
           )}
@@ -54,15 +55,15 @@ export const EndGameModal = ({
             <>
               <img src={Fail} alt="success" height="auto" width="80%" />
               <div className="text-primary dark:text-primary-dark text-4xl text-center">
-                <p>Oops!</p>
+                <p>{dictionary['Oops']}!</p>
                 <p className="mt-3 text-2xl">
-                  The word was <strong>{answer}</strong>
+                  {dictionary['TheWordWas']} <strong>{answer}</strong>
                 </p>
                 <p className="mt-6 text-base">
-                  Current streak: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
+                  {dictionary['CurrentStreak']}: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
                 </p>
                 <p className="text-base">
-                  Longest streak: <strong>{longestStreak}</strong>
+                  {dictionary['LongestStreak']}: <strong>{longestStreak}</strong>
                 </p>
               </div>
             </>

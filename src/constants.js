@@ -44,3 +44,23 @@ export const status = {
   gray: 'gray',
   unguessed: 'unguessed',
 }
+
+export const dictionary = {
+  HowToPlay: 'Treoireacha',
+  SixGuessesLeft: 'Tá 6 thomhas agat leis an fhocal cheart a thomhas.',
+  GuessAnyValidWord: 'Glacfar le focail bailí Gaeilge ar bith.',
+  AfterEachGuessLetterWillTurnDifferentColour: 'I ndiaidh gach tomhas, cuirfear dath glas, buí nó liath ar na litreacha a chur tú isteach.',
+  CorrectLetterCorrectSpot: 'An litir ceart, san áit cheart',
+  CorrectLetterWrongSpot: 'An litir ceart, san áit mícheart',
+  WrongLetter: 'An litir mícheart',
+  ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte ar',
+  PlayAgain: 'Imir Arís',
+  CurrentStreak: 'Buanna gan stad',
+  LongestStreak: 'An tsraith is faide buanna gan stad',
+  Oops: 'Úps!',
+  TheWordWas: 'Ba é an focal nó:',
+  DarkMode: 'Mód dorcha',
+  IfYouAreEnjoyingThisGame: 'Má tá tú ag baint suilt as an chluiche seo, tabhair tacaíocht domh trí',
+  BuyMeACoffee: 'pionta Guinness a cheannacht domh',
+  Enter: 'Tomhas',
+}
