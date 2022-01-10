@@ -1,7 +1,7 @@
 export const keyboardLetters = [
   ['A', 'Á', 'E', 'É', 'I', 'Í', 'O', 'Ó', 'U', 'Ú'],
   ['B', 'C', 'D', 'F', 'G', 'H', 'L', 'M', 'N'],
-  ['R', 'S', 'T', 'V', 'W'],
+  ['P','R', 'S', 'T', 'V', 'W'],
 ]
 
 export const letters = [
@@ -55,12 +55,12 @@ export const dictionary = {
   WrongLetter: 'An litir mícheart',
   ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte ar',
   PlayAgain: 'Imir Arís',
-  CurrentStreak: 'Buanna gan stad',
-  LongestStreak: 'An tsraith is faide buanna gan stad',
+  CurrentStreak: 'Buanna gan briseadh',
+  LongestStreak: 'Sraith is faide buanna gan briseadh',
   Oops: 'Úps!',
   TheWordWas: 'Ba é an focal nó:',
   DarkMode: 'Mód dorcha',
   IfYouAreEnjoyingThisGame: 'Má tá tú ag baint suilt as an chluiche seo, tabhair tacaíocht domh trí',
-  BuyMeACoffee: 'pionta Guinness a cheannacht domh',
+  BuyMeACoffee: 'phionta Guinness a cheannacht domh',
   Enter: 'Tomhas',
 }

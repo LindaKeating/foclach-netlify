@@ -42,7 +42,7 @@ export const EndGameModal = ({
           {gameState === state.won && (
             <>
               <img src={Success} alt="success" height="auto" width="auto" />
-              <h1 className="text-primary dark:text-primary-dark text-3xl">Comhgairdeas!</h1>
+              <h1 className="text-primary dark:text-primary-dark text-3xl">Comhghairdeas!</h1>
               <p className="mt-6">
                 {dictionary['CurrentStreak']}: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
               </p>
