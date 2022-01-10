@@ -1,8 +1,11 @@
-# Word Master
+## Foclach
+
+A clone of octokatherine Word Master but slightly changed to allow Irish language players play the game using an Irish dictionary and Irish alphabet
 
 🔗 https://octokatherine.github.io/word-master/
 
-Heavily inspired by [Wordle](https://www.powerlanguage.co.uk/wordle/), Word Master is a word guessing game similar to Mastermind. I created this because I love Wordle, but the once a day limit leaves me wanting more.
+
+Which was heavily inspired by [Wordle](https://www.powerlanguage.co.uk/wordle/), Word Master is a word guessing game similar to Mastermind. I created this because I love Wordle, but the once a day limit leaves me wanting more.
 
 ## Rules
 
