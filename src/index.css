@@ -39,5 +39,6 @@ html {
 }
 
 .keyboardButton {
-  min-width: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
