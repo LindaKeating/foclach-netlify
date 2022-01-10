@@ -1,7 +1,7 @@
 export const keyboardLetters = [
-  ['W', 'E', 'É', 'R', 'T', 'U', 'Ú','I', 'Í', 'O', 'Ó', 'P'],
-  ['A', 'Á', 'S', 'D', 'F', 'G', 'H', 'L'],
-  ['C', 'V', 'B', 'N', 'M'],
+  ['A', 'Á', 'E', 'É', 'I', 'Í', 'O', 'Ó', 'U', 'Ú'],
+  ['B', 'C', 'D', 'F', 'G', 'H', 'L', 'M', 'N'],
+  ['R', 'S', 'T', 'V', 'W'],
 ]
 
 export const letters = [

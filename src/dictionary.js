@@ -14,6 +14,6 @@ export const dictionary = {
   TheWordWas: 'Ba é an focal nó:',
   DarkMode: 'Mód dorcha',
   IfYouAreEnjoyingThisGame: 'Má tá tú ag baint suilt as an chluiche seo, tabhair tacaíocht domh trí',
-  BuyMeACoffee: 'chupa caifé a cheannacht domh',
+  BuyMeACoffee: 'pionta guinness a cheannacht domh',
   Enter: 'Tomhas',
 }
