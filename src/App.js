@@ -3,6 +3,7 @@ import { letters, status } from './constants'
 import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
 import words from './data/words'
+import  html2canvas  from 'html2canvas'
 
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { ReactComponent as Info } from './data/Info.svg'
@@ -16,6 +17,7 @@ const state = {
   playing: 'playing',
   won: 'won',
   lost: 'lost',
+  lastCanvas: '',
 }
 
 const getRandomAnswer = () => {
@@ -44,7 +46,7 @@ function App() {
         letterStatuses[letter] = status.unguessed
       })
       return letterStatuses
-    },
+    }
   }
   const [answer, setAnswer] = useState(initialStates.answer)
   const [gameState, setGameState] = useState(initialStates.gameState)
@@ -53,6 +55,7 @@ function App() {
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
+  const [lastCanvas, setLastCanvas] = useState(state.lastCanvas)
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
@@ -138,8 +141,6 @@ function App() {
   }
 
   const onEnterPress = () => {
-    console.log(board);
-    console.log(state);
     const word = board[currentRow].join('')
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
@@ -152,6 +153,14 @@ function App() {
     updateLetterStatuses(word)
     setCurrentRow((prev) => prev + 1)
     setCurrentCol(0)
+  }
+
+  const screenShotResult = () => {
+    html2canvas(document.querySelector("#gameBoard")).then(canvas => {
+      state.lastCanvas = canvas
+    });
+    console.log(board)
+    console.log(state)
   }
 
   const onDeletePress = () => {
@@ -199,8 +208,13 @@ function App() {
     })
   }
 
+  // checking if the answer is right
   const isRowAllGreen = (row) => {
-    return row.every((cell) => cell === status.green)
+    let correctAnswer = row.every((cell) => cell === status.green)
+    if (correctAnswer) {
+      screenShotResult()
+    }
+    return correctAnswer
   }
 
   // every time cellStatuses updates, check if the game is won or lost
@@ -324,6 +338,7 @@ function App() {
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
+            setLastCanvas(state.lastCanvas)
             closeModal()
             streakUpdated.current = false
           }}

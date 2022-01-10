@@ -2,6 +2,7 @@ import Modal from 'react-modal'
 import Success from '../data/Success.png'
 import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
+import { useEffect } from 'react'
 
 Modal.setAppElement('#root')
 
@@ -16,7 +17,12 @@ export const EndGameModal = ({
   longestStreak,
   answer,
   playAgain,
+  lastCanvas,
 }) => {
+  useEffect(() => {
+    console.log(state.lastCanvas)
+  })
+
   const PlayAgainButton = () => {
     return (
       <div className={darkMode ? 'dark' : ''}>
@@ -37,7 +43,7 @@ export const EndGameModal = ({
       style={styles}
       contentLabel="Game End Modal"
     >
-      <div className={darkMode ? 'dark' : ''}>
+      <div id="endGameModal"className={darkMode ? 'dark' : ''}>
         <div className="h-full flex flex-col items-center justify-center max-w-[300px] mx-auto">
           {gameState === state.won && (
             <>
@@ -49,6 +55,7 @@ export const EndGameModal = ({
               <p>
                 {dictionary['LongestStreak']}: <strong>{longestStreak}</strong>
               </p>
+              { lastCanvas }
             </>
           )}
           {gameState === state.lost && (
