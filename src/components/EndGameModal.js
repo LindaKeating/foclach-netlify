@@ -57,7 +57,7 @@ export const EndGameModal = ({
               <div className="text-primary dark:text-primary-dark text-4xl text-center">
                 <p>{dictionary['Oops']}!</p>
                 <p className="mt-3 text-2xl">
-                  {dictionary['TheWordWas']} <strong>{answer}</strong>
+                  Ba é <strong>{answer}</strong> an focal ceart
                 </p>
                 <p className="mt-6 text-base">
                   {dictionary['CurrentStreak']}: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}

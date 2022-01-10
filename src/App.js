@@ -138,6 +138,8 @@ function App() {
   }
 
   const onEnterPress = () => {
+    console.log(board);
+    console.log(state);
     const word = board[currentRow].join('')
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
@@ -281,7 +283,7 @@ function App() {
           </button>
         </header>
         <div className="flex items-center flex-col py-3">
-          <div className="grid grid-cols-5 grid-flow-row gap-4">
+          <div id="gameBoard" className="grid grid-cols-5 grid-flow-row gap-4">
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
                 <span
