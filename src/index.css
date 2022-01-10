@@ -38,7 +38,34 @@ html {
   font-family: 'Righteous', cursive;
 }
 
-.keyboardButton {
+.keyboardButton,
+.letterTile
+{
   font-size: 40px;
   font-weight: bold;
+}
+
+.letterTile {
+  height: 10vw;
+  width: 10vw;
+  max-width: 98px;
+  max-height: 98px;
+}
+
+.appContainer {
+  height: auto;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+
+@media (max-width: 800px) {
+  .letterTile {
+    width: 20vw;
+    height: 20vw;
+    max-width: unset;
+    max-height: unset;
+  }
 }

@@ -284,19 +284,19 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className={`flex flex-col justify-between h-fill bg-background dark:bg-background-dark`}>
-        <header className="flex items-center py-2 px-3 text-primary dark:text-primary-dark">
+      <div className={`flex flex-col h-fill bg-background dark:bg-background-dark appContainer`}>
+        <header className="flex items-center py-2 px-3 text-primary dark:text-primary-dark mb-[5rem]">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>
-          <h1 className="flex-1 text-center text-xl xxs:text-2xl -mr-6 sm:text-4xl tracking-wide font-bold font-righteous">
+          <h1 className="flex-1 text-center text-xl xxs:text-2xl -mr-6 sm:text-6xl tracking-wide font-bold font-righteous">
             FOCLACH
           </h1>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
           </button>
         </header>
-        <div className="flex items-center flex-col py-3">
+        <div className="flex items-center flex-col py-3 mb-[5rem]">
           <div id="gameBoard" className="grid grid-cols-5 grid-flow-row gap-4">
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
@@ -306,7 +306,7 @@ function App() {
                     rowNumber,
                     colNumber,
                     letter
-                  )} inline-flex items-center font-medium justify-center text-lg w-[14vw] h-[14vw] xs:w-14 xs:h-14 sm:w-20 sm:h-20 rounded-full`}
+                  )} letterTile inline-flex items-center font-medium justify-center text-lg rounded-full`}
                 >
                   {letter}
                 </span>
