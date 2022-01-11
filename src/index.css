@@ -60,6 +60,10 @@ body {
   background-color: antiquewhite;
 }
 
+.dark {
+  color: white;
+}
+
 
 @media (max-width: 800px) {
   .letterTile {

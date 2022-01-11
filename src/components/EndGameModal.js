@@ -67,11 +67,11 @@ export const EndGameModal = ({
             <>
               <img src={Fail} alt="success" height="auto" width="80%" />
               <div className="text-primary dark:text-primary-dark text-4xl text-center">
-                <p>{dictionary['Oops']}!</p>
-                <p className="mt-3 text-2xl">
+                <p className={darkMode ? 'dark': ''}>{dictionary['Oops']}!</p>
+                <p className={darkMode ? 'dark mt-3 text-2xl' : 'mt-3 text-2xl'} >
                   Ba é <strong>{answer}</strong> an focal ceart
                 </p>
-                <p className="mt-6 text-base">
+                <p className={darkMode ? 'dark mt-6 text-base' : 'mt-6 text-base'}>
                   {dictionary['CurrentStreak']}: <strong>{currentStreak}</strong> {currentStreak > 4 && '🔥'}
                 </p>
                 <p className="text-base">
