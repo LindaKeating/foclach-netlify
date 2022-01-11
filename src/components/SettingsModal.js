@@ -28,6 +28,15 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
               <span>{dictionary['DarkMode']}</span>
             </div>
           </div>
+          <p className="mb-[1rem]">
+            Tá an cluiche Foclach bunaithe ar an chluiche Wordle le Josh Wardle @powerlanguish 
+          </p>
+          <p className="mb-[1rem]">
+            Rinneadh an cód foinseach a chraobhú ón stór a rinne <a href="https://octokatherine.github.io/word-master/">octokatherine</a> - a bhunaigh an cód agus an dearadh ar an chluiche focal Wordle le @powerlanguish </p>
+          <p className="mb-[1rem]">
+            Tógadh liosta na bhfocal ón liosta seo, le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
+          <p>Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/?s=tomhas+orm+tomhas+ort">Tomhas Orm, Tomhas Ort!</a>, foilsithe ag Éabhlóid:  Bailiúchán tomhasanna ón bhéaloideas.
+          </p>
           <div className="flex flex-col items-center">
             <div className="mb-4">
               {dictionary['IfYouAreEnjoyingThisGame']}{' '}

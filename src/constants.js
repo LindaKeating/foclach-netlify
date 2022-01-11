@@ -63,4 +63,6 @@ export const dictionary = {
   IfYouAreEnjoyingThisGame: 'Má tá tú ag baint suilt as an chluiche seo, tabhair tacaíocht domh trí',
   BuyMeACoffee: 'phionta Guinness a cheannacht domh',
   Enter: 'Tomhas',
+  ResultsCopiedToClipboard: 'Tá na torthaí cóipeáilte chuig an ghearrthaisce',
+  ShareTheResults: 'Roinn na torthaí'
 }

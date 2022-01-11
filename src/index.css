@@ -41,15 +41,15 @@ html {
 .keyboardButton,
 .letterTile
 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .letterTile {
-  height: 10vw;
-  width: 10vw;
-  max-width: 98px;
-  max-height: 98px;
+  height: 12vw;
+  width: 12vw;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 .appContainer {
@@ -64,12 +64,20 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: rgb(12, 12, 11) underline;
+}
+
+.dark a {
+  text-decoration: antiquewhite underline;
+}
+
 
 @media (max-width: 800px) {
   .letterTile {
     width: 20vw;
     height: 20vw;
-    max-width: unset;
-    max-height: unset;
+    max-width: 60px;
+    max-height: 60px;
   }
 }

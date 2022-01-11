@@ -338,7 +338,7 @@ function App() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <div className={`flex flex-col h-fill bg-background dark:bg-background-dark appContainer`}>
-        <header className="flex items-center py-2 px-3 text-primary dark:text-primary-dark mb-[5rem]">
+        <header className="flex items-center py-2 px-3 text-primary dark:text-primary-dark mb-[1rem]">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>

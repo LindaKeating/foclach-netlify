@@ -80,17 +80,19 @@ export const EndGameModal = ({
               </div>
             </>
           )}
-          <button
-            type="button"
-            className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
-            onClick={shareResults}
-          >
-            Roinn na torthaí
-          </button>
-          {isCopied ? <p>Tá na torthaí cóipeáilte go dtí an gearrthaisce</p> : <p></p>}
-          <br />
-          <PlayAgainButton />
-        </div>
+          <div class="items-center">
+            <button
+              type="button"
+              className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
+              onClick={shareResults}
+            >
+              {dictionary['ShareTheResults']}
+            </button>
+            {isCopied ? <p>{dictionary['ResultsCopiedToClipboard']}</p> : <p></p>}
+            <br />
+            <PlayAgainButton />
+          </div>
+          </div>
       </div>
     </Modal>
   )
