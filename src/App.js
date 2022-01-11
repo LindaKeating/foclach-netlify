@@ -17,7 +17,11 @@ const state = {
   playing: 'playing',
   won: 'won',
   lost: 'lost',
-  lastCanvas: '',
+
+}
+
+let variableState = {
+  lastResult: ''
 }
 
 const getRandomAnswer = () => {
@@ -55,7 +59,7 @@ function App() {
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
-  const [lastCanvas, setLastCanvas] = useState(state.lastCanvas)
+  const [lastResult, setLastResult] = useState(variableState.lastResult)
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
@@ -159,8 +163,6 @@ function App() {
     html2canvas(document.querySelector("#gameBoard")).then(canvas => {
       state.lastCanvas = canvas
     });
-    console.log(board)
-    console.log(state)
   }
 
   const onDeletePress = () => {
@@ -230,7 +232,44 @@ function App() {
     } else if (currentRow === 6) {
       setGameState(state.lost)
     }
+
+      let myResults = '';
+      let rowOne = printEmojis(cellStatuses[0]);
+      let rowTwo = printEmojis(cellStatuses[1]);;
+      let rowThree = printEmojis(cellStatuses[2]);;
+      let rowFour = printEmojis(cellStatuses[3]);;
+      let rowFive = printEmojis(cellStatuses[4]);;
+      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive);
+      console.log(myResults, 'myResults')
+      variableState.lastResult = myResults;
+      //lastResult(myResults)
   }, [cellStatuses, currentRow])
+
+  const printEmojis = (item) => {
+    let s = '';
+    for (var i = 0; i < item.length; i++) {
+      switch (item[i]) {
+        case "gray":
+          s = s + '\u26AA' + '\x20';
+          break;
+        case "unguessed":
+          s = s + '\u26AA' + '\x20';
+          break;
+        case "green":
+          s = s + '💚' + '\x20';
+          break;
+        case "yellow":
+          s = s + '💛' + '\x20';
+          break;
+        default:
+          console.log('\u26AA', item);
+          s = s + '\x0A';
+      }
+    }
+    return (
+      s = s + '\x0A'
+    )
+  }
 
   const updateLetterStatuses = (word) => {
     setLetterStatuses((prev) => {
@@ -249,6 +288,10 @@ function App() {
       }
       return newLetterStatuses
     })
+  }
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(variableState.lastResult);
   }
 
   const modalStyles = {
@@ -339,9 +382,11 @@ function App() {
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
-            setLastCanvas(state.lastCanvas)
             closeModal()
             streakUpdated.current = false
+          }}
+          shareResults={() => {
+            copyToClipboard()
           }}
         />
         <SettingsModal

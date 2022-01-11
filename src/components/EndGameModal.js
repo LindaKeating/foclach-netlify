@@ -18,47 +18,10 @@ export const EndGameModal = ({
   longestStreak,
   answer,
   playAgain,
-  lastCanvas,
+  setLastResult,
   cellStatuses,
+  shareResults,
 }) => {
-  useEffect(() => {
-    if(isOpen) {
-      let myResults = '';
-      let rowOne = printEmojis(cellStatuses[0]);
-      let rowTwo = printEmojis(cellStatuses[1]);;
-      let rowThree = printEmojis(cellStatuses[2]);;
-      let rowFour = printEmojis(cellStatuses[3]);;
-      let rowFive = printEmojis(cellStatuses[4]);;
-      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive);
-      console.log(myResults, 'myResults')
-    }
-  })
-
-  const printEmojis = (item) => {
-    let s = '';
-      for(var i = 0; i < item.length; i++) {
-        switch (item[i]) {
-          case "gray":
-            s = s + '\u26AA' + '\x20';
-            break;
-          case "unguessed":
-            s = s + '\u26AA' + '\x20';
-            break;
-          case "green":
-            s = s + '💚' + '\x20';
-            break;
-          case "yellow":
-            s = s + '💛' + '\x20';
-            break;         
-          default:
-            console.log('\u26AA', item);
-            s = s + '\x0A';
-        }
-      }    
-    return (
-      s = s + '\x0A'
-    )
-  }
 
   const PlayAgainButton = () => {
     return (
@@ -69,6 +32,13 @@ export const EndGameModal = ({
           onClick={playAgain}
         >
           {dictionary['PlayAgain']}
+        </button>
+        <button
+          type="button"
+          className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
+          onClick={shareResults}
+        >
+          Share Results
         </button>
       </div>
     )
@@ -98,7 +68,6 @@ export const EndGameModal = ({
               <p>
                 {dictionary['LongestStreak']}: <strong>{longestStreak}</strong>
               </p>
-              { lastCanvas }
             </>
           )}
           {gameState === state.lost && (
