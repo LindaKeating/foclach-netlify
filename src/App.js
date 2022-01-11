@@ -17,12 +17,12 @@ const state = {
   playing: 'playing',
   won: 'won',
   lost: 'lost',
+  copiedToClipboard: false,
 
 }
 
 let variableState = {
   lastResult: '',
-  copiedToClipboard: false,
 }
 
 const getRandomAnswer = () => {
@@ -51,7 +51,7 @@ function App() {
         letterStatuses[letter] = status.unguessed
       })
       return letterStatuses
-    }
+    },
   }
   const [answer, setAnswer] = useState(initialStates.answer)
   const [gameState, setGameState] = useState(initialStates.gameState)
@@ -60,7 +60,7 @@ function App() {
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
-  const [lastResult, setLastResult] = useState(variableState.lastResult)
+  const [copiedToClipboard, setCopiedToClipboard] = useState(false)
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
@@ -292,11 +292,15 @@ function App() {
   }
 
   const copyToClipboard = () => {
+    setCopiedToClipboard(true)
     navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
+      setCopiedToClipboard(true);
       console.log('successfully wrote to clipboard')
     }, function(){
+      setCopiedToClipboard(false)
       console.log('there was a problem heuston')
     });
+    setCopiedToClipboard(true)
 
   }
 
@@ -394,6 +398,7 @@ function App() {
           shareResults={() => {
             copyToClipboard()
           }}
+          isCopied={copiedToClipboard}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}

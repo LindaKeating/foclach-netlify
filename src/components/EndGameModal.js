@@ -17,22 +17,13 @@ export const EndGameModal = ({
   longestStreak,
   answer,
   playAgain,
-  setLastResult,
-  cellStatuses,
   shareResults,
+  isCopied,
 }) => {
 
   const PlayAgainButton = () => {
     return (
       <div className={darkMode ? 'dark' : ''}>
-        <button
-          type="button"
-          className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
-          onClick={shareResults}
-        >
-          Roinn Toradh do chluiche
-        </button>
-        <br/>
         <button
           type="button"
           className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
@@ -50,6 +41,7 @@ export const EndGameModal = ({
       onRequestClose={handleClose}
       style={styles}
       contentLabel="Game End Modal"
+      isCopied={isCopied}
     >
       <div id="endGameModal"className={darkMode ? 'dark' : ''}>
         <div className="h-full flex flex-col items-center justify-center max-w-[300px] mx-auto">
@@ -88,6 +80,15 @@ export const EndGameModal = ({
               </div>
             </>
           )}
+          <button
+            type="button"
+            className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
+            onClick={shareResults}
+          >
+            Roinn na torthaí
+          </button>
+          {isCopied ? <p>Tá na torthaí cóipeáilte go dtí an gearrthaisce</p> : <p></p>}
+          <br />
           <PlayAgainButton />
         </div>
       </div>
