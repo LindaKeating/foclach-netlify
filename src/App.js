@@ -246,7 +246,7 @@ function App() {
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
-    let s = '';
+    let s = 'FOCLACH ' + '\x0A';
     for (var i = 0; i < item.length; i++) {
       switch (item[i]) {
         case "gray":
@@ -267,7 +267,7 @@ function App() {
       }
     }
     return (
-      s = s + '\x0A'
+      s = s + '\x0A  https://lindakeating.github.io/foclach/'
     )
   }
 

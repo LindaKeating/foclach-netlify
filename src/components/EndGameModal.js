@@ -20,7 +20,6 @@ export const EndGameModal = ({
   setLastResult,
   cellStatuses,
   shareResults,
-  isVisible,
 }) => {
 
   const PlayAgainButton = () => {
@@ -33,7 +32,6 @@ export const EndGameModal = ({
         >
           Roinn Toradh do chluiche
         </button>
-        <p isVisible={isVisible}>Results copied to clipboard</p>
         <br/>
         <button
           type="button"
