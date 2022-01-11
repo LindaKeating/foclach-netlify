@@ -247,7 +247,7 @@ function App() {
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
-    let s = 'FOCLACH ' + '\x0A';
+    let s = 'FOCLACH ';
     for (var i = 0; i < item.length; i++) {
       switch (item[i]) {
         case "gray":
@@ -268,7 +268,7 @@ function App() {
       }
     }
     return (
-      s = s + '\x0A  https://lindakeating.github.io/foclach/'
+      s = s + '\x0A '
     )
   }
 
@@ -292,7 +292,7 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(variableState.lastResult + " ").then(function(){
+    navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
       console.log('successfully wrote to clipboard')
     }, function(){
       console.log('there was a problem heuston')
