@@ -2,7 +2,6 @@ import Modal from 'react-modal'
 import Success from '../data/Success.png'
 import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
-import { useEffect } from 'react'
 import { ReactComponent as Close } from '../data/Close.svg'
 
 Modal.setAppElement('#root')
@@ -21,6 +20,7 @@ export const EndGameModal = ({
   setLastResult,
   cellStatuses,
   shareResults,
+  isVisible,
 }) => {
 
   const PlayAgainButton = () => {
@@ -29,17 +29,20 @@ export const EndGameModal = ({
         <button
           type="button"
           className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
+          onClick={shareResults}
+        >
+          Roinn Toradh do chluiche
+        </button>
+        <p isVisible={isVisible}>Results copied to clipboard</p>
+        <br/>
+        <button
+          type="button"
+          className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
           onClick={playAgain}
         >
           {dictionary['PlayAgain']}
         </button>
-        <button
-          type="button"
-          className="rounded-lg px-6 py-2 mt-8 text-lg nm-flat-background dark:nm-flat-background-dark hover:nm-inset-background dark:hover:nm-inset-background-dark text-primary dark:text-primary-dark"
-          onClick={shareResults}
-        >
-          Share Results
-        </button>
+        
       </div>
     )
   }

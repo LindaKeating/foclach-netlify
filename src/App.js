@@ -291,7 +291,12 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(variableState.lastResult);
+    navigator.clipboard.writeText(variableState.lastResult + " ").then(function(){
+      console.log('successfully wrote to clipboard')
+    }, function(){
+      console.log('there was a problem heuston')
+    });
+
   }
 
   const modalStyles = {
@@ -388,6 +393,7 @@ function App() {
           shareResults={() => {
             copyToClipboard()
           }}
+          isVisible={isVisible}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
