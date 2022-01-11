@@ -46,14 +46,14 @@ export const status = {
 }
 
 export const dictionary = {
-  HowToPlay: 'Treoireacha',
-  SixGuessesLeft: 'Tá 6 thomhas agat leis an fhocal cheart a thomhas.',
-  GuessAnyValidWord: 'Glacfar le focail bailí Gaeilge ar bith.',
-  AfterEachGuessLetterWillTurnDifferentColour: 'I ndiaidh gach tomhas, cuirfear dath glas, buí nó liath ar na litreacha a chur tú isteach.',
+  HowToPlay: 'Treoracha',
+  SixGuessesLeft: 'Gheobhaidh tú 6 iarracht leis an fhocal cheart a thomhas.',
+  GuessAnyValidWord: 'Glactar le mórchuid na bhfocal bailí Gaeilge. Ní ghlactar le hainmneacha dílse.',
+  AfterEachGuessLetterWillTurnDifferentColour: 'I ndiaidh gach tomhas a dhéanann tú, cuirfear dath glas, buí nó liath ar na litreacha a chuir tú isteach.',
   CorrectLetterCorrectSpot: 'An litir ceart, san áit cheart',
   CorrectLetterWrongSpot: 'An litir ceart, san áit mícheart',
   WrongLetter: 'An litir mícheart',
-  ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte ar',
+  ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte',
   PlayAgain: 'Imir Arís',
   CurrentStreak: 'Buanna gan briseadh',
   LongestStreak: 'Sraith is faide buanna gan briseadh',

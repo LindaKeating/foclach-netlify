@@ -383,7 +383,6 @@ function App() {
           currentStreak={currentStreak}
           longestStreak={longestStreak}
           answer={answer}
-          cellStatuses={cellStatuses}
           playAgain={() => {
             setAnswer(initialStates.answer)
             setGameState(initialStates.gameState)
