@@ -247,7 +247,7 @@ function App() {
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
-    let s = 'FOCLACH ';
+    let s = '';
     for (var i = 0; i < item.length; i++) {
       switch (item[i]) {
         case "gray":
