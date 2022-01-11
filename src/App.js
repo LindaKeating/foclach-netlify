@@ -21,7 +21,8 @@ const state = {
 }
 
 let variableState = {
-  lastResult: ''
+  lastResult: '',
+  copiedToClipboard: false,
 }
 
 const getRandomAnswer = () => {
@@ -393,7 +394,6 @@ function App() {
           shareResults={() => {
             copyToClipboard()
           }}
-          isVisible={isVisible}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
