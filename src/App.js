@@ -258,7 +258,7 @@ function App() {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: darkMode ? 'hsl(231, 16%, 25%)' : 'hsl(231, 16%, 92%)',
+      backgroundColor: darkMode ? 'rgba(54, 57, 74, .6)' : 'hsl(231, 16%, 92%)',
     },
     content: {
       top: '50%',

@@ -23,9 +23,42 @@ export const EndGameModal = ({
 }) => {
   useEffect(() => {
     if(isOpen) {
-      cellStatuses.forEach(function (x) { console.log(x) })
+      let myResults = '';
+      let rowOne = printEmojis(cellStatuses[0]);
+      let rowTwo = printEmojis(cellStatuses[1]);;
+      let rowThree = printEmojis(cellStatuses[2]);;
+      let rowFour = printEmojis(cellStatuses[3]);;
+      let rowFive = printEmojis(cellStatuses[4]);;
+      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive);
+      console.log(myResults, 'myResults')
     }
   })
+
+  const printEmojis = (item) => {
+    let s = '';
+      for(var i = 0; i < item.length; i++) {
+        switch (item[i]) {
+          case "gray":
+            s = s + '\u26AA' + '\x20';
+            break;
+          case "unguessed":
+            s = s + '\u26AA' + '\x20';
+            break;
+          case "green":
+            s = s + '💚' + '\x20';
+            break;
+          case "yellow":
+            s = s + '💛' + '\x20';
+            break;         
+          default:
+            console.log('\u26AA', item);
+            s = s + '\x0A';
+        }
+      }    
+    return (
+      s = s + '\x0A'
+    )
+  }
 
   const PlayAgainButton = () => {
     return (
