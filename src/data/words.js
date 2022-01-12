@@ -6627,6 +6627,7 @@ urraí: true,
 urróg: true,
 urrús: true,
 ursal: true,
+feilm: true,
 }
 
 
