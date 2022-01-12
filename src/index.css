@@ -70,9 +70,19 @@ a {
   text-decoration: antiquewhite underline;
 }
 
-@media (min-width: 800px) {
+.keyboardContainer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 500px) {
   .letterTile {
     max-width: 60px;
     max-height: 60px;
+  }
+
+  .keyboardContainer {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
