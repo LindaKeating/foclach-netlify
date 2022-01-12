@@ -236,14 +236,13 @@ function App() {
 
       let myResults = '';
       let rowOne = printEmojis(cellStatuses[0]);
-      let rowTwo = printEmojis(cellStatuses[1]);;
-      let rowThree = printEmojis(cellStatuses[2]);;
-      let rowFour = printEmojis(cellStatuses[3]);;
-      let rowFive = printEmojis(cellStatuses[4]);;
-      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive);
-      console.log(myResults, 'myResults')
+      let rowTwo = printEmojis(cellStatuses[1]);
+      let rowThree = printEmojis(cellStatuses[2]);
+      let rowFour = printEmojis(cellStatuses[3]);
+      let rowFive = printEmojis(cellStatuses[4]);
+      let rowSix = printEmojis(cellStatuses[5]);
+      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive, rowSix);
       variableState.lastResult = myResults;
-      //lastResult(myResults)
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
