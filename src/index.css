@@ -90,6 +90,16 @@ a {
   margin: 0 auto;
 }
 
+.icons {
+  height: 2rem;
+  width: 2rem;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (min-width: 500px) {
   .letterTile {
     max-width: 60px;

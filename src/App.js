@@ -337,11 +337,11 @@ function App() {
   return (
     <div className={darkMode ? 'dark' : ''}>
       <div className={`flex flex-col h-fill bg-background dark:bg-background-dark appContainer`}>
-        <header className="flex items-center py-2 px-3 text-primary dark:text-primary-dark mb-[1rem]">
+        <header className="appHeader items-center py-2 px-3 text-primary dark:text-primary-dark mb-[1rem]">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>
-          <h1 className="flex-1 text-center text-xl xxs:text-4xl -mr-6 sm:text-6xl tracking-wide font-bold font-righteous">
+          <h1 className="text-center text-xl xxs:text-4xl sm:text-6xl tracking-wide font-bold font-righteous">
             FOCLACH
           </h1>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
