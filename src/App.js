@@ -341,7 +341,7 @@ function App() {
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>
-          <h1 className="flex-1 text-center text-xl xxs:text-2xl -mr-6 sm:text-6xl tracking-wide font-bold font-righteous">
+          <h1 className="flex-1 text-center text-xl xxs:text-4xl -mr-6 sm:text-6xl tracking-wide font-bold font-righteous">
             FOCLACH
           </h1>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
