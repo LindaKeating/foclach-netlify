@@ -587,7 +587,6 @@ const answers = [
   'casúr',
   'rolla',
   'clúmh',
-  'Conán',
   'leasc',
   'líofa',
   'gréas',
