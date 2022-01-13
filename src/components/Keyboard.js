@@ -55,7 +55,7 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
           {idx === 2 && (
             <button
               onClick={onEnterPress}
-              className=" keyboardButton h-[5rem] sm:w-[10rem] xxs:h-[5rem] w-12 px-1 text-xs font-medium mx-[3.5px] rounded nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark"
+              className=" TomhasButton keyboardButton text-xs font-medium mx-[3.5px] w-[15vw] rounded nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark"
             >
               Tomhas
             </button>
@@ -64,7 +64,7 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
             <button
               onClick={() => onKeyButtonPress(letter)}
               key={letter}
-              className="keyboardButton h-[5rem] xxs:h-[5rem] w-[3rem] sm:w-[6rem] mx-[3.5px] text-sm font-medium rounded-[4px] nm-flat-background-sm dark:nm-flat-background-dark-sm"
+              className="keyboardButton text-sm font-medium rounded-[4px] nm-flat-background-sm dark:nm-flat-background-dark-sm"
             >
               <div
                 className={`h-full w-full rounded-[3px] flex items-center justify-center ${getKeyStyle(
@@ -78,7 +78,7 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
           {idx === 2 && (
             <button
               onClick={onDeletePress}
-              className="keyboardButton h-10 xxs:h-[5rem] sm:w-[6rem] w-12 flex items-center justify-center nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark mx-[3.5px] text-sm  rounded"
+              className="keyboardButton flex items-center justify-center nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark mx-[3.5px] text-sm  rounded"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

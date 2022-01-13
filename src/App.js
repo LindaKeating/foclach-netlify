@@ -348,7 +348,7 @@ function App() {
             <Info />
           </button>
         </header>
-        <div className="flex items-center flex-col py-3 mb-[5rem]">
+        <div className="flex items-center flex-col py-3 mb-[1rem]">
           <div id="gameBoard" className="grid grid-cols-5 grid-flow-row gap-4">
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
