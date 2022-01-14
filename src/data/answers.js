@@ -320,7 +320,6 @@ const answers = [
   'abhus',
   'fuath',
   'ríomh',
-  'Páras',
   'díomá',
   'cupán',
   'buíon',
