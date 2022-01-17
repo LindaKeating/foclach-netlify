@@ -13,6 +13,7 @@ import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
 import { InvalidWord } from './components/invalidWord'
+import { GameStats } from './components/gameStats'
 
 const state = {
   playing: 'playing',
