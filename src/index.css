@@ -168,9 +168,16 @@ a {
   background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px );
 }
 
+.invalidWordContainer {
+  height: 24px;
+  text-align: center;
+}
+
 
 .submittedInvalidWord {
-  animation: shake-animation 4.72s ease infinite;
+  border-color: #532222;
+  background-color: #715151;
+  animation: shake-animation 4.72s ease;
   transform-origin: 50% 50%;
 }
 

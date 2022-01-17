@@ -12,6 +12,7 @@ import { ReactComponent as Settings } from './data/Settings.svg'
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
+import { InvalidWord } from './components/invalidWord'
 
 const state = {
   playing: 'playing',
@@ -58,7 +59,10 @@ function App() {
       })
       return letterStatuses
     },
+    invalidWord: false,
+    currentGuess: ''
   }
+  const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
   const [gameState, setGameState] = useState(initialStates.gameState)
   const [board, setBoard] = useState(initialStates.board)
@@ -67,7 +71,7 @@ function App() {
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
-  const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
+  
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
   const streakUpdated = useRef(false)
@@ -75,6 +79,7 @@ function App() {
   const [firstTime, setFirstTime] = useLocalStorage('first-time', true)
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(firstTime)
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
+  const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
@@ -153,6 +158,8 @@ function App() {
 
   const onEnterPress = () => {
     const word = board[currentRow].join('')
+    setCurrentGuess(word)
+    setSubmittedInvalidWord(true)
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
       return
@@ -374,9 +381,14 @@ function App() {
             )}
           </div>
           
-          <div className="messageContainer"></div>
+          <div className="messageContainer">
+            <InvalidWord 
+              word={currentGuess} 
+              isInvalidWord={submittedInvalidWord}/>
+          </div>
           </div>     
         </div>
+        
         <InfoModal
           isOpen={infoModalIsOpen}
           handleClose={handleInfoClose}
