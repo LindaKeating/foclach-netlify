@@ -5,13 +5,13 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
   const getKeyStyle = (letter) => {
     switch (letterStatuses[letter]) {
       case status.green:
-        return 'bg-n-green text-gray-50'
+        return 'rightLetterRightPlace'
       case status.yellow:
-        return 'bg-yellow-500 text-gray-50'
+        return 'rightLetterWrongPlace'
       case status.gray:
-        return 'bg-n-gray text-gray-50'
+        return 'wrongLetter'
       default:
-        return 'text-primary dark:text-primary-dark'
+        return ''
     }
   }
 
@@ -49,13 +49,13 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
   }, [handleKeyDown])
 
   return (
-    <div className="keyboardContainer w-full flex flex-col items-center select-none">
+    <div className="keyboardContainer">
       {keyboardLetters.map((row, idx) => (
-        <div key={idx} className="w-full flex justify-center my-[5px]">
+        <div key={idx} className="keyboardRow">
           {idx === 2 && (
             <button
               onClick={onEnterPress}
-              className=" TomhasButton keyboardButton text-xs font-medium mx-[3.5px] w-[15vw] rounded nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark"
+              className="TomhasButton keyboardButton"
             >
               Tomhas
             </button>
@@ -64,21 +64,15 @@ const Keyboard = ({ letterStatuses, addLetter, onEnterPress, onDeletePress, game
             <button
               onClick={() => onKeyButtonPress(letter)}
               key={letter}
-              className="keyboardButton text-sm font-medium rounded-[4px] nm-flat-background-sm dark:nm-flat-background-dark-sm"
+              className={`keyboardButton  ${getKeyStyle(letter)}`}
             >
-              <div
-                className={`h-full w-full rounded-[3px] flex items-center justify-center ${getKeyStyle(
-                  letter
-                )}`}
-              >
                 {letter}
-              </div>
             </button>
           ))}
           {idx === 2 && (
             <button
               onClick={onDeletePress}
-              className="keyboardButton flex items-center justify-center nm-flat-background-sm dark:nm-flat-background-dark-sm text-primary dark:text-primary-dark mx-[3.5px] text-sm  rounded"
+              className="keyboardButton"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

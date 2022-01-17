@@ -25,6 +25,12 @@ let variableState = {
   lastResult: '',
 }
 
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
+
 const getRandomAnswer = () => {
   const randomIndex = Math.floor(Math.random() * answers.length)
   return answers[randomIndex].toUpperCase()
@@ -106,22 +112,22 @@ function App() {
   const getCellStyles = (rowNumber, colNumber, letter) => {
     if (rowNumber === currentRow) {
       if (letter) {
-        return `nm-inset-background dark:nm-inset-background-dark text-primary dark:text-primary-dark ${
+        return ` ${
           submittedInvalidWord ? 'border border-red-800' : ''
         }`
       }
-      return 'nm-flat-background dark:nm-flat-background-dark text-primary dark:text-primary-dark'
+      return ''
     }
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
-        return 'nm-inset-n-green text-gray-50'
+        return 'rightLetterRightPlace'
       case status.yellow:
-        return 'nm-inset-yellow-500 text-gray-50'
+        return 'rightLetterWrongPlace'
       case status.gray:
-        return 'nm-inset-n-gray text-gray-50'
+        return 'wrongLetter'
       default:
-        return 'nm-flat-background dark:nm-flat-background-dark text-primary dark:text-primary-dark'
+        return ''
     }
   }
 
@@ -336,20 +342,21 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className={`flex flex-col h-fill bg-background dark:bg-background-dark appContainer`}>
-        <header className="appHeader items-center py-2 px-3 text-primary dark:text-primary-dark mb-[1rem]">
+      <div className={`appContainer`}>
+        <header className="appHeader">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>
-          <h1 className="text-center text-xl xxs:text-4xl sm:text-6xl tracking-wide font-bold font-righteous">
+          <h1 className="siteTitle">
             FOCLACH
           </h1>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
           </button>
         </header>
-        <div className="flex items-center flex-col py-3 mb-[1rem]">
-          <div id="gameBoard" className="grid grid-cols-5 grid-flow-row gap-4">
+        <div className="gameContainer">
+          <div>
+           <div id="gameBoard" className="gameBoard">
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
                 <span
@@ -358,13 +365,15 @@ function App() {
                     rowNumber,
                     colNumber,
                     letter
-                  )} letterTile inline-flex items-center font-medium justify-center text-lg rounded-full`}
+                  )} letterTile`}
                 >
                   {letter}
                 </span>
               ))
             )}
           </div>
+          <div className="messageContainer"></div>
+          </div>     
         </div>
         <InfoModal
           isOpen={infoModalIsOpen}
