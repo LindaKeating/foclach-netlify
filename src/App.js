@@ -113,7 +113,7 @@ function App() {
     if (rowNumber === currentRow) {
       if (letter) {
         return ` ${
-          submittedInvalidWord ? 'border border-red-800' : ''
+          submittedInvalidWord ? 'submittedInvalidWord border border-red-800' : ''
         }`
       }
       return ''
@@ -356,7 +356,8 @@ function App() {
         </header>
         <div className="gameContainer">
           <div>
-           <div id="gameBoard" className="gameBoard">
+          
+           <div id="gameBoard" className="gameBoard">         
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
                 <span
@@ -372,6 +373,7 @@ function App() {
               ))
             )}
           </div>
+          
           <div className="messageContainer"></div>
           </div>     
         </div>

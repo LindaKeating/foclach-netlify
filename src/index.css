@@ -163,9 +163,39 @@ a {
 
 .wrongLetter {
   /* PATTERN MAKER https://www.magicpattern.design/tools/css-backgrounds */
- background-color: #9a9aa0;
+  background-color: #9a9aa0;
   opacity: 0.8;
   background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px );
+}
+
+
+.submittedInvalidWord {
+  animation: shake-animation 4.72s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+   0% { transform:translate(0,0) }
+  1.78571% { transform:translate(5px,0) }
+  3.57143% { transform:translate(0,0) }
+  5.35714% { transform:translate(5px,0) }
+  7.14286% { transform:translate(0,0) }
+  8.92857% { transform:translate(5px,0) }
+  10.71429% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}
+
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(10px, 0); }
+	20% { -webkit-transform: translate(-10px, 0); }
+	10% { -webkit-transform: translate(8px, 0); }
+	40% { -webkit-transform: translate(-8px, 0); }
+	50% { -webkit-transform: translate(4px, 0); }
+	60% { -webkit-transform: translate(-4px, 0); }
+	70% { -webkit-transform: translate(4px, 0); }
+	80% { -webkit-transform: translate(-2px, 0); }
+	0% { -webkit-transform: translate(2px, 0); }
+	100% { -webkit-transform: translate(0, 0); }
 }
 
 .icons {
