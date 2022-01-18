@@ -160,10 +160,11 @@ function App() {
   const onEnterPress = () => {
     const word = board[currentRow].join('')
     setCurrentGuess(word)
-    setSubmittedInvalidWord(true)
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
       return
+    } else {
+      setSubmittedInvalidWord(false)
     }
 
     if (currentRow === 6) return
