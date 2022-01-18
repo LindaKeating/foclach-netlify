@@ -325,7 +325,7 @@ function App() {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: darkMode ? 'rgba(54, 57, 74, .6)' : 'hsl(231, 16%, 92%)',
+      backgroundColor: '#0D313F'
     },
     content: {
       top: '50%',
@@ -335,16 +335,10 @@ function App() {
       transform: 'translate(-50%, -50%)',
       height: 'calc(100% - 2rem)',
       width: 'calc(100% - 2rem)',
-      backgroundColor: darkMode ? 'hsl(231, 16%, 25%)' : 'hsl(231, 16%, 92%)',
-      boxShadow: `${
-        darkMode
-          ? '0.2em 0.2em calc(0.2em * 2) #1E2029, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #36394A'
-          : '0.2em 0.2em calc(0.2em * 2) #A3A7BD, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF'
-      }`,
+      background: 'rgb(25,42,73)',
+      background: 'linear-gradient(180deg, rgb(47, 55, 69) 0%,    rgb(34, 66, 79) 42%, rgba(70, 107, 120, 0.995)    100%)',
       border: 'none',
       borderRadius: '1rem',
-      maxWidth: '475px',
-      maxHeight: '650px',
       position: 'relative',
     },
   }

@@ -9,6 +9,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('http://fonts.cdnfonts.com/css/futura');
+@import url('http://fonts.cdnfonts.com/css/avenir-next-lt-pro');
 
 
 
@@ -187,7 +188,6 @@ a {
   align-items: center;
   -webkit-tap-highlight-color: rgba(0,0,0,0.3);
   text-transform: lowercase;
-  /* filter: drop-shadow(1px 1px 2px #201919); */
 }
 
 .rightLetterWrongPlace {
@@ -290,6 +290,36 @@ a {
   width: 100%;
   padding: 12px;
 }
+
+/* modals styles */
+
+.closeButton,
+.gitHubIcon {
+  width: 1.5em;
+  float: right;
+}
+
+.modalTitle {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.infoModal-Container .endGameButton {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.infoModal-Rule {
+  margin-bottom: 1em;
+}
+
+.gitHubLink {
+  margin-top: 3em;
+  font-size: .8em;
+}
+
+
 
 @media (min-width: 500px) {
   .letterTile {
