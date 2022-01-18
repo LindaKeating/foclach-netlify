@@ -444,8 +444,10 @@ function App() {
           shareResults={() => {
             copyToClipboard()
           }}
+          isOpen={modalIsOpen}
         ></EndGameButtons>
         <Keyboard
+          isNotOpen={modalIsOpen}
           letterStatuses={letterStatuses}
           addLetter={addLetter}
           onEnterPress={onEnterPress}

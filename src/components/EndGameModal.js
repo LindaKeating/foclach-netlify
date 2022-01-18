@@ -37,7 +37,7 @@ export const EndGameModal = ({
   }
   return (
     <Modal
-      isOpen={isOpen}
+      isOpen={false}
       onRequestClose={handleClose}
       style={styles}
       contentLabel="Game End Modal"

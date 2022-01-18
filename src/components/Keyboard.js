@@ -49,7 +49,7 @@ const Keyboard = (props) => {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
 
-  if(isVisible) {
+  if(!props.isNotOpen) {
     return (
       <div className="keyboardContainer">
         {keyboardLetters.map((row, idx) => (
