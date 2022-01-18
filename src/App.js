@@ -14,7 +14,7 @@ import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
 import { InvalidWord } from './components/invalidWord'
 import { GameStats } from './components/gameStats'
-
+import { EndGameButtons } from './components/EndGameButtons'
 const state = {
   playing: 'playing',
   won: 'won',
@@ -429,6 +429,22 @@ function App() {
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
         />
+        <EndGameButtons
+          playAgain={() => {
+            setAnswer(initialStates.answer)
+            setGameState(initialStates.gameState)
+            setBoard(initialStates.board)
+            setCellStatuses(initialStates.cellStatuses)
+            setCurrentRow(initialStates.currentRow)
+            setCurrentCol(initialStates.currentCol)
+            setLetterStatuses(initialStates.letterStatuses)
+            closeModal()
+            streakUpdated.current = false
+          }}
+          shareResults={() => {
+            copyToClipboard()
+          }}
+        ></EndGameButtons>
         <Keyboard
           letterStatuses={letterStatuses}
           addLetter={addLetter}
@@ -436,6 +452,7 @@ function App() {
           onDeletePress={onDeletePress}
           gameDisabled={gameState !== state.playing}
         />
+
       </div>
     </div>
   )

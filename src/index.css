@@ -92,6 +92,8 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .shadow {
@@ -116,9 +118,46 @@ a {
   text-decoration: antiquewhite underline;
 }
 
-.keyboardContainer {
+.keyboardContainer,
+.gameStats,
+.endGameButtons {
   width: 100%;
-  height: 190px;
+  height: 140px;
+}
+
+.gameStats {
+  display: flex;
+  padding: 12px;
+}
+
+.stat {
+  width: 50%;
+  text-align: center;
+}
+
+.endGameButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.endGameButton {
+  background-color: #A98E29;
+  padding: .375rem .75rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  width: inherit;
+  color:rgb(47, 55, 69)
+}
+
+.shareButton {
+  background-color: grey;
+  color: white;
+  margin-right: 16px;
+}
+
+.number {
+  font-size: xx-large;
 }
 
 .keyboardRow {
@@ -259,5 +298,11 @@ a {
   .keyboardContainer {
     max-width: 600px;
     margin: 0 auto;
+    height: 190px;
+  }
+
+  .keyboardButton {
+    width: 40px;
+    height: 48px
   }
 }
