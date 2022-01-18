@@ -88,7 +88,7 @@ function App() {
     setInfoModalIsOpen(false)
   }
 
-  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', false)
+  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   useEffect(() => {
@@ -252,7 +252,8 @@ function App() {
       setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
-      setMessageVisible('😿 Mí ááádh')
+      setMessage('😿 Mí ááádh')
+      setMessageVisible(true)
     }
 
       let myResults = '';
