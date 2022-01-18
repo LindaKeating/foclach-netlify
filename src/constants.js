@@ -63,5 +63,11 @@ export const dictionary = {
   BuyMeACoffee: 'phionta Guinness a cheannacht domh',
   Enter: 'Tomhas',
   ResultsCopiedToClipboard: 'Tá na torthaí cóipeáilte chuig an ghearrthaisce',
-  ShareTheResults: 'Roinn na torthaí'
+  ShareTheResults: 'Roinn na torthaí',
+  DownloadAppToPhone: 'Download this app to your phone',
+  PlayTheGameOffline: 'Play the game offline',
+  UseLessData: 'Use less data',
+  OneClickAccessFromHomeScreen: 'One click access from home screen',
+  DownloadNow: 'íoslódáil anois',
+  About: 'Faoi Foclach'
 }

@@ -340,6 +340,7 @@ function App() {
       border: 'none',
       borderRadius: '1rem',
       position: 'relative',
+      maxWidth: '500px'
     },
   }
 

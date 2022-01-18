@@ -305,7 +305,22 @@ a {
   margin-bottom: 1em;
 }
 
-.infoModal-Container .endGameButton {
+.downloadAppContainer {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.downloadTitle {
+  font-size: large;
+  margin-bottom: 1em;
+}
+
+.downloadBenefits {
+  margin-left: 1em;
+}
+
+.infoModal-Container .endGameButton, 
+.downloadAppContainer .endGameButton {
   width: 100%;
   margin-top: 2em;
 }
