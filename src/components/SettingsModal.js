@@ -34,7 +34,7 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
             </ul>
             <InstallPWA />
           </div>
-          <h1>{dictionary['About']}</h1>
+          <h1 className="modalTitle">{dictionary['About']}</h1>
           <p className="mb-[1rem]">
             Tá an cluiche Foclach bunaithe ar an chluiche Wordle le <i>Josh Wardle</i> <a href="https://twitter.com/powerlanguish">@powerlanguish </a>
           </p>

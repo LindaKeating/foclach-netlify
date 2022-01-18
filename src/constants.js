@@ -69,5 +69,6 @@ export const dictionary = {
   UseLessData: 'Laghdaigh an méid sonraí a úsáidtear don chluiche',
   OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
   DownloadNow: 'íoslódáil anois',
-  About: 'Faoi Foclach'
+  About: 'Eolas',
+  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin'
 }

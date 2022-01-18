@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { letters, status } from './constants'
+import { dictionary, letters, status } from './constants'
 import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
 import words from './data/words'
@@ -15,6 +15,8 @@ import { EndGameModal } from './components/EndGameModal'
 import { InvalidWord } from './components/invalidWord'
 import { GameStats } from './components/gameStats'
 import { EndGameButtons } from './components/EndGameButtons'
+import { Message } from './components/Message'
+
 const state = {
   playing: 'playing',
   won: 'won',
@@ -55,7 +57,8 @@ function App() {
       return letterStatuses
     },
     invalidWord: false,
-    currentGuess: ''
+    currentGuess: '',
+    message: ''
   }
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
@@ -66,6 +69,8 @@ function App() {
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
+  const [messageVisible, setMessageVisible] = useState(false)
+  const [message, setMessage] = useState(initialStates.message)
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
@@ -239,8 +244,11 @@ function App() {
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       setGameState(state.won)
+      setMessage(`🌟 Maith thú! ${ currentStreak } ${dictionary['CurrentStreak']} agus ${ longestStreak} ${dictionary['LongestStreak']}`)
+      setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
+      setMessageVisible('😿 Mí ááádh')
     }
 
       let myResults = '';
@@ -300,16 +308,14 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    setCopiedToClipboard(true)
     navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
-      setCopiedToClipboard(true);
+      setMessage(dictionary['ResultsCopiedToClipboard'])
+      setMessageVisible(true);
       console.log('successfully wrote to clipboard')
     }, function(){
-      setCopiedToClipboard(false)
+      setMessageVisible(false);
       console.log('there was a problem heuston')
     });
-    setCopiedToClipboard(true)
-
   }
 
   const modalStyles = {
@@ -353,8 +359,7 @@ function App() {
           </button>
         </header>
         <div className="gameContainer">
-          <div>
-          
+          <div>        
            <div id="gameBoard" className="gameBoard">         
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
@@ -376,6 +381,11 @@ function App() {
             <InvalidWord 
               word={currentGuess} 
               isInvalidWord={submittedInvalidWord}/>
+            
+            <Message 
+              message={message}
+              messageVisible={messageVisible}
+            />
           </div>
           </div>     
         </div>
@@ -405,6 +415,7 @@ function App() {
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
             closeModal()
+            setMessage('')
             streakUpdated.current = false
           }}
           shareResults={() => {
@@ -428,6 +439,7 @@ function App() {
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
+            setMessage('')
             closeModal()
             streakUpdated.current = false
           }}
