@@ -143,12 +143,14 @@ a {
 }
 
 .endGameButton {
-  background-color: #A98E29;
+  background-color: #c3ac14;
   padding: .375rem .75rem;
   border: 1px solid transparent;
   border-radius: .25rem;
   width: inherit;
-  color:rgb(47, 55, 69)
+  color:rgb(47, 55, 69);
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .shareButton {

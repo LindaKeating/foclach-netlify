@@ -64,10 +64,10 @@ export const dictionary = {
   Enter: 'Tomhas',
   ResultsCopiedToClipboard: 'Tá na torthaí cóipeáilte chuig an ghearrthaisce',
   ShareTheResults: 'Roinn na torthaí',
-  DownloadAppToPhone: 'Download this app to your phone',
-  PlayTheGameOffline: 'Play the game offline',
-  UseLessData: 'Use less data',
-  OneClickAccessFromHomeScreen: 'One click access from home screen',
+  DownloadAppToPhone: 'Íoslódáil an aip seo chuig d\'fhón',
+  PlayTheGameOffline: 'Imir an cluiche as líne',
+  UseLessData: 'Laghdaigh an méid sonraí a úsáidtear don chluiche',
+  OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
   DownloadNow: 'íoslódáil anois',
   About: 'Faoi Foclach'
 }

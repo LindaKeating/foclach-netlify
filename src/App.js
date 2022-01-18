@@ -27,12 +27,6 @@ let variableState = {
   lastResult: '',
 }
 
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    deferredPrompt = e;
-});
-
 const getRandomAnswer = () => {
   const randomIndex = Math.floor(Math.random() * answers.length)
   return answers[randomIndex].toUpperCase()

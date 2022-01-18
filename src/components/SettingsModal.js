@@ -1,10 +1,11 @@
 import { ReactComponent as Close } from '../data/Close.svg'
 import Modal from 'react-modal'
+import InstallPWA from './InstallPWA'
 import { dictionary } from '../constants'
 
 Modal.setAppElement('#root')
 
-export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDarkMode }) => {
+export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDarkMode, downloadApp }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -31,7 +32,7 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
               <li>✨ {dictionary['UseLessData']}</li>
               <li>✨ {dictionary['OneClickAccessFromHomeScreen']}</li>
             </ul>
-            <button className="endGameButton">{dictionary['DownloadNow']}</button>
+            <InstallPWA />
           </div>
           <h1>{dictionary['About']}</h1>
           <p className="mb-[1rem]">
