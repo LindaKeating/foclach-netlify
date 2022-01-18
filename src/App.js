@@ -161,6 +161,8 @@ function App() {
     setCurrentGuess(word)
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
+      setMessage(`Níl ${word} sa stór focal 😿`)
+      setMessageVisible(true)
       return
     } else {
       setSubmittedInvalidWord(false)
@@ -182,6 +184,8 @@ function App() {
 
   const onDeletePress = () => {
     setSubmittedInvalidWord(false)
+    setMessage('')
+    setMessageVisible(false)
     if (currentCol === 0) return
 
     setBoard((prev) => {
@@ -244,7 +248,7 @@ function App() {
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       setGameState(state.won)
-      setMessage(`🌟 Maith thú! ${ currentStreak } ${dictionary['CurrentStreak']} agus ${ longestStreak} ${dictionary['LongestStreak']}`)
+      setMessage(` Maith thú! ⭐ ${ currentStreak } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak} `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
@@ -378,9 +382,6 @@ function App() {
           </div>
           
           <div className="messageContainer">
-            <InvalidWord 
-              word={currentGuess} 
-              isInvalidWord={submittedInvalidWord}/>
             
             <Message 
               message={message}

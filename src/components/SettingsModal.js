@@ -28,9 +28,9 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
           <div className="downloadAppContainer">
             <h1 className="downloadTitle">{dictionary['DownloadAppToPhone']}</h1>
             <ul className="downloadBenefits">
-              <li>✨ {dictionary['PlayTheGameOffline']}</li>
-              <li>✨ {dictionary['UseLessData']}</li>
-              <li>✨ {dictionary['OneClickAccessFromHomeScreen']}</li>
+              <li>⭐ {dictionary['PlayTheGameOffline']}</li>
+              <li>⭐ {dictionary['UseLessData']}</li>
+              <li>⭐ {dictionary['OneClickAccessFromHomeScreen']}</li>
             </ul>
             <InstallPWA />
           </div>

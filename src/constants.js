@@ -55,7 +55,7 @@ export const dictionary = {
   ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte',
   PlayAgain: 'Imir Arís',
   CurrentStreak: 'buanna gan briseadh',
-  LongestStreak: 'sraith is faide buanna gan briseadh',
+  LongestStreak: 'Sraith is faide buanna gan briseadh',
   Oops: 'Úps!',
   TheWordWas: 'Ba é an focal nó:',
   DarkMode: 'Mód dorcha',
