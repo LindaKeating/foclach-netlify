@@ -214,6 +214,7 @@ a {
 .invalidWordContainer {
   height: 35px;
   text-align: center;
+  max-width: 344px;
 }
 
 
