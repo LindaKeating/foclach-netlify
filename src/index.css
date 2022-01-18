@@ -85,7 +85,7 @@ body {
 
 .letterTile {
   height: 15vw;
-  width: 15vw;
+  width: 18%;
 }
 
 .appContainer {
@@ -166,13 +166,14 @@ a {
 
 .keyboardRow {
   display: flex;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto 8px;
   touch-action: manipulation;
 }
 
 .keyboardButton {
   width: 30px;
+  max-width: calc(10%);
   font-family: inherit;
   font-weight: normal;
   font-size: x-large;
@@ -278,8 +279,8 @@ a {
 
 .gameBoard {
   background-color: rgba(32,25,25,.2);
-  width: 344px;
-  height: 412px;
+  width: 90vw;
+  max-width: 344px;
   display: flex;
   flex-wrap: wrap;
   grid-gap: 5px;
