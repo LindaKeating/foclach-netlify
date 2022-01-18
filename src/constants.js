@@ -54,7 +54,7 @@ export const dictionary = {
   WrongLetter: 'An litir mícheart',
   ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte',
   PlayAgain: 'Imir Arís',
-  CurrentStreak: 'Buanna gan briseadh',
+  CurrentStreak: 'buanna gan briseadh',
   LongestStreak: 'Sraith is faide buanna gan briseadh',
   Oops: 'Úps!',
   TheWordWas: 'Ba é an focal nó:',
@@ -63,5 +63,12 @@ export const dictionary = {
   BuyMeACoffee: 'phionta Guinness a cheannacht domh',
   Enter: 'Tomhas',
   ResultsCopiedToClipboard: 'Tá na torthaí cóipeáilte chuig an ghearrthaisce',
-  ShareTheResults: 'Roinn na torthaí'
+  ShareTheResults: 'Roinn na torthaí',
+  DownloadAppToPhone: 'Íoslódáil an aip seo chuig d\'fhón',
+  PlayTheGameOffline: 'Imir an cluiche as líne',
+  UseLessData: 'Laghdaigh an méid sonraí a úsáidtear don chluiche',
+  OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
+  DownloadNow: 'íoslódáil anois',
+  About: 'Eolas',
+  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin'
 }

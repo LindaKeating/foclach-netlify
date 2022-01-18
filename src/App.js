@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { letters, status } from './constants'
+import { dictionary, letters, status } from './constants'
 import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
 import words from './data/words'
@@ -12,6 +12,10 @@ import { ReactComponent as Settings } from './data/Settings.svg'
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
+import { InvalidWord } from './components/invalidWord'
+import { GameStats } from './components/gameStats'
+import { EndGameButtons } from './components/EndGameButtons'
+import { Message } from './components/Message'
 
 const state = {
   playing: 'playing',
@@ -52,7 +56,11 @@ function App() {
       })
       return letterStatuses
     },
+    invalidWord: false,
+    currentGuess: '',
+    message: ''
   }
+  const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
   const [gameState, setGameState] = useState(initialStates.gameState)
   const [board, setBoard] = useState(initialStates.board)
@@ -61,7 +69,9 @@ function App() {
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
-  const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
+  const [messageVisible, setMessageVisible] = useState(false)
+  const [message, setMessage] = useState(initialStates.message)
+  
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
   const streakUpdated = useRef(false)
@@ -69,6 +79,7 @@ function App() {
   const [firstTime, setFirstTime] = useLocalStorage('first-time', true)
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(firstTime)
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
+  const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
@@ -77,7 +88,7 @@ function App() {
     setInfoModalIsOpen(false)
   }
 
-  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', false)
+  const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   useEffect(() => {
@@ -106,22 +117,22 @@ function App() {
   const getCellStyles = (rowNumber, colNumber, letter) => {
     if (rowNumber === currentRow) {
       if (letter) {
-        return `nm-inset-background dark:nm-inset-background-dark text-primary dark:text-primary-dark ${
-          submittedInvalidWord ? 'border border-red-800' : ''
+        return ` ${
+          submittedInvalidWord ? 'submittedInvalidWord border border-red-800' : ''
         }`
       }
-      return 'nm-flat-background dark:nm-flat-background-dark text-primary dark:text-primary-dark'
+      return ''
     }
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
-        return 'nm-inset-n-green text-gray-50'
+        return 'rightLetterRightPlace'
       case status.yellow:
-        return 'nm-inset-yellow-500 text-gray-50'
+        return 'rightLetterWrongPlace'
       case status.gray:
-        return 'nm-inset-n-gray text-gray-50'
+        return 'wrongLetter'
       default:
-        return 'nm-flat-background dark:nm-flat-background-dark text-primary dark:text-primary-dark'
+        return ''
     }
   }
 
@@ -147,9 +158,14 @@ function App() {
 
   const onEnterPress = () => {
     const word = board[currentRow].join('')
+    setCurrentGuess(word)
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
+      setMessage(`Níl ${word} sa stór focal 😿`)
+      setMessageVisible(true)
       return
+    } else {
+      setSubmittedInvalidWord(false)
     }
 
     if (currentRow === 6) return
@@ -168,6 +184,8 @@ function App() {
 
   const onDeletePress = () => {
     setSubmittedInvalidWord(false)
+    setMessage('')
+    setMessageVisible(false)
     if (currentCol === 0) return
 
     setBoard((prev) => {
@@ -230,8 +248,12 @@ function App() {
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       setGameState(state.won)
+      setMessage(` Maith thú! ⭐ ${ currentStreak } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak} `)
+      setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
+      setMessage('😿 Mí ááádh')
+      setMessageVisible(true)
     }
 
       let myResults = '';
@@ -291,16 +313,14 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    setCopiedToClipboard(true)
     navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
-      setCopiedToClipboard(true);
+      setMessage(dictionary['ResultsCopiedToClipboard'])
+      setMessageVisible(true);
       console.log('successfully wrote to clipboard')
     }, function(){
-      setCopiedToClipboard(false)
+      setMessageVisible(false);
       console.log('there was a problem heuston')
     });
-    setCopiedToClipboard(true)
-
   }
 
   const modalStyles = {
@@ -310,7 +330,7 @@ function App() {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: darkMode ? 'rgba(54, 57, 74, .6)' : 'hsl(231, 16%, 92%)',
+      backgroundColor: '#0D313F'
     },
     content: {
       top: '50%',
@@ -320,36 +340,32 @@ function App() {
       transform: 'translate(-50%, -50%)',
       height: 'calc(100% - 2rem)',
       width: 'calc(100% - 2rem)',
-      backgroundColor: darkMode ? 'hsl(231, 16%, 25%)' : 'hsl(231, 16%, 92%)',
-      boxShadow: `${
-        darkMode
-          ? '0.2em 0.2em calc(0.2em * 2) #1E2029, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #36394A'
-          : '0.2em 0.2em calc(0.2em * 2) #A3A7BD, calc(0.2em * -1) calc(0.2em * -1) calc(0.2em * 2) #FFFFFF'
-      }`,
+      background: 'rgb(25,42,73)',
+      background: 'linear-gradient(180deg, rgb(47, 55, 69) 0%,    rgb(34, 66, 79) 42%, rgba(70, 107, 120, 0.995)    100%)',
       border: 'none',
       borderRadius: '1rem',
-      maxWidth: '475px',
-      maxHeight: '650px',
       position: 'relative',
+      maxWidth: '500px'
     },
   }
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className={`flex flex-col h-fill bg-background dark:bg-background-dark appContainer`}>
-        <header className="appHeader items-center py-2 px-3 text-primary dark:text-primary-dark mb-[1rem]">
+      <div className={`appContainer`}>
+        <header className="appHeader">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
             <Settings />
           </button>
-          <h1 className="text-center text-xl xxs:text-4xl sm:text-6xl tracking-wide font-bold font-righteous">
+          <h1 className="siteTitle">
             FOCLACH
           </h1>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
           </button>
         </header>
-        <div className="flex items-center flex-col py-3 mb-[1rem]">
-          <div id="gameBoard" className="grid grid-cols-5 grid-flow-row gap-4">
+        <div className="gameContainer">
+          <div>        
+           <div id="gameBoard" className="gameBoard">         
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
                 <span
@@ -358,14 +374,24 @@ function App() {
                     rowNumber,
                     colNumber,
                     letter
-                  )} letterTile inline-flex items-center font-medium justify-center text-lg rounded-full`}
+                  )} letterTile`}
                 >
                   {letter}
                 </span>
               ))
             )}
           </div>
+          
+          <div className="messageContainer">
+            
+            <Message 
+              message={message}
+              messageVisible={messageVisible}
+            />
+          </div>
+          </div>     
         </div>
+        
         <InfoModal
           isOpen={infoModalIsOpen}
           handleClose={handleInfoClose}
@@ -391,6 +417,7 @@ function App() {
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
             closeModal()
+            setMessage('')
             streakUpdated.current = false
           }}
           shareResults={() => {
@@ -405,13 +432,33 @@ function App() {
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
         />
+        <EndGameButtons
+          playAgain={() => {
+            setAnswer(initialStates.answer)
+            setGameState(initialStates.gameState)
+            setBoard(initialStates.board)
+            setCellStatuses(initialStates.cellStatuses)
+            setCurrentRow(initialStates.currentRow)
+            setCurrentCol(initialStates.currentCol)
+            setLetterStatuses(initialStates.letterStatuses)
+            setMessage('')
+            closeModal()
+            streakUpdated.current = false
+          }}
+          shareResults={() => {
+            copyToClipboard()
+          }}
+          isOpen={modalIsOpen}
+        ></EndGameButtons>
         <Keyboard
+          isNotOpen={modalIsOpen}
           letterStatuses={letterStatuses}
           addLetter={addLetter}
           onEnterPress={onEnterPress}
           onDeletePress={onDeletePress}
           gameDisabled={gameState !== state.playing}
         />
+
       </div>
     </div>
   )

@@ -8,6 +8,10 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('http://fonts.cdnfonts.com/css/futura');
+@import url('http://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+
 
 *,
 body {
@@ -29,6 +33,16 @@ html {
   /* Prevent overscroll on chrome (not supported on safari) */
   overscroll-behavior-y: none;
 }
+
+html, body, #root, #root > div {
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: rgb(25,42,73);
+  background: linear-gradient(0deg, rgb(47, 55, 69) 0%,    rgb(34, 66, 79) 42%, rgba(70, 107, 120, 0.995)    100%);
+}
 .h-fill {
   height: 120vh;
   max-height: -webkit-fill-available;
@@ -36,6 +50,19 @@ html {
 
 .font-righteous {
   font-family: 'Righteous', cursive;
+}
+
+.letterTile {
+  background-color:rgba(32,25,25,.6);
+  border-radius: 6px;
+  color: white;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .keyboardButton,
@@ -57,12 +84,18 @@ html {
 }
 
 .letterTile {
-  height: 16vw;
-  width: 16vw;
+  height: 15vw;
+  width: 18%;
 }
 
 .appContainer {
-  height: 100vh;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .shadow {
@@ -87,8 +120,134 @@ a {
   text-decoration: antiquewhite underline;
 }
 
-.keyboardContainer {
-  margin: 0 auto;
+.keyboardContainer,
+.gameStats,
+.endGameButtons {
+  width: 100%;
+  height: 140px;
+}
+
+.gameStats {
+  display: flex;
+  padding: 12px;
+}
+
+.stat {
+  width: 50%;
+  text-align: center;
+}
+
+.endGameButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.endGameButton {
+  background-color: #c3ac14;
+  padding: .375rem .75rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  width: inherit;
+  color:rgb(47, 55, 69);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.shareButton {
+  background-color: grey;
+  color: white;
+  margin-right: 16px;
+}
+
+.number {
+  font-size: xx-large;
+}
+
+.keyboardRow {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.keyboardButton {
+  width: 30px;
+  max-width: calc(10%);
+  font-family: inherit;
+  font-weight: normal;
+  font-size: x-large;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgba(32,25,25,.6);
+  color: white;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+  text-transform: lowercase;
+}
+
+.rightLetterWrongPlace {
+  background-color: #ba7a39;
+  border: 2px dashed white;
+}
+
+.rightLetterRightPlace {
+  background-color: #6aaa64;
+  border: 2px solid white;
+}
+
+.wrongLetter {
+  /* PATTERN MAKER https://www.magicpattern.design/tools/css-backgrounds */
+  background-color: #9a9aa0;
+  opacity: 0.8;
+  background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px );
+}
+
+.invalidWordContainer {
+  height: 35px;
+  text-align: center;
+}
+
+
+.submittedInvalidWord {
+  border-color: #532222;
+  background-color: #715151;
+  animation: shake-animation 4.72s ease;
+  transform-origin: 50% 50%;
+}
+
+
+
+@keyframes shake-animation {
+   0% { transform:translate(0,0) }
+  1.78571% { transform:translate(5px,0) }
+  3.57143% { transform:translate(0,0) }
+  5.35714% { transform:translate(5px,0) }
+  7.14286% { transform:translate(0,0) }
+  8.92857% { transform:translate(5px,0) }
+  10.71429% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}
+
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(10px, 0); }
+	20% { -webkit-transform: translate(-10px, 0); }
+	10% { -webkit-transform: translate(8px, 0); }
+	40% { -webkit-transform: translate(-8px, 0); }
+	50% { -webkit-transform: translate(4px, 0); }
+	60% { -webkit-transform: translate(-4px, 0); }
+	70% { -webkit-transform: translate(4px, 0); }
+	80% { -webkit-transform: translate(-2px, 0); }
+	0% { -webkit-transform: translate(2px, 0); }
+	100% { -webkit-transform: translate(0, 0); }
 }
 
 .icons {
@@ -99,7 +258,87 @@ a {
 .appHeader {
   display: flex;
   justify-content: space-between;
+  color: white;
+  height: 72px;
 }
+
+.siteTitle {
+  font-family: 'Futura', sans-serif;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.gameBoard {
+  background-color: rgba(32,25,25,.2);
+  width: 90vw;
+  max-width: 344px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+}
+
+.messageContainer {
+  width: 100%;
+  padding: 12px;
+}
+
+/* modals styles */
+
+.closeButton,
+.gitHubIcon {
+  width: 1.5em;
+  float: right;
+}
+
+.modalTitle {
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.downloadAppContainer {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.downloadTitle {
+  font-size: large;
+  margin-bottom: 1em;
+}
+
+.downloadBenefits {
+  margin-left: 1em;
+}
+
+.infoModal-Container .endGameButton, 
+.downloadAppContainer .endGameButton {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.infoModal-Rule {
+  margin-bottom: 1em;
+}
+
+.gitHubLink {
+  margin-top: 3em;
+  font-size: .8em;
+}
+
+
 
 @media (min-width: 500px) {
   .letterTile {
@@ -110,5 +349,11 @@ a {
   .keyboardContainer {
     max-width: 600px;
     margin: 0 auto;
+    height: 190px;
+  }
+
+  .keyboardButton {
+    width: 40px;
+    height: 48px
   }
 }
