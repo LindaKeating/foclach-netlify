@@ -360,11 +360,11 @@ a {
 
 @media (max-height: 736px) {
   .letterTile {
-    height: 12vw;
+    height: 11vw;
   }
 
   .appHeader {
-    height: 50px;
+    height: 40px;
   }
 
   .siteTitle {
@@ -372,10 +372,10 @@ a {
   }
 
   .keyboardContainer {
-    height: 120px;
+    height: 110px;
   }
 
   .keyboardButton {
-    height: 34px;
+    height: 30px;
   }
 }
