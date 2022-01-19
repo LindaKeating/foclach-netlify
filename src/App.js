@@ -242,6 +242,7 @@ function App() {
   useEffect(() => {
     const cellStatusesCopy = [...cellStatuses]
     const reversedStatuses = cellStatusesCopy.reverse()
+    console.log(reversedStatuses, 'reversedStatuses')
     const lastFilledRow = reversedStatuses.find((r) => {
       return r[0] !== status.unguessed
     })

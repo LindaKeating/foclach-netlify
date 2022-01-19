@@ -274,6 +274,7 @@ a {
   align-items: center;
   flex-grow: 1;
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 .gameBoard {
