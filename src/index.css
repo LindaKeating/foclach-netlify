@@ -357,9 +357,10 @@ a {
   }
 }
 
+/*
 @media (max-height: 736px) {
   .letterTile {
     height: 12vw;
     width: 12vw;
   }
-}
+}*/
