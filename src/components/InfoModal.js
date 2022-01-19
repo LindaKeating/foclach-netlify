@@ -53,7 +53,7 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, styles }) => (
           <span>{dictionary['ProjectIsOpenSource']}</span>
           <a
             className="gitHubIcon"
-            href="https://lindakeating.github.io/foclach/"
+            href="https://github.com/LindaKeating/foclach/tree/main/src"
             target="_blank"
             rel="noreferrer"
           >
