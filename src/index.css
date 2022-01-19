@@ -362,4 +362,20 @@ a {
   .letterTile {
     height: 12vw;
   }
+
+  .appHeader {
+    height: 50px;
+  }
+
+  .siteTitle {
+    font-size: 2em;
+  }
+
+  .keyboardContainer {
+    height: 120px;
+  }
+
+  .keyboardButton {
+    height: 34px;
+  }
 }
