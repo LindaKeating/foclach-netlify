@@ -257,7 +257,7 @@ function App() {
       setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
-      setMessage('😿 Mí ááádh')
+      setMessage(`😿 Mí ááádh  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
     }
 
