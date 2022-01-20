@@ -243,12 +243,18 @@ function App() {
   useEffect(() => {
     const cellStatusesCopy = [...cellStatuses]
     const reversedStatuses = cellStatusesCopy.reverse()
-    console.log(reversedStatuses, 'reversedStatuses')
     const lastFilledRow = reversedStatuses.find((r) => {
       return r[0] !== status.unguessed
     })
 
+
+    let gameRowEnded = 6;
+
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
+      let lastFilledRowIndex = reversedStatuses.findIndex((r) => {
+        return (r[0]) !== status.unguessed
+      })
+      setRowsPlayed(6 - lastFilledRowIndex)
       setGameState(state.won)
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
@@ -258,7 +264,7 @@ function App() {
       setMessageVisible(true)
     }
 
-    let myResults = '';
+    let myResults = ' ';
 
     for (var i = 0; i < rowsPlayed; i++) {
       myResults += printEmojis(cellStatuses[i])
@@ -315,7 +321,6 @@ function App() {
     navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
       setMessage(dictionary['ResultsCopiedToClipboard'])
       setMessageVisible(true);
-      console.log('successfully wrote to clipboard')
     }, function(){
       setMessageVisible(false);
       console.log('there was a problem heuston')
