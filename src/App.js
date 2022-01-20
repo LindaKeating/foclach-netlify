@@ -245,13 +245,14 @@ function App() {
     })
 
 
-    let gameRowEnded = 6;
+    let gameRowEnded = 0
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       let lastFilledRowIndex = reversedStatuses.findIndex((r) => {
         return (r[0]) !== status.unguessed
       })
       setRowsPlayed(6 - lastFilledRowIndex)
+      gameRowEnded = 6 - lastFilledRowIndex;
       setGameState(state.won)
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
@@ -259,11 +260,14 @@ function App() {
       setGameState(state.lost)
       setMessage(`😿 Mí ááádh  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
+      setRowsPlayed(6)
+      gameRowEnded = 6
+      console.log('rowsPlayed', rowsPlayed)
     }
 
     let results = '';
 
-    for (var i = 0; i < rowsPlayed; i++) {
+    for (var i = 0; i < gameRowEnded; i++) {
       results += printEmojis(cellStatuses[i])
     }
       setMyResults(results)
