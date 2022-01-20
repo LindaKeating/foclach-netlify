@@ -261,12 +261,12 @@ function App() {
       setMessageVisible(true)
     }
 
-    let myResults = '';
+    let results = '';
 
     for (var i = 0; i < rowsPlayed; i++) {
-      myResults += printEmojis(cellStatuses[i])
+      results += printEmojis(cellStatuses[i])
     }
-      setMyResults(myResults)
+      setMyResults(results)
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
