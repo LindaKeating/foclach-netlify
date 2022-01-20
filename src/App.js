@@ -261,7 +261,7 @@ function App() {
       setMessageVisible(true)
     }
 
-    let myResults = ' ';
+    let myResults = '';
 
     for (var i = 0; i < rowsPlayed; i++) {
       myResults += printEmojis(cellStatuses[i])
@@ -274,16 +274,16 @@ function App() {
     for (var i = 0; i < item.length; i++) {
       switch (item[i]) {
         case "gray":
-          s = s + '\u26AA' + '\x20';
+          s = s + '\u26AA';
           break;
         case "unguessed":
-          s = s + '\u26AA' + '\x20';
+          s = s + '\u26AA';
           break;
         case "green":
-          s = s + '💚' + '\x20';
+          s = s + '💚';
           break;
         case "yellow":
-          s = s + '💛' + '\x20';
+          s = s + '💛';
           break;
         default:
           console.log('\u26AA', item);
@@ -316,6 +316,7 @@ function App() {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(myResults + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
+      console.log('myResults', myResults)
       setMessage(dictionary['ResultsCopiedToClipboard'])
       setMessageVisible(true);
     }, function(){
