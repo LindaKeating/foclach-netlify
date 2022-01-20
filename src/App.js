@@ -25,10 +25,6 @@ const state = {
 
 }
 
-let variableState = {
-  lastResult: '',
-}
-
 const getRandomAnswer = () => {
   const randomIndex = Math.floor(Math.random() * answers.length)
   return answers[randomIndex].toUpperCase()
@@ -81,6 +77,7 @@ function App() {
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(firstTime)
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
+  const [myResults, setMyResults] = useState('')
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
@@ -269,7 +266,7 @@ function App() {
     for (var i = 0; i < rowsPlayed; i++) {
       myResults += printEmojis(cellStatuses[i])
     }
-      variableState.lastResult = myResults;
+      setMyResults(myResults)
   }, [cellStatuses, currentRow])
 
   const printEmojis = (item) => {
@@ -318,7 +315,7 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(variableState.lastResult + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
+    navigator.clipboard.writeText(myResults + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
       setMessage(dictionary['ResultsCopiedToClipboard'])
       setMessageVisible(true);
     }, function(){
@@ -423,6 +420,7 @@ function App() {
             setRowsPlayed(0)
             closeModal()
             setMessage('')
+            setMyResults('')
             streakUpdated.current = false
           }}
           shareResults={() => {
@@ -448,6 +446,7 @@ function App() {
             setLetterStatuses(initialStates.letterStatuses)
             setMessage('')
             setRowsPlayed(0)
+            setMyResults('')
             closeModal()
             streakUpdated.current = false
           }}
