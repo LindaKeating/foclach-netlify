@@ -74,6 +74,7 @@ function App() {
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [firstTime, setFirstTime] = useLocalStorage('first-time', true)
@@ -257,14 +258,11 @@ function App() {
       setMessageVisible(true)
     }
 
-      let myResults = '';
-      let rowOne = printEmojis(cellStatuses[0]);
-      let rowTwo = printEmojis(cellStatuses[1]);
-      let rowThree = printEmojis(cellStatuses[2]);
-      let rowFour = printEmojis(cellStatuses[3]);
-      let rowFive = printEmojis(cellStatuses[4]);
-      let rowSix = printEmojis(cellStatuses[5]);
-      myResults = myResults.concat(rowOne, rowTwo, rowThree, rowFour, rowFive, rowSix);
+    let myResults = '';
+
+    for (var i = 0; i < rowsPlayed; i++) {
+      myResults += printEmojis(cellStatuses[i])
+    }
       variableState.lastResult = myResults;
   }, [cellStatuses, currentRow])
 
@@ -417,6 +415,7 @@ function App() {
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
+            setRowsPlayed(0)
             closeModal()
             setMessage('')
             streakUpdated.current = false
@@ -443,6 +442,7 @@ function App() {
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
             setMessage('')
+            setRowsPlayed(0)
             closeModal()
             streakUpdated.current = false
           }}
