@@ -70,6 +70,7 @@ function App() {
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [dayRecord, setDayRecord] = useLocalStorage(Date)
   const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
