@@ -341,14 +341,11 @@ function App() {
     });
   }
 
-  // when the game Mode is updated update the answer
+  //when game Mode is toggled, update the answer
   useEffect(() => {
-    console.log('gameMode sideEffect', gameMode)
+    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
   }, [gameMode])
 
-  const updateAnswer = () => {
-
-  }
 
   const modalStyles = {
     overlay: {
