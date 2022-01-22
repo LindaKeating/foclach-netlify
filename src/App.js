@@ -81,6 +81,8 @@ function App() {
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [wins, setWins] = useLocalStorage('wins', 0)
+  const [losses, setLosses] = useLocalStorage('losses', 0)
   const [gameMode, setGameMode] = useLocalStorage('daily', true)
   const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
@@ -273,10 +275,12 @@ function App() {
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
       setGameState(state.won)
+      setWins(wins + 1)
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
+      setLosses(losses + 1)
       setMessage(`😿 Mí ááádh  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
       setRowsPlayed(6)
@@ -446,20 +450,6 @@ function App() {
           currentStreak={currentStreak}
           longestStreak={longestStreak}
           answer={answer}
-          playAgain={() => {
-            setAnswer(initialStates.answer)
-            setGameState(initialStates.gameState)
-            setBoard(initialStates.board)
-            setCellStatuses(initialStates.cellStatuses)
-            setCurrentRow(initialStates.currentRow)
-            setCurrentCol(initialStates.currentCol)
-            setLetterStatuses(initialStates.letterStatuses)
-            setRowsPlayed(0)
-            closeModal()
-            setMessage('')
-            setMyResults('')
-            streakUpdated.current = false
-          }}
           shareResults={() => {
             copyToClipboard()
           }}

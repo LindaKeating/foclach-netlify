@@ -9,13 +9,18 @@ Modal.setAppElement('#root')
 export const EndGameModal = ({ 
   isOpen, 
   handleClose, 
-  styles
+  styles,
+  currentStreak,
+  longestStreak
  }) => {
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={handleClose}
       style={styles}
+      currentStreak={currentStreak}
+      longestStreak={longestStreak}
+
     >
       <div className="h-full endGameModal dark">
         <button
@@ -38,14 +43,14 @@ export const EndGameModal = ({
         </div> 
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
-            3
+            {currentStreak}
           </span>
           current streak
         </div> 
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
-            6
-          </span>
+            {longestStreak}
+          </span>       
           longest streak
         </div> 
       </div>
