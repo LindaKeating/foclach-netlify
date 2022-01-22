@@ -105,7 +105,7 @@ function App() {
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   useEffect(() => {
-    if (gameState !== state.playing) {
+    if (gameState !== state.playing && !gameMode) {
       setTimeout(() => {
         openModal()
       }, 500)
