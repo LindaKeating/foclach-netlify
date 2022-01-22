@@ -15,7 +15,17 @@ export const EndGameModal = ({
   percentage,
   totalPlayed
  }) => {
-  const hoursMinsSecs = {hours:1, minutes: 20, seconds: 40}
+   const timeToMidnight = () => {
+    let now = new Date(),
+    midnight = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        23,59,59),
+    diff =  midnight.getTime() - now.getTime();
+    let hsMsSs = new Date(diff).toISOString().slice(11,19)
+    return { hours: hsMsSs.slice(0,2), minutes: hsMsSs.slice(3,5), seconds: hsMsSs.slice(6,8)}
+   }
   return (
     <Modal
       isOpen={isOpen}
@@ -43,7 +53,7 @@ export const EndGameModal = ({
           <span className="endGameMode-StatisticNumber">
             {percentage}
           </span>
-          wins%
+          wins %
         </div> 
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
@@ -58,7 +68,7 @@ export const EndGameModal = ({
           longest streak
         </div>
         <CountdownTimer 
-          hoursMinsSecs={hoursMinsSecs}
+          hoursMinsSecs={timeToMidnight()}
         />
       </div>
     </Modal>
