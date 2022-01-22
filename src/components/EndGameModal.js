@@ -18,6 +18,12 @@ export const EndGameModal = ({
       style={styles}
     >
       <div className="h-full endGameModal dark">
+        <button
+              className="closeButton"
+              onClick={handleClose}
+            >
+              <Close />
+        </button>
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
             2

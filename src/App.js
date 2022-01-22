@@ -439,7 +439,7 @@ function App() {
         />
         <EndGameModal
           isOpen={dayModeModalOpen}
-          handleClose={closeModal}
+          handleClose={() => setDayModeModalOpen(false)}
           styles={modalStyles}
           gameState={gameState}
           state={state}
