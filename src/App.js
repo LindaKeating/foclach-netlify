@@ -41,7 +41,6 @@ const getAnswer = (mode) => {
   return mode ? getTodaysAnswer() : getRandomAnswer()
 }
 
-
 function App() {
   const initialStates = {
     answer: () => getAnswer(true),
@@ -348,6 +347,15 @@ function App() {
   //when game Mode is toggled, update the answer
   useEffect(() => {
     gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
+    setGameState(initialStates.gameState)
+    setBoard(initialStates.board)
+    setCellStatuses(initialStates.cellStatuses)
+    setCurrentRow(initialStates.currentRow)
+    setCurrentCol(initialStates.currentCol)
+    setLetterStatuses(initialStates.letterStatuses)
+    setRowsPlayed(0)
+    setMessage('')
+    setMyResults('')
   }, [gameMode])
 
 
