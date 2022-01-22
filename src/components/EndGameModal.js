@@ -3,7 +3,7 @@ import Success from '../data/Success.png'
 import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
 import { ReactComponent as Close } from '../data/Close.svg'
-
+import { CountdownTimer } from './countdownTimer/CountdownTimer';
 Modal.setAppElement('#root')
 
 export const EndGameModal = ({ 
@@ -15,6 +15,7 @@ export const EndGameModal = ({
   percentage,
   totalPlayed
  }) => {
+  const hoursMinsSecs = {hours:1, minutes: 20, seconds: 40}
   return (
     <Modal
       isOpen={isOpen}
@@ -55,7 +56,10 @@ export const EndGameModal = ({
             {longestStreak}
           </span>       
           longest streak
-        </div> 
+        </div>
+        <CountdownTimer 
+          hoursMinsSecs={hoursMinsSecs}
+        />
       </div>
     </Modal>
   )

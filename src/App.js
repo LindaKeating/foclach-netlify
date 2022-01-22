@@ -18,6 +18,7 @@ import { GameStats } from './components/gameStats'
 import { EndGameButtons } from './components/EndGameButtons'
 import { Message } from './components/Message'
 
+
 const state = {
   playing: 'playing',
   won: 'won',
@@ -255,6 +256,12 @@ function App() {
       screenShotResult()
     }
     return correctAnswer
+  }
+
+  const percentageStatistic = () => {
+    let totalGames = losses + wins
+    let percentage = wins / totalGames * 100
+    return Math.round(Number.parseFloat(percentage))
   }
 
   // every time cellStatuses updates, check if the game is won or lost
