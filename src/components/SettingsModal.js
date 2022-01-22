@@ -6,7 +6,17 @@ import { GameModePicker } from './gameModePicker/gameModePicker'
 
 Modal.setAppElement('#root')
 
-export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDarkMode, downloadApp }) => {
+export const SettingsModal = ({ 
+  isOpen, 
+  handleClose, 
+  styles, 
+  darkMode, 
+  toggleDarkMode, 
+  downloadApp, 
+  getAnswer,
+  gameMode,
+  toggleGameMode
+ }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -26,7 +36,10 @@ export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDar
               <Close />
             </button>
           </div>
-          <GameModePicker />
+          <GameModePicker 
+            gameMode={gameMode}
+            toggleGameMode={toggleGameMode}
+            />
           <div className="downloadAppContainer">
             <h1 className="downloadTitle">{dictionary['DownloadAppToPhone']}</h1>
             <ul className="downloadBenefits">

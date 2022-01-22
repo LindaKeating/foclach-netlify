@@ -22,7 +22,6 @@ const state = {
   won: 'won',
   lost: 'lost',
   copiedToClipboard: false,
-
 }
 
 const getRandomAnswer = () => {
@@ -30,9 +29,18 @@ const getRandomAnswer = () => {
   return answers[randomIndex].toUpperCase()
 }
 
+const getTodaysAnswer = () => {
+  return 'anois'
+}
+
+const getAnswer = (mode) => {
+  return mode ? getTodaysAnswer() : getRandomAnswer()
+}
+
+
 function App() {
   const initialStates = {
-    answer: () => getRandomAnswer(),
+    answer: () => getAnswer(true),
     gameState: state.playing,
     board: [
       ['', '', '', '', ''],
@@ -70,7 +78,7 @@ function App() {
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
-  const [dayRecord, setDayRecord] = useLocalStorage(Date)
+  const [gameMode, setGameMode] = useLocalStorage('daily', true)
   const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -80,12 +88,15 @@ function App() {
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
   const [myResults, setMyResults] = useState('')
 
+
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
   const handleInfoClose = () => {
     setFirstTime(false)
     setInfoModalIsOpen(false)
   }
+
+  const toggleGameMode = () => setGameMode((prev) => !prev)
 
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
@@ -330,6 +341,10 @@ function App() {
     });
   }
 
+  const updateAnswer = () => {
+
+  }
+
   const modalStyles = {
     overlay: {
       position: 'fixed',
@@ -389,8 +404,7 @@ function App() {
             )}
           </div>
           
-          <div className="messageContainer">
-            
+          <div className="messageContainer">         
             <Message 
               message={message}
               messageVisible={messageVisible}
@@ -440,6 +454,9 @@ function App() {
           styles={modalStyles}
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
+          getAnswer={getAnswer}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <EndGameButtons
           playAgain={() => {

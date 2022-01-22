@@ -1,34 +1,26 @@
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 
-const updateMode = function (x) {
-    console.log('params', x)
-}
-
-function GameModePicker() {
-    const [gameMode, setGameMode] = useLocalStorage('daily', true)
-    console.log(gameMode, 'gameMode')
+export const GameModePicker = ({ gameMode, toggleGameMode}) => {
     return (
         <div className="radio-btn-container">
         <div
           className="radio-btn"
-          onClick={()=>{setGameMode(true)}}>
+          onClick={toggleGameMode}>
           <input
             type="radio"
             value="daily"
             name="gameMode"
             checked={gameMode}
-            onChange={()=>{}}
+            onChange={() => {}}
           />
           Daily
         </div>
         <div
           className="radio-btn"
-          onClick={() => {
-            setGameMode(false);
-          }}       
+          onClick={toggleGameMode}       
         >
           <input          
-            onChange={()=>{}}
+            onChange={() => {}}
             type="radio"
             value="free"
             name="gameMode"
@@ -40,4 +32,37 @@ function GameModePicker() {
     )
 }
 
-export { GameModePicker }
+/*
+function GameModePicker(props) {
+    return (
+        <div className="radio-btn-container">
+        <div
+          className="radio-btn"
+          onClick={()=>{}}>
+          <input
+            type="radio"
+            value="daily"
+            name="gameMode"
+            checked={props.gameMode}
+            onChange={() => {}}
+          />
+          Daily
+        </div>
+        <div
+          className="radio-btn"
+          onClick={() => {}}       
+        >
+          <input          
+            onChange={() => {}}
+            type="radio"
+            value="free"
+            name="gameMode"
+            checked={!props.gameMode}
+          />
+          Free
+        </div>
+      </div>
+    )
+} 
+
+export { GameModePicker } */
