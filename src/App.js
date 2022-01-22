@@ -4,6 +4,7 @@ import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
 import words from './data/words'
 import  html2canvas  from 'html2canvas'
+import dailyAnswers from './data/dailyAnswers'
 
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { ReactComponent as Info } from './data/Info.svg'
@@ -30,7 +31,10 @@ const getRandomAnswer = () => {
 }
 
 const getTodaysAnswer = () => {
-  return 'anois'
+  const fullDate = new Date()
+  const dateSubstring = fullDate.toISOString().substring(0, 10)
+  const todaysWord = dailyAnswers[dateSubstring]['word']
+  return todaysWord
 }
 
 const getAnswer = (mode) => {
