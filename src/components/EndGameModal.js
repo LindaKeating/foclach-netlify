@@ -11,7 +11,9 @@ export const EndGameModal = ({
   handleClose, 
   styles,
   currentStreak,
-  longestStreak
+  longestStreak,
+  percentage,
+  totalPlayed
  }) => {
   return (
     <Modal
@@ -20,7 +22,8 @@ export const EndGameModal = ({
       style={styles}
       currentStreak={currentStreak}
       longestStreak={longestStreak}
-
+      percentage={percentage}
+      totalPlayed={totalPlayed}
     >
       <div className="h-full endGameModal dark">
         <button
@@ -31,13 +34,13 @@ export const EndGameModal = ({
         </button>
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
-            2
+            {totalPlayed}
           </span>
           played
         </div>
         <div className="endGameModal-Statistic">
           <span className="endGameMode-StatisticNumber">
-            100
+            {percentage}
           </span>
           wins%
         </div> 

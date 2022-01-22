@@ -13,7 +13,7 @@ export const GameModePicker = ({ gameMode, toggleGameMode}) => {
             checked={gameMode}
             onChange={() => {}}
           />
-          Daily
+          Mód Laethúil
         </div>
         <div
           className="radio-btn"
@@ -26,7 +26,7 @@ export const GameModePicker = ({ gameMode, toggleGameMode}) => {
             name="gameMode"
             checked={!gameMode}
           />
-          Free
+          Mód Cleachtú
         </div>
       </div>
     )

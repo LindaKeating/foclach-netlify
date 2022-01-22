@@ -275,13 +275,13 @@ function App() {
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
       setGameState(state.won)
-      setWins(wins + 1)
+      if(gameMode) { setWins(wins + 1) }  
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       setGameState(state.lost)
-      setLosses(losses + 1)
-      setMessage(`😿 Mí ááádh  ${ answer } an freagra ceart`  )
+      if(gameMode) { setLosses(losses + 1)}
+      setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
       setRowsPlayed(6)
       gameRowEnded = 6
@@ -454,6 +454,8 @@ function App() {
             copyToClipboard()
           }}
           isCopied={copiedToClipboard}
+          percentage={percentageStatistic()}
+          totalPlayed={wins + losses}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
