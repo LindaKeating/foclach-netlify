@@ -341,6 +341,11 @@ function App() {
     });
   }
 
+  // when the game Mode is updated update the answer
+  useEffect(() => {
+    console.log('gameMode sideEffect', gameMode)
+  }, [gameMode])
+
   const updateAnswer = () => {
 
   }

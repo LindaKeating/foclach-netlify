@@ -31,38 +31,3 @@ export const GameModePicker = ({ gameMode, toggleGameMode}) => {
       </div>
     )
 }
-
-/*
-function GameModePicker(props) {
-    return (
-        <div className="radio-btn-container">
-        <div
-          className="radio-btn"
-          onClick={()=>{}}>
-          <input
-            type="radio"
-            value="daily"
-            name="gameMode"
-            checked={props.gameMode}
-            onChange={() => {}}
-          />
-          Daily
-        </div>
-        <div
-          className="radio-btn"
-          onClick={() => {}}       
-        >
-          <input          
-            onChange={() => {}}
-            type="radio"
-            value="free"
-            name="gameMode"
-            checked={!props.gameMode}
-          />
-          Free
-        </div>
-      </div>
-    )
-} 
-
-export { GameModePicker } */
