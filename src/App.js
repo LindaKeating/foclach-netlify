@@ -90,6 +90,7 @@ function App() {
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
   const [myResults, setMyResults] = useState('')
+  const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
 
 
   const openModal = () => setIsOpen(true)
@@ -109,7 +110,10 @@ function App() {
       setTimeout(() => {
         openModal()
       }, 500)
-    }
+    } 
+    if (gameState !== state.playing && gameMode) {
+      setDayModeModalOpen(true)
+    } 
   }, [gameState])
 
   useEffect(() => {
@@ -434,10 +438,9 @@ function App() {
           styles={modalStyles}
         />
         <EndGameModal
-          isOpen={modalIsOpen}
+          isOpen={dayModeModalOpen}
           handleClose={closeModal}
           styles={modalStyles}
-          darkMode={darkMode}
           gameState={gameState}
           state={state}
           currentStreak={currentStreak}
