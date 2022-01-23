@@ -123,12 +123,13 @@ function App() {
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
-  // on mount effect I think?
+  // on mount event I think?
   useEffect (() => {
-    if (!gameMode) {
-      setBoard(initialStates.board)
-    } else {
+    if (gameMode && playedAlreadyToday(lastPlayedDate)) {
+      console.log('played Already today', dailyBoard)
       setBoard(dailyBoard)
+    } else {
+      setBoard(initialStates.board)
     }
   }, [])
 
@@ -308,11 +309,13 @@ function App() {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
+      gameMode ? setDailyBoard(board): setPracticeBoard(board)
       setGameState(state.won)   
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
+      gameMode ? setPracticeBoard(board) : setPracticeBoard(board)
       setGameState(state.lost)      
       setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
