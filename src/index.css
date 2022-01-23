@@ -62,6 +62,8 @@ body {
   justify-content: center;
   vertical-align: middle;
   align-items: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
 .keyboardButton,
@@ -353,6 +355,16 @@ a {
    flex: 1
  }
 
+ .endGameModal-Message {
+   text-align: center;
+ }
+
+ .endGameModal-Statistics, 
+ .endGameModal-Message,
+ .endGameModal-Countdown {
+   margin-bottom: 2rem;
+ }
+
  .endGameModal-Statistics {
    display: flex;
  }
@@ -383,6 +395,21 @@ h1 {
   text-align: center;
   letter-spacing: 0.05em;
   font-variant-numeric: proportional-nums;
+}
+
+
+/*
+***************************************************************
+CARD ANIMATIONS
+****************************************************************
+*/
+
+.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.is-flipped > span {
+  transform: rotateY(180deg);
 }
 
 /*

@@ -16,7 +16,7 @@ export const EndGameModal = ({
   percentage,
   totalPlayed, 
   message,
-  messageVisible
+  shareResults
  }) => {
    const timeToMidnight = () => {
     let now = new Date(),
@@ -38,6 +38,7 @@ export const EndGameModal = ({
       longestStreak={longestStreak}
       percentage={percentage}
       totalPlayed={totalPlayed}
+      shareResults={shareResults}
     >
       <div className="h-full endGameModal dark">
         <button
@@ -90,10 +91,18 @@ export const EndGameModal = ({
           <div className="endGameModal-Word">
 
           </div>
-          <div class="endGameModal-Countdown">
+          <div className="endGameModal-Countdown">
             <h1>An chéad FOCLACH eile</h1>
             <CountdownTimer 
               hoursMinsSecs={timeToMidnight()}/>
+          </div>
+          <div className="endGameModal-Share">
+            <div className="endGameButtons">
+              <button className="endGameButton shareButton" 
+                onClick={shareResults}>
+                ⭐   Roinn  ⭐ 
+              </button>
+            </div>
           </div>
         </div> 
       </div>

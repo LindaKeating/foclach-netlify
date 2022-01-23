@@ -213,11 +213,11 @@ function App() {
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
-        return 'rightLetterRightPlace'
+        return 'rightLetterRightPlace is-flipped'
       case status.yellow:
-        return 'rightLetterWrongPlace'
+        return 'rightLetterWrongPlace is-flipped'
       case status.gray:
-        return 'wrongLetter'
+        return 'wrongLetter is-flipped'
       default:
         return ''
     }
@@ -476,16 +476,19 @@ function App() {
            <div id="gameBoard" className="gameBoard">         
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
-                <span
-                  key={colNumber}
-                  className={`${getCellStyles(
+                  <span
+                    key={colNumber}
+                    className={`${getCellStyles(
                     rowNumber,
                     colNumber,
-                    letter
+                    letter,                  
                   )} letterTile`}
-                >
-                  {letter}
-                </span>
+                  >
+                    <span className="innerLetter">
+                      {letter}
+                    </span>
+                  
+                  </span>             
               ))
             )}
           </div>
