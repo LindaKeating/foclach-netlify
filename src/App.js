@@ -43,7 +43,7 @@ const getAnswer = (mode) => {
 }
 
 const playedAlreadyToday = (date) => {
-  if (date.substring(0, 10) === new Date().toISOString().substring(0, 10)) {
+  if (date && date.substring(0, 10) === new Date().toISOString().substring(0, 10)) {
     return true
   } else {
     return false
@@ -88,6 +88,7 @@ function App() {
   const [practiceBoard, setPracticeBoard] = useLocalStorage('practiceBoard', initialStates.board)
   const [dailyBoard, setDailyBoard] = useLocalStorage('dailyBoard', initialStates.board)
   const [board, setBoard] = useState(initialStates.board)
+  const [dailyCellStatuses, setDailyCellStatuses] = useLocalStorage('dailyCellStatuses', initialStates.cellStatuses)
   const [cellStatuses, setCellStatuses] = useState(initialStates.cellStatuses)
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
@@ -118,7 +119,24 @@ function App() {
     setInfoModalIsOpen(false)
   }
 
-  const toggleGameMode = () => setGameMode((prev) => !prev)
+  const updateBoard = () => {
+    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
+    gameMode ? setBoard(dailyBoard) : setBoard( initialStates.board)
+    console.log(dailyCellStatuses, "daily cell statuses")
+    console.log(gameMode, 'gameMode')
+    gameMode ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
+    setGameState(initialStates.gameState)
+    setCurrentRow(initialStates.currentRow)
+    setCurrentCol(initialStates.currentCol)
+    setLetterStatuses(initialStates.letterStatuses)
+    setRowsPlayed(0)
+    setMessage('')
+    setMyResults('')
+  }
+
+  const toggleGameMode = () => {
+    setGameMode((prev) => !prev)
+  }
 
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
@@ -126,10 +144,12 @@ function App() {
   // on mount event I think?
   useEffect (() => {
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
-      console.log('played Already today', dailyBoard)
       setBoard(dailyBoard)
+      setCellStatuses(dailyCellStatuses)
+      
     } else {
       setBoard(initialStates.board)
+      setCellStatuses(initialStates.cellStatuses)
     }
   }, [])
 
@@ -160,6 +180,11 @@ function App() {
       }
     }
   }, [gameState, currentStreak, longestStreak, setLongestStreak, setCurrentStreak])
+
+  useEffect(() => {
+    console.log('gameMode', gameMode)
+    updateBoard()
+  }, [gameMode])
 
   const getCellStyles = (rowNumber, colNumber, letter) => {
     if (rowNumber === currentRow) {
@@ -310,12 +335,14 @@ function App() {
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
       gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
+      if(gameMode) {setDailyCellStatuses([...cellStatuses])}
       setGameState(state.won)   
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
       gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
+      if(gameMode) { setDailyCellStatuses([...cellStatuses])}
       setGameState(state.lost)      
       setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
@@ -386,19 +413,6 @@ function App() {
       console.log('there was a problem heuston')
     });
   }
-
-  //when game Mode is toggled, update the answer
-  useEffect(() => {
-    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
-    setGameState(initialStates.gameState)
-    setCellStatuses(initialStates.cellStatuses)
-    setCurrentRow(initialStates.currentRow)
-    setCurrentCol(initialStates.currentCol)
-    setLetterStatuses(initialStates.letterStatuses)
-    setRowsPlayed(0)
-    setMessage('')
-    setMyResults('')
-  }, [gameMode])
 
 
   const modalStyles = {
@@ -504,6 +518,7 @@ function App() {
         <EndGameButtons
           playAgain={() => {
             setAnswer(initialStates.answer)
+            setBoard(initialStates.board)
             setGameState(initialStates.gameState)
             setCellStatuses(initialStates.cellStatuses)
             setCurrentRow(initialStates.currentRow)
