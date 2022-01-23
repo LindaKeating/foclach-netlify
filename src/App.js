@@ -110,6 +110,7 @@ function App() {
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
   const [myResults, setMyResults] = useState('')
   const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
+  const [enterEvent, setEnterEvent] = useState(null)
 
 
   const openModal = () => setIsOpen(true)
@@ -124,7 +125,6 @@ function App() {
     dailyModeAndPlayedToday ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
     dailyModeAndPlayedToday ? setBoard(dailyBoard) : setBoard( initialStates.board)
     dailyModeAndPlayedToday ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
-    console.log(dailyModeAndPlayedToday, 'dailyModeAndPlayedToday')
     setGameState(initialStates.gameState)
     setCurrentRow(initialStates.currentRow)
     setCurrentCol(initialStates.currentCol)
@@ -182,11 +182,24 @@ function App() {
   }, [gameState, currentStreak, longestStreak, setLongestStreak, setCurrentStreak])
 
   useEffect(() => {
-    console.log('gameMode', gameMode)
     updateBoard()
   }, [gameMode])
 
   const getCellStyles = (rowNumber, colNumber, letter) => {
+    if (rowNumber === 0 && enterEvent !== 'Enter' ) {
+      switch (cellStatuses[rowNumber][colNumber]) {
+        case status.green:
+          return 'rightLetterRightPlace'
+        case status.yellow:
+          return 'rightLetterWrongPlace'
+        case status.gray:
+          return 'wrongLetter'
+        default:
+          console.log('trying to get first row to return styles')
+          return ''
+      }
+    }
+
     if (rowNumber === currentRow) {
       if (letter) {
         return ` ${
@@ -195,6 +208,8 @@ function App() {
       }
       return ''
     }
+    
+
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
@@ -228,7 +243,8 @@ function App() {
     return words[word.toLowerCase()]
   }
 
-  const onEnterPress = () => {
+  const onEnterPress = (event) => {
+    setEnterEvent(event && event.key)
     const word = board[currentRow].join('')
     setCurrentGuess(word)
     if (!isValidWord(word)) {
@@ -254,7 +270,7 @@ function App() {
     });
   }
 
-  const onDeletePress = () => {
+  const onDeletePress = (event) => {
     setSubmittedInvalidWord(false)
     setMessage('')
     setMessageVisible(false)
