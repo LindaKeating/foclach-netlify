@@ -4,6 +4,7 @@ import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
 import { ReactComponent as Close } from '../data/Close.svg'
 import { CountdownTimer } from './countdownTimer/CountdownTimer';
+import { Message } from './Message'
 Modal.setAppElement('#root')
 
 export const EndGameModal = ({ 
@@ -13,7 +14,9 @@ export const EndGameModal = ({
   currentStreak,
   longestStreak,
   percentage,
-  totalPlayed
+  totalPlayed, 
+  message,
+  messageVisible
  }) => {
    const timeToMidnight = () => {
     let now = new Date(),
@@ -43,33 +46,56 @@ export const EndGameModal = ({
             >
               <Close />
         </button>
-        <div className="endGameModal-Statistic">
-          <span className="endGameMode-StatisticNumber">
+        <div className="endGameModal-Container">
+          <h1>Statistics</h1>
+          <div className="endGameModal-Statistics">
+        <div className="endGameMode-statisticContainer">
+          <div className="endGameMode-StatisticNumber">
             {totalPlayed}
-          </span>
-          played
+          </div>
+          <div class="label">
+            played
+          </div>
         </div>
-        <div className="endGameModal-Statistic">
-          <span className="endGameMode-StatisticNumber">
+        <div className="endGameMode-statisticContainer">
+          <div className="endGameMode-StatisticNumber">
             {percentage}
-          </span>
-          wins %
+          </div>
+          <div class="label">
+            wins %
+          </div>
         </div> 
-        <div className="endGameModal-Statistic">
-          <span className="endGameMode-StatisticNumber">
+        <div className="endGameMode-statisticContainer">
+          <div className="endGameMode-StatisticNumber">
             {currentStreak}
-          </span>
+          </div>
+          <div class="label">
           current streak
+            </div>
+          
         </div> 
-        <div className="endGameModal-Statistic">
-          <span className="endGameMode-StatisticNumber">
+        <div className="endGameMode-statisticContainer">
+          <div className="endGameMode-StatisticNumber">
             {longestStreak}
-          </span>       
+          </div>
+          <div class="label">
           longest streak
+            </div>    
+          
         </div>
-        <CountdownTimer 
-          hoursMinsSecs={timeToMidnight()}
-        />
+          </div>
+          <div className="endGameModal-Message">
+            {message}
+          </div>
+          <div className="endGameModal-Word">
+
+          </div>
+          <div class="endGameModal-Countdown">
+            <h1>An chéad FOCLACH eile</h1>
+            <CountdownTimer 
+              hoursMinsSecs={timeToMidnight()}/>
+          </div>
+        </div> 
       </div>
     </Modal>
   )

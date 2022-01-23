@@ -520,6 +520,8 @@ function App() {
           isCopied={copiedToClipboard}
           percentage={percentageStatistic()}
           totalPlayed={wins + losses}
+          message={message}
+          messageVisible={messageVisible}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
