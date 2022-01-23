@@ -42,6 +42,15 @@ const getAnswer = (mode) => {
   return mode ? getTodaysAnswer() : getRandomAnswer()
 }
 
+const playedAlreadyToday = (date) => {
+  if (date.substring(0, 10) === new Date().toISOString().substring(0, 10)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
 function App() {
   const initialStates = {
     answer: () => getAnswer(true),
@@ -68,9 +77,16 @@ function App() {
     currentGuess: '',
     message: ''
   }
+
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
+  const [boardState, setBoardState] = useLocalStorage('boardState', null)
+  const [gameMode, setGameMode] = useLocalStorage('daily', true)
+  const [lastPlayedDate, setLastPlayedDate] = useLocalStorage('lastPlayedDate', null)
+  const boards = gameMode && lastPlayedDate ? boardState : initialStates.board
   const [gameState, setGameState] = useState(initialStates.gameState)
+  const [practiceBoard, setPracticeBoard] = useLocalStorage('practiceBoard', initialStates.board)
+  const [dailyBoard, setDailyBoard] = useLocalStorage('dailyBoard', initialStates.board)
   const [board, setBoard] = useState(initialStates.board)
   const [cellStatuses, setCellStatuses] = useState(initialStates.cellStatuses)
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
@@ -84,7 +100,6 @@ function App() {
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
   const [wins, setWins] = useLocalStorage('wins', 0)
   const [losses, setLosses] = useLocalStorage('losses', 0)
-  const [gameMode, setGameMode] = useLocalStorage('daily', true)
   const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -108,6 +123,15 @@ function App() {
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
+  // on mount effect I think?
+  useEffect (() => {
+    if (!gameMode) {
+      setBoard(initialStates.board)
+    } else {
+      setBoard(dailyBoard)
+    }
+  }, [])
+
   useEffect(() => {
     if (gameState !== state.playing && !gameMode) {
       setTimeout(() => {
@@ -126,8 +150,10 @@ function App() {
           setLongestStreak((prev) => prev + 1)
         }
         setCurrentStreak((prev) => prev + 1)
+        setWins((prev) => prev + 1)
         streakUpdated.current = true
       } else if (gameState === state.lost) {
+        setLosses((prev) => prev + 1)
         setCurrentStreak(0)
         streakUpdated.current = true
       }
@@ -279,20 +305,19 @@ function App() {
       let lastFilledRowIndex = reversedStatuses.findIndex((r) => {
         return (r[0]) !== status.unguessed
       })
+      if(gameMode) { setLastPlayedDate(new Date().toISOString())}
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
-      setGameState(state.won)
-      if(gameMode) { setWins(wins + 1) }  
+      setGameState(state.won)   
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
-      setGameState(state.lost)
-      if(gameMode) { setLosses(losses + 1)}
+      if(gameMode) { setLastPlayedDate(new Date().toISOString())}
+      setGameState(state.lost)      
       setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
       setRowsPlayed(6)
       gameRowEnded = 6
-      console.log('rowsPlayed', rowsPlayed)
     }
 
     let results = '';
@@ -363,7 +388,6 @@ function App() {
   useEffect(() => {
     gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
     setGameState(initialStates.gameState)
-    setBoard(initialStates.board)
     setCellStatuses(initialStates.cellStatuses)
     setCurrentRow(initialStates.currentRow)
     setCurrentCol(initialStates.currentCol)
@@ -478,7 +502,6 @@ function App() {
           playAgain={() => {
             setAnswer(initialStates.answer)
             setGameState(initialStates.gameState)
-            setBoard(initialStates.board)
             setCellStatuses(initialStates.cellStatuses)
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)

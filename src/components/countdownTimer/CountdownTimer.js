@@ -6,8 +6,7 @@ const CountdownTimer = ({hoursMinsSecs}) => {
     const { hours = 0, minutes = 0, seconds = 60 } = hoursMinsSecs;
     const [[hrs, mins, secs], setTime] = useState([hours, minutes, seconds]);
 
-    const tick = () => {
-   
+    const tick = () => { 
         if (hrs === 0 && mins === 0 && secs === 0) 
             reset()
         else if (mins === 0 && secs === 0) {
