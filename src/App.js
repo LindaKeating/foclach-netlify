@@ -309,13 +309,13 @@ function App() {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
-      gameMode ? setDailyBoard(board): setPracticeBoard(board)
+      gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
       setGameState(state.won)   
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
-      gameMode ? setPracticeBoard(board) : setPracticeBoard(board)
+      gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
       setGameState(state.lost)      
       setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
