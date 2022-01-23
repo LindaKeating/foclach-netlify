@@ -120,11 +120,11 @@ function App() {
   }
 
   const updateBoard = () => {
-    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
-    gameMode ? setBoard(dailyBoard) : setBoard( initialStates.board)
-    console.log(dailyCellStatuses, "daily cell statuses")
-    console.log(gameMode, 'gameMode')
-    gameMode ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
+    const dailyModeAndPlayedToday =  gameMode && playedAlreadyToday(lastPlayedDate)
+    dailyModeAndPlayedToday ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
+    dailyModeAndPlayedToday ? setBoard(dailyBoard) : setBoard( initialStates.board)
+    dailyModeAndPlayedToday ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
+    console.log(dailyModeAndPlayedToday, 'dailyModeAndPlayedToday')
     setGameState(initialStates.gameState)
     setCurrentRow(initialStates.currentRow)
     setCurrentCol(initialStates.currentCol)
@@ -143,10 +143,10 @@ function App() {
 
   // on mount event I think?
   useEffect (() => {
+    
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
       setBoard(dailyBoard)
-      setCellStatuses(dailyCellStatuses)
-      
+      setCellStatuses(dailyCellStatuses) 
     } else {
       setBoard(initialStates.board)
       setCellStatuses(initialStates.cellStatuses)
@@ -335,14 +335,14 @@ function App() {
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
       gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
-      if(gameMode) {setDailyCellStatuses([...cellStatuses])}
+      if(gameMode) {setDailyCellStatuses(cellStatuses)}
       setGameState(state.won)   
       setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
       gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
-      if(gameMode) { setDailyCellStatuses([...cellStatuses])}
+      if(gameMode) { setDailyCellStatuses(cellStatuses)}
       setGameState(state.lost)      
       setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
