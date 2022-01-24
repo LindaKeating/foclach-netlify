@@ -19,6 +19,11 @@ const isLocalhost = Boolean(
 );
 
 export function register(config) {
+  if (window.self && window.self.caches) {
+    window.self.caches.delete("workbox-precache-v2-https://lindakeating.github.io/foclach/");
+  }
+  
+
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
