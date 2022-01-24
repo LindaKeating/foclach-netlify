@@ -9,6 +9,7 @@ import dailyAnswers from './data/dailyAnswers'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { ReactComponent as Info } from './data/Info.svg'
 import { ReactComponent as Settings } from './data/Settings.svg'
+import { ReactComponent as Statistics } from './data/Statistics.svg'
 
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
@@ -332,7 +333,8 @@ function App() {
   const percentageStatistic = () => {
     let totalGames = losses + wins
     let percentage = wins / totalGames * 100
-    return Math.round(Number.parseFloat(percentage))
+    let percentageType = typeof(Math.round(Number.parseFloat(percentage)))
+    return percentageType === Number ? Math.round(Number.parseFloat(percentage)) : 0
   }
 
   // every time cellStatuses updates, check if the game is won or lost
@@ -468,9 +470,18 @@ function App() {
           <h1 className="siteTitle">
             FOCLACH
           </h1>
+          <div>
+             <button 
+              className="statisticIcon"
+              type="button" 
+              onClick={() => setDayModeModalOpen(true)}>
+            <Statistics />
+          </button>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
           </button>
+          </div>
+         
         </header>
         <div className="gameContainer">
           <div>        

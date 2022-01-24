@@ -55,7 +55,7 @@ export const EndGameModal = ({
             {totalPlayed}
           </div>
           <div className="label">
-            played
+            {dictionary['Played']}
           </div>
         </div>
         <div className="endGameMode-statisticContainer">
@@ -63,7 +63,7 @@ export const EndGameModal = ({
             {percentage}
           </div>
           <div className="label">
-            wins %
+            {dictionary['Wins']} %
           </div>
         </div> 
         <div className="endGameMode-statisticContainer">
@@ -87,7 +87,7 @@ export const EndGameModal = ({
           <div className="endGameModal-Word">
           </div>
           <div className="endGameModal-Countdown">
-            <h1>An chéad FOCLACH eile</h1>
+            <h1>{dictionary['CheadFoclachEile']}</h1>
             <CountdownTimer 
               hoursMinsSecs={timeToMidnight()}/>
           </div>
@@ -102,7 +102,6 @@ export const EndGameModal = ({
           <div className="endGameModal-ModeMessage">
             <small>
               {dictionary['ModeMessage']}
-          
             </small>
           </div>
         </div> 
