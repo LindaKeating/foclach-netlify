@@ -79,5 +79,6 @@ export const dictionary = {
   you can share your results with friends online.  But if you wish to play more than once a day you can use the PRACTICE MODE. 
   In practice mode you can play as often as you like, but you will not be able to share your results online`,
   DayMode: 'day mode',
-  PracticeMode: 'practice mode'
+  PracticeMode: 'practice mode',
+  CheadFoclachEile: 'An chéad FOCLACH eile'
 }
