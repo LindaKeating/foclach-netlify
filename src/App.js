@@ -358,7 +358,7 @@ function App() {
       gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
       if(gameMode) {setDailyCellStatuses(cellStatuses)}
       setGameState(state.won)   
-      setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
+      setMessage(` ⭐  Maith thú! ⭐  `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
       if(gameMode) { setLastPlayedDate(new Date().toISOString())}
@@ -549,7 +549,7 @@ function App() {
         />
         <EndGameButtons
           playAgain={() => {
-            setAnswer(initialStates.answer)
+            setAnswer(getRandomAnswer())
             setBoard(initialStates.board)
             setGameState(initialStates.gameState)
             setCellStatuses(initialStates.cellStatuses)
