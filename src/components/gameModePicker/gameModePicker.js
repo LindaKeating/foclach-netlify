@@ -1,5 +1,5 @@
 import { useLocalStorage } from '../../hooks/useLocalStorage'
-
+import { dictionary } from '../../constants'
 export const GameModePicker = ({ gameMode, toggleGameMode}) => {
     return (
         <div className="radio-btn-container">
@@ -13,7 +13,7 @@ export const GameModePicker = ({ gameMode, toggleGameMode}) => {
             checked={gameMode}
             onChange={() => {}}
           />
-          Mód Laethúil
+          {dictionary['DayMode']}
         </div>
         <div
           className="radio-btn"
@@ -26,7 +26,7 @@ export const GameModePicker = ({ gameMode, toggleGameMode}) => {
             name="gameMode"
             checked={!gameMode}
           />
-          Mód Cleachtú
+          {dictionary['PracticeMode']}
         </div>
       </div>
     )

@@ -80,5 +80,8 @@ export const dictionary = {
   In practice mode you can play as often as you like, but you will not be able to share your results online`,
   DayMode: 'day mode',
   PracticeMode: 'practice mode',
-  CheadFoclachEile: 'An chéad FOCLACH eile'
+  CheadFoclachEile: 'An chéad FOCLACH eile',
+  PracticeModeMessage: `You are playing using the PRACTICE MODE. Wins & Losses in this mode are not counted & they can not be shared online.  
+  When you play in DAILY MODE you will be given the same answer as everybody else within a given 24 hours.  Those games will be recorded and 
+  we encourage you to share your results online`
 }

@@ -161,6 +161,11 @@ a {
   margin-right: 16px;
 }
 
+.shareButton:disabled {
+  background-color: #80808045;
+  color: #80808045;
+}
+
 .number {
   font-size: xx-large;
 }
@@ -367,7 +372,8 @@ a {
 
  .endGameModal-Statistics, 
  .endGameModal-Message,
- .endGameModal-Countdown {
+ .endGameModal-Countdown,
+ .endGameModal-ModeMessage {
    margin-bottom: 2rem;
  }
 

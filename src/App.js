@@ -536,6 +536,8 @@ function App() {
           percentage={percentageStatistic()}
           totalPlayed={wins + losses}
           message={clipboardMessage}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}

@@ -1,10 +1,8 @@
 import Modal from 'react-modal'
-import Success from '../data/Success.png'
-import Fail from '../data/Cross.png'
 import { dictionary } from '../constants'
 import { ReactComponent as Close } from '../data/Close.svg'
 import { CountdownTimer } from './countdownTimer/CountdownTimer';
-import { Message } from './Message'
+import { GameModePicker } from './gameModePicker/gameModePicker'
 Modal.setAppElement('#root')
 
 export const EndGameModal = ({ 
@@ -16,7 +14,9 @@ export const EndGameModal = ({
   percentage,
   totalPlayed, 
   message,
-  shareResults
+  shareResults,
+  gameMode,
+  toggleGameMode
  }) => {
    const timeToMidnight = () => {
     let now = new Date(),
@@ -94,6 +94,7 @@ export const EndGameModal = ({
           <div className="endGameModal-Share">
             <div className="endGameButtons">
               <button className="endGameButton shareButton" 
+                disabled={!gameMode}
                 onClick={shareResults}>
                 ⭐   {message ? message : dictionary['Share']}  ⭐ 
               </button>
@@ -101,8 +102,14 @@ export const EndGameModal = ({
           </div>
           <div className="endGameModal-ModeMessage">
             <small>
-              {dictionary['ModeMessage']}
+              {gameMode ? dictionary['ModeMessage'] : dictionary['PracticeModeMessage']}
             </small>
+          </div>
+          <div className="endGameMode-GameModePicker">
+            <GameModePicker 
+              gameMode={gameMode}
+              toggleGameMode={toggleGameMode}
+            />
           </div>
         </div> 
       </div>
