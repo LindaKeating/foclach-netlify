@@ -41,14 +41,18 @@ export const EndGameModal = ({
       shareResults={shareResults}
     >
       <div className="h-full endGameModal dark">
-        <button
+        
+        <div className="endGameModal-Container">
+          <div className="endGameModal-Header">
+            <button></button>
+            <h1>Statistics</h1>
+            <button
               className="closeButton"
               onClick={handleClose}
             >
               <Close />
-        </button>
-        <div className="endGameModal-Container">
-          <h1>Statistics</h1>
+            </button>
+          </div>      
           <div className="endGameModal-Statistics">
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
@@ -84,8 +88,6 @@ export const EndGameModal = ({
             </div>              
         </div>
           </div>
-          <div className="endGameModal-Word">
-          </div>
           <div className="endGameModal-Countdown">
             <h1>{dictionary['CheadFoclachEile']}</h1>
             <CountdownTimer 
@@ -96,7 +98,7 @@ export const EndGameModal = ({
               <button className="endGameButton shareButton" 
                 disabled={!gameMode}
                 onClick={shareResults}>
-                ⭐   {message ? message : dictionary['Share']}  ⭐ 
+                ⭐   { message && gameMode ? message : dictionary['Share']}  ⭐ 
               </button>
             </div>
           </div>

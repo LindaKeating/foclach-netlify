@@ -36,10 +36,6 @@ export const SettingsModal = ({
               <Close />
             </button>
           </div>
-          <GameModePicker 
-            gameMode={gameMode}
-            toggleGameMode={toggleGameMode}
-            />
           <div className="downloadAppContainer">
             <h1 className="downloadTitle">{dictionary['DownloadAppToPhone']}</h1>
             <ul className="downloadBenefits">

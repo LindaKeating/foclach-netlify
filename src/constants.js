@@ -71,17 +71,16 @@ export const dictionary = {
   DownloadNow: 'íoslódáil anois',
   About: 'Eolas',
   AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin',
-  Statistics: 'Statistics',
-  Played: 'played',
-  Wins: 'wins',
-  Share: 'share',
-  ModeMessage: `You are playing using the DAILY MODE.  In this mode you are given the same word as everyone else within a 24 hour period &
-  you can share your results with friends online.  But if you wish to play more than once a day you can use the PRACTICE MODE. 
-  In practice mode you can play as often as you like, but you will not be able to share your results online`,
-  DayMode: 'day mode',
-  PracticeMode: 'practice mode',
+  Statistics: 'Staitisticí',
+  Played: 'cluiche imeartha',
+  Wins: 'buanna',
+  Share: 'roinn',
+  ModeMessage: `Tá tú ag imirt sa MHÓD LAETHÚIL. Sa mhód seo, tugtar an tomhas céanna do gach imreoir gach tréimhse 24 uair, agus thig leat do thorthaí a roinnt ar líne. 
+  Más mian leat níos mó ná cluiche amháin a imirt sa lá, thig leat úsáid a bhaint as an MÓD CLEACHTA. 
+  Sa mhód cleachta thig leat imirt chomh minic agus is mian leat, ach ní thugtar rogha duit do thorthaí a roinnt ar líne`,
+  DayMode: 'Mód Laethúil',
+  PracticeMode: 'Mód cleachta',
   CheadFoclachEile: 'An chéad FOCLACH eile',
-  PracticeModeMessage: `You are playing using the PRACTICE MODE. Wins & Losses in this mode are not counted & they can not be shared online.  
-  When you play in DAILY MODE you will be given the same answer as everybody else within a given 24 hours.  Those games will be recorded and 
-  we encourage you to share your results online`
+  PracticeModeMessage: `Tá tú ag imirt sa MHÓD CLEACHTA. Sa mhód seo ní chuirtear na buanna leis an scór agus níl rogha ann na torthaí a roinnt ar líne. 
+  Nuair a imrítear sa MHÓD LAETHÚIL tugtar an tomhas céanna gach lá do gach imreoir, cuirtear na buanna leis an scór agus bíonn deis agat do thorthaí a roinnt ar líne.`
 }
