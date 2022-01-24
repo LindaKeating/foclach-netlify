@@ -96,6 +96,7 @@ function App() {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
   const [messageVisible, setMessageVisible] = useState(false)
   const [message, setMessage] = useState(initialStates.message)
+  const [clipboardMessage, setClipboardMessage] = useState(false)
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
@@ -160,20 +161,22 @@ function App() {
       }, 500)
     } 
     if (gameState !== state.playing && gameMode) {
-      setDayModeModalOpen(true)
+      setTimeout(() => {
+        setDayModeModalOpen(true)
+      }, 1000)    
     } 
   }, [gameState])
 
   useEffect(() => {
     if (!streakUpdated.current) {
-      if (gameState === state.won) {
+      if ((gameState === state.won) && gameMode) {
         if (currentStreak >= longestStreak) {
           setLongestStreak((prev) => prev + 1)
         }
         setCurrentStreak((prev) => prev + 1)
         setWins((prev) => prev + 1)
         streakUpdated.current = true
-      } else if (gameState === state.lost) {
+      } else if ((gameState === state.lost) && gameMode) {
         setLosses((prev) => prev + 1)
         setCurrentStreak(0)
         streakUpdated.current = true
@@ -422,10 +425,8 @@ function App() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(myResults + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
       console.log('myResults', myResults)
-      setMessage(dictionary['ResultsCopiedToClipboard'])
-      setMessageVisible(true);
+      setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
-      setMessageVisible(false);
       console.log('there was a problem heuston')
     });
   }
@@ -523,8 +524,7 @@ function App() {
           isCopied={copiedToClipboard}
           percentage={percentageStatistic()}
           totalPlayed={wins + losses}
-          message={message}
-          messageVisible={messageVisible}
+          message={clipboardMessage}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}

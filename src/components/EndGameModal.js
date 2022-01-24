@@ -71,7 +71,7 @@ export const EndGameModal = ({
             {currentStreak}
           </div>
           <div className="label">
-          current streak
+          {dictionary['CurrentStreak']}
             </div>
           
         </div> 
@@ -80,16 +80,11 @@ export const EndGameModal = ({
             {longestStreak}
           </div>
           <div className="label">
-          longest streak
-            </div>    
-          
+            {dictionary['LongestStreak']}
+            </div>              
         </div>
           </div>
-          <div className="endGameModal-Message">
-            {message}
-          </div>
           <div className="endGameModal-Word">
-
           </div>
           <div className="endGameModal-Countdown">
             <h1>An chéad FOCLACH eile</h1>
@@ -100,15 +95,14 @@ export const EndGameModal = ({
             <div className="endGameButtons">
               <button className="endGameButton shareButton" 
                 onClick={shareResults}>
-                ⭐   Roinn  ⭐ 
+                ⭐   {message ? message : dictionary['Share']}  ⭐ 
               </button>
             </div>
           </div>
           <div className="endGameModal-ModeMessage">
             <small>
-            You are playing using the <strong>daily mode</strong>.  In this mode you are given the same word as everyone else within a 24 hour period &
-            you can share your results with friends online.  But if you wish to play more than once a day you can use the <strong>practice mode</strong>. 
-            In practice mode you can play as often as you like, but you will not be able to share your results online
+              {dictionary['ModeMessage']}
+          
             </small>
           </div>
         </div> 

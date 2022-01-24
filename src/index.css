@@ -352,7 +352,8 @@ a {
  }
 
  .endGameMode-statisticContainer {
-   flex: 1
+   flex: 1;
+   min-width: 50%;
  }
 
  .endGameModal-Message {
@@ -367,6 +368,7 @@ a {
 
  .endGameModal-Statistics {
    display: flex;
+   flex-flow: wrap;
  }
 
  .endGameMode-statisticContainer .label {

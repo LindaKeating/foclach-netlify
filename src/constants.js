@@ -70,5 +70,14 @@ export const dictionary = {
   OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
   DownloadNow: 'íoslódáil anois',
   About: 'Eolas',
-  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin'
+  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin',
+  Statistics: 'Statistics',
+  Played: 'played',
+  Wins: 'wins',
+  Share: 'share',
+  ModeMessage: `You are playing using the DAILY MODE.  In this mode you are given the same word as everyone else within a 24 hour period &
+  you can share your results with friends online.  But if you wish to play more than once a day you can use the PRACTICE MODE. 
+  In practice mode you can play as often as you like, but you will not be able to share your results online`,
+  DayMode: 'day mode',
+  PracticeMode: 'practice mode'
 }
