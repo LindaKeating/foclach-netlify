@@ -333,8 +333,8 @@ function App() {
   const percentageStatistic = () => {
     let totalGames = losses + wins
     let percentage = wins / totalGames * 100
-    let percentageType = typeof(Math.round(Number.parseFloat(percentage)))
-    return percentageType === Number ? Math.round(Number.parseFloat(percentage)) : 0
+    let percentageNumber = Math.round(Number.parseFloat(percentage))
+    return isNaN(percentageNumber) ? 0 : Math.round(Number.parseFloat(percentage)) 
   }
 
   // every time cellStatuses updates, check if the game is won or lost
