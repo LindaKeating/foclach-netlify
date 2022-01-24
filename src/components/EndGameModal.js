@@ -54,7 +54,7 @@ export const EndGameModal = ({
           <div className="endGameMode-StatisticNumber">
             {totalPlayed}
           </div>
-          <div class="label">
+          <div className="label">
             played
           </div>
         </div>
@@ -62,7 +62,7 @@ export const EndGameModal = ({
           <div className="endGameMode-StatisticNumber">
             {percentage}
           </div>
-          <div class="label">
+          <div className="label">
             wins %
           </div>
         </div> 
@@ -70,7 +70,7 @@ export const EndGameModal = ({
           <div className="endGameMode-StatisticNumber">
             {currentStreak}
           </div>
-          <div class="label">
+          <div className="label">
           current streak
             </div>
           
@@ -79,7 +79,7 @@ export const EndGameModal = ({
           <div className="endGameMode-StatisticNumber">
             {longestStreak}
           </div>
-          <div class="label">
+          <div className="label">
           longest streak
             </div>    
           
@@ -103,6 +103,13 @@ export const EndGameModal = ({
                 ⭐   Roinn  ⭐ 
               </button>
             </div>
+          </div>
+          <div className="endGameModal-ModeMessage">
+            <small>
+            You are playing using the <strong>daily mode</strong>.  In this mode you are given the same word as everyone else within a 24 hour period &
+            you can share your results with friends online.  But if you wish to play more than once a day you can use the <strong>practice mode</strong>. 
+            In practice mode you can play as often as you like, but you will not be able to share your results online
+            </small>
           </div>
         </div> 
       </div>

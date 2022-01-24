@@ -58,6 +58,7 @@ const Keyboard = (props) => {
               <button
                 onClick={props.onEnterPress}
                 className="TomhasButton keyboardButton"
+                disabled={props.gameDisabled}
               >
                 Tomhas
               </button>

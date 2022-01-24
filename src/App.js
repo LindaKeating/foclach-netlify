@@ -122,7 +122,7 @@ function App() {
 
   const updateBoard = () => {
     const dailyModeAndPlayedToday =  gameMode && playedAlreadyToday(lastPlayedDate)
-    dailyModeAndPlayedToday ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
+    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
     dailyModeAndPlayedToday ? setBoard(dailyBoard) : setBoard( initialStates.board)
     dailyModeAndPlayedToday ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
     setGameState(initialStates.gameState)
