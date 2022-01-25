@@ -104,9 +104,8 @@ function App() {
   const [messageVisible, setMessageVisible] = useState(false)
   const [message, setMessage] = useState(initialStates.message)
   const [clipboardMessage, setClipboardMessage] = useState(false)
-  
-  const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
-  const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [currentWinStreak, setCurrentWinStreak] = useLocalStorage('current-win-streak', 0)
+  const [longestWinStreak, setLongestWinStreak] = useLocalStorage('longest-win-streak', 0)
   const [wins, setWins] = useLocalStorage('wins', 0)
   const [losses, setLosses] = useLocalStorage('losses', 0)
   const [rowsPlayed, setRowsPlayed] = useState(0)
@@ -135,15 +134,15 @@ function App() {
   const updateScores = () => {
     if (gameMode && !playedAlreadyToday(lastPlayedDate)) {
       if ((gameState === state.won) && gameMode) {
-        if (currentStreak >= longestStreak) {
-          setLongestStreak((prev) => prev + 1)
+        if (currentWinStreak >= longestWinStreak) {
+          setLongestWinStreak((prev) => prev + 1)
         }
-        setCurrentStreak((prev) => prev + 1)
+        setCurrentWinStreak((prev) => prev + 1)
         setWins((prev) => prev + 1)
         streakUpdated.current = true
       } else if ((gameState === state.lost) && gameMode) {
         setLosses((prev) => prev + 1)
-        setCurrentStreak(0)
+        setCurrentWinStreak(0)
         streakUpdated.current = true
       }
     }
@@ -539,8 +538,8 @@ function App() {
           styles={modalStyles}
           gameState={gameState}
           state={state}
-          currentStreak={currentStreak}
-          longestStreak={longestStreak}
+          currentStreak={currentWinStreak}
+          longestStreak={longestWinStreak}
           answer={answer}
           shareResults={() => {
             copyToClipboard()
