@@ -39,6 +39,12 @@ const getTodaysAnswer = () => {
   return todaysWord
 }
 
+const getTodaysWordNumber = () => {
+  const today = new Date().toISOString().substring(0, 10)
+  const todaysWordNumber = dailyAnswers[today]['number']
+  return todaysWordNumber
+}
+
 const getAnswer = (mode) => {
   return mode ? getTodaysAnswer() : getRandomAnswer()
 }
@@ -430,7 +436,7 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(rowsPlayed + "/6 FOCLACH \x0A "  + myResults + " \x0A ").then(function(){
+    navigator.clipboard.writeText("FOCLACH " + getTodaysWordNumber() + ' - ' + rowsPlayed + "/6\x0A"  + myResults + "\x0A").then(function(){
       console.log('myResults', myResults)
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
