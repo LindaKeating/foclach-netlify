@@ -428,7 +428,7 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(myResults + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
+    navigator.clipboard.writeText(rowsPlayed + "/6 FOCLACH \x0A "  + myResults + " \x0A ").then(function(){
       console.log('myResults', myResults)
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
