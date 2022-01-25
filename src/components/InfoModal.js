@@ -2,10 +2,11 @@ import Modal from 'react-modal'
 import { dictionary } from '../constants'
 import { ReactComponent as Close } from '../data/Close.svg'
 import { ReactComponent as Github } from '../data/Github.svg'
+import { GameModePicker} from '../components/gameModePicker/gameModePicker'
 
 Modal.setAppElement('#root')
 
-export const InfoModal = ({ isOpen, handleClose, darkMode, styles }) => (
+export const InfoModal = ({ isOpen, handleClose, darkMode, styles, gameMode, toggleGameMode }) => (
   <Modal isOpen={isOpen} onRequestClose={handleClose} style={styles} contentLabel="Game Info Modal">
     <div className={`h-full ${darkMode ? 'dark' : ''}`}>
       <button
@@ -49,6 +50,16 @@ export const InfoModal = ({ isOpen, handleClose, darkMode, styles }) => (
         <button
           onClick={handleClose}
           className="endGameButton">Imir Anois</button>
+          <div>
+          <GameModePicker 
+            gameMode={gameMode}
+            toggleGameMode={toggleGameMode}
+          />
+        </div>
+        <div>
+          {dictionary['ModeMessage']}
+        </div>
+        
         <div className="gitHubLink">
           <span>{dictionary['ProjectIsOpenSource']}</span>
           <a

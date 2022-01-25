@@ -45,7 +45,7 @@ export const EndGameModal = ({
         <div className="endGameModal-Container">
           <div className="endGameModal-Header">
             <button></button>
-            <h1>Statistics</h1>
+            <h1>{dictionary['Statistics']}</h1>
             <button
               className="closeButton"
               onClick={handleClose}

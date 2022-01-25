@@ -122,6 +122,23 @@ function App() {
     setInfoModalIsOpen(false)
   }
 
+ const updateScores = () => {
+  if (gameMode && !playedAlreadyToday(lastPlayedDate)) {
+    if ((gameState === state.won) && gameMode) {
+      if (currentStreak >= longestStreak) {
+        setLongestStreak((prev) => prev + 1)
+      }
+      setCurrentStreak((prev) => prev + 1)
+      setWins((prev) => prev + 1)
+      streakUpdated.current = true
+    } else if ((gameState === state.lost) && gameMode) {
+      setLosses((prev) => prev + 1)
+      setCurrentStreak(0)
+      streakUpdated.current = true
+    }
+  }
+ }
+
   const updateBoard = () => {
     const dailyModeAndPlayedToday =  gameMode && playedAlreadyToday(lastPlayedDate)
     gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
@@ -143,9 +160,12 @@ function App() {
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
-  // on mount event I think?
   useEffect (() => {
-    
+    setLastPlayedDate(new Date().toISOString())
+  }, [wins, losses])
+
+  // on mount event I think?
+  useEffect (() => { 
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
       setBoard(dailyBoard)
       setCellStatuses(dailyCellStatuses) 
@@ -167,23 +187,6 @@ function App() {
       }, 1000)    
     } 
   }, [gameState])
-
-  useEffect(() => {
-    if (!streakUpdated.current) {
-      if ((gameState === state.won) && gameMode) {
-        if (currentStreak >= longestStreak) {
-          setLongestStreak((prev) => prev + 1)
-        }
-        setCurrentStreak((prev) => prev + 1)
-        setWins((prev) => prev + 1)
-        streakUpdated.current = true
-      } else if ((gameState === state.lost) && gameMode) {
-        setLosses((prev) => prev + 1)
-        setCurrentStreak(0)
-        streakUpdated.current = true
-      }
-    }
-  }, [gameState, currentStreak, longestStreak, setLongestStreak, setCurrentStreak])
 
   useEffect(() => {
     updateBoard()
@@ -352,7 +355,7 @@ function App() {
       let lastFilledRowIndex = reversedStatuses.findIndex((r) => {
         return (r[0]) !== status.unguessed
       })
-      if(gameMode) { setLastPlayedDate(new Date().toISOString())}
+      if (gameMode) { updateScores()}
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
       gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
@@ -361,7 +364,7 @@ function App() {
       setMessage(` ⭐  Maith thú! ⭐  `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
-      if(gameMode) { setLastPlayedDate(new Date().toISOString())}
+      if(gameMode) updateScores()
       gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
       if(gameMode) { setDailyCellStatuses(cellStatuses)}
       setGameState(state.lost)      
@@ -519,6 +522,8 @@ function App() {
           handleClose={handleInfoClose}
           darkMode={darkMode}
           styles={modalStyles}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <EndGameModal
           isOpen={dayModeModalOpen}
@@ -562,7 +567,6 @@ function App() {
             setRowsPlayed(0)
             setMyResults('')
             closeModal()
-            streakUpdated.current = false
           }}
           shareResults={() => {
             copyToClipboard()
