@@ -295,7 +295,7 @@ function App() {
       }
     }
     return (
-      s = s + '\x0A '
+      s = s + '\x0A'
     )
   }
 
