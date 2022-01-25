@@ -436,7 +436,6 @@ function App() {
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText("FOCLACH " + getTodaysWordNumber() + ' - ' + rowsPlayed + "/6\x0A"  + myResults + "\x0A").then(function(){
-      console.log('myResults', myResults)
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
       console.log('there was a problem heuston')
