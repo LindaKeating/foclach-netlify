@@ -884,7 +884,6 @@ const answers = [
   'veist',
   'bulla',
   'stáca',
-  'indiu',
   'pailm',
   'caise',
   'stiúg',

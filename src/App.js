@@ -4,10 +4,12 @@ import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
 import words from './data/words'
 import  html2canvas  from 'html2canvas'
+import dailyAnswers from './data/dailyAnswers'
 
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { ReactComponent as Info } from './data/Info.svg'
 import { ReactComponent as Settings } from './data/Settings.svg'
+import { ReactComponent as Statistics } from './data/Statistics.svg'
 
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
@@ -17,12 +19,12 @@ import { GameStats } from './components/gameStats'
 import { EndGameButtons } from './components/EndGameButtons'
 import { Message } from './components/Message'
 
+
 const state = {
   playing: 'playing',
   won: 'won',
   lost: 'lost',
   copiedToClipboard: false,
-
 }
 
 const getRandomAnswer = () => {
@@ -30,9 +32,29 @@ const getRandomAnswer = () => {
   return answers[randomIndex].toUpperCase()
 }
 
+const getTodaysAnswer = () => {
+  const fullDate = new Date()
+  const dateSubstring = fullDate.toISOString().substring(0, 10)
+  const todaysWord = dailyAnswers[dateSubstring]['word']
+  return todaysWord
+}
+
+const getAnswer = (mode) => {
+  return mode ? getTodaysAnswer() : getRandomAnswer()
+}
+
+const playedAlreadyToday = (date) => {
+  if (date && date.substring(0, 10) === new Date().toISOString().substring(0, 10)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
 function App() {
   const initialStates = {
-    answer: () => getRandomAnswer(),
+    answer: () => getAnswer(true),
     gameState: state.playing,
     board: [
       ['', '', '', '', ''],
@@ -56,10 +78,18 @@ function App() {
     currentGuess: '',
     message: ''
   }
+
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
+  const [boardState, setBoardState] = useLocalStorage('boardState', null)
+  const [gameMode, setGameMode] = useLocalStorage('daily', true)
+  const [lastPlayedDate, setLastPlayedDate] = useLocalStorage('lastPlayedDate', null)
+  const boards = gameMode && lastPlayedDate ? boardState : initialStates.board
   const [gameState, setGameState] = useState(initialStates.gameState)
+  const [practiceBoard, setPracticeBoard] = useLocalStorage('practiceBoard', initialStates.board)
+  const [dailyBoard, setDailyBoard] = useLocalStorage('dailyBoard', initialStates.board)
   const [board, setBoard] = useState(initialStates.board)
+  const [dailyCellStatuses, setDailyCellStatuses] = useLocalStorage('dailyCellStatuses', initialStates.cellStatuses)
   const [cellStatuses, setCellStatuses] = useState(initialStates.cellStatuses)
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
@@ -67,9 +97,12 @@ function App() {
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
   const [messageVisible, setMessageVisible] = useState(false)
   const [message, setMessage] = useState(initialStates.message)
+  const [clipboardMessage, setClipboardMessage] = useState(false)
   
   const [currentStreak, setCurrentStreak] = useLocalStorage('current-streak', 0)
   const [longestStreak, setLongestStreak] = useLocalStorage('longest-streak', 0)
+  const [wins, setWins] = useLocalStorage('wins', 0)
+  const [losses, setLosses] = useLocalStorage('losses', 0)
   const [rowsPlayed, setRowsPlayed] = useState(0)
   const streakUpdated = useRef(false)
   const [modalIsOpen, setIsOpen] = useState(false)
@@ -78,41 +111,106 @@ function App() {
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
   const [myResults, setMyResults] = useState('')
+  const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
+  const [enterEvent, setEnterEvent] = useState(null)
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
+
   const handleInfoClose = () => {
-    setFirstTime(false)
-    setInfoModalIsOpen(false)
+     setFirstTime(false)
+     setInfoModalIsOpen(false)
+  }
+
+  const setTodaysDate = () => {
+    setLastPlayedDate(new Date().toISOString())
+  }
+
+  const updateScores = () => {
+    if (gameMode && !playedAlreadyToday(lastPlayedDate)) {
+      if ((gameState === state.won) && gameMode) {
+        if (currentStreak >= longestStreak) {
+          setLongestStreak((prev) => prev + 1)
+        }
+        setCurrentStreak((prev) => prev + 1)
+        setWins((prev) => prev + 1)
+        streakUpdated.current = true
+      } else if ((gameState === state.lost) && gameMode) {
+        setLosses((prev) => prev + 1)
+        setCurrentStreak(0)
+        streakUpdated.current = true
+      }
+    }
+   }
+
+  const updateBoard = () => {
+    const dailyModeAndPlayedToday =  gameMode && playedAlreadyToday(lastPlayedDate)
+    gameMode ? setAnswer(getTodaysAnswer()) : setAnswer(getRandomAnswer())
+    dailyModeAndPlayedToday ? setBoard(dailyBoard) : setBoard( initialStates.board)
+    dailyModeAndPlayedToday ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
+    setGameState(initialStates.gameState)
+    setCurrentRow(initialStates.currentRow)
+    setCurrentCol(initialStates.currentCol)
+    setLetterStatuses(initialStates.letterStatuses)
+    setRowsPlayed(0)
+    setMessage('')
+    setMyResults('')
+  }
+
+  const toggleGameMode = () => {
+    setGameMode((prev) => !prev)
   }
 
   const [darkMode, setDarkMode] = useLocalStorage('dark-mode', true)
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
+  // on mount event I think?
+  useEffect (() => { 
+    if (gameMode && playedAlreadyToday(lastPlayedDate)) {
+      setBoard(dailyBoard)
+      setCellStatuses(dailyCellStatuses) 
+    } else {
+      setBoard(initialStates.board)
+      setCellStatuses(initialStates.cellStatuses)
+    }
+  }, [])
+
   useEffect(() => {
-    if (gameState !== state.playing) {
+    if (gameState !== state.playing && !gameMode) {
       setTimeout(() => {
         openModal()
       }, 500)
+    } 
+    if (gameState !== state.playing && gameMode) {
+      setTimeout(() => {
+        setDayModeModalOpen(true)
+      }, 1000)    
+    }
+    if (gameState !== 'playing' && gameMode) {
+      updateScores()
+      setTodaysDate()
     }
   }, [gameState])
 
   useEffect(() => {
-    if (!streakUpdated.current) {
-      if (gameState === state.won) {
-        if (currentStreak >= longestStreak) {
-          setLongestStreak((prev) => prev + 1)
-        }
-        setCurrentStreak((prev) => prev + 1)
-        streakUpdated.current = true
-      } else if (gameState === state.lost) {
-        setCurrentStreak(0)
-        streakUpdated.current = true
-      }
-    }
-  }, [gameState, currentStreak, longestStreak, setLongestStreak, setCurrentStreak])
+    updateBoard()
+  }, [gameMode])
 
   const getCellStyles = (rowNumber, colNumber, letter) => {
+    if (rowNumber === 0 && enterEvent !== 'Enter' ) {
+      switch (cellStatuses[rowNumber][colNumber]) {
+        case status.green:
+          return 'rightLetterRightPlace'
+        case status.yellow:
+          return 'rightLetterWrongPlace'
+        case status.gray:
+          return 'wrongLetter'
+        default:
+          console.log('trying to get first row to return styles')
+          return ''
+      }
+    }
+
     if (rowNumber === currentRow) {
       if (letter) {
         return ` ${
@@ -121,14 +219,16 @@ function App() {
       }
       return ''
     }
+    
+
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
-        return 'rightLetterRightPlace'
+        return 'rightLetterRightPlace is-flipped'
       case status.yellow:
-        return 'rightLetterWrongPlace'
+        return 'rightLetterWrongPlace is-flipped'
       case status.gray:
-        return 'wrongLetter'
+        return 'wrongLetter is-flipped'
       default:
         return ''
     }
@@ -154,7 +254,8 @@ function App() {
     return words[word.toLowerCase()]
   }
 
-  const onEnterPress = () => {
+  const onEnterPress = (event) => {
+    setEnterEvent(event && event.key)
     const word = board[currentRow].join('')
     setCurrentGuess(word)
     if (!isValidWord(word)) {
@@ -180,7 +281,7 @@ function App() {
     });
   }
 
-  const onDeletePress = () => {
+  const onDeletePress = (event) => {
     setSubmittedInvalidWord(false)
     setMessage('')
     setMessageVisible(false)
@@ -236,6 +337,13 @@ function App() {
     return correctAnswer
   }
 
+  const percentageStatistic = () => {
+    let totalGames = losses + wins
+    let percentage = wins / totalGames * 100
+    let percentageNumber = Math.round(Number.parseFloat(percentage))
+    return isNaN(percentageNumber) ? 0 : Math.round(Number.parseFloat(percentage)) 
+  }
+
   // every time cellStatuses updates, check if the game is won or lost
   useEffect(() => {
     const cellStatusesCopy = [...cellStatuses]
@@ -253,16 +361,19 @@ function App() {
       })
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
-      setGameState(state.won)
-      setMessage(` Maith thú! ⭐ ${ currentStreak + 1 } ${dictionary['CurrentStreak']}! ⭐ ${dictionary['LongestStreak']}: ${ longestStreak + 1 } `)
+      gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
+      if(gameMode) {setDailyCellStatuses(cellStatuses)}
+      setGameState(state.won)   
+      setMessage(` ⭐  Maith thú! ⭐  `)
       setMessageVisible(true)
     } else if (currentRow === 6) {
-      setGameState(state.lost)
-      setMessage(`😿 Mí ááádh  ${ answer } an freagra ceart`  )
+      gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
+      if(gameMode) { setDailyCellStatuses(cellStatuses)}
+      setGameState(state.lost)      
+      setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
       setMessageVisible(true)
       setRowsPlayed(6)
       gameRowEnded = 6
-      console.log('rowsPlayed', rowsPlayed)
     }
 
     let results = '';
@@ -319,15 +430,14 @@ function App() {
   }
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(myResults + "  \x0A https://lindakeating.github.io/foclach/").then(function(){
+    navigator.clipboard.writeText(rowsPlayed + "/6 FOCLACH \x0A "  + myResults + " \x0A ").then(function(){
       console.log('myResults', myResults)
-      setMessage(dictionary['ResultsCopiedToClipboard'])
-      setMessageVisible(true);
+      setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
-      setMessageVisible(false);
       console.log('there was a problem heuston')
     });
   }
+
 
   const modalStyles = {
     overlay: {
@@ -365,31 +475,42 @@ function App() {
           <h1 className="siteTitle">
             FOCLACH
           </h1>
+          <div>
+             <button 
+              className="statisticIcon"
+              type="button" 
+              onClick={() => setDayModeModalOpen(true)}>
+            <Statistics />
+          </button>
           <button type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
           </button>
+          </div>
+         
         </header>
         <div className="gameContainer">
           <div>        
            <div id="gameBoard" className="gameBoard">         
             {board.map((row, rowNumber) =>
               row.map((letter, colNumber) => (
-                <span
-                  key={colNumber}
-                  className={`${getCellStyles(
+                  <span
+                    key={colNumber}
+                    className={`${getCellStyles(
                     rowNumber,
                     colNumber,
-                    letter
+                    letter,                  
                   )} letterTile`}
-                >
-                  {letter}
-                </span>
+                  >
+                    <span className="innerLetter">
+                      {letter}
+                    </span>
+                  
+                  </span>             
               ))
             )}
           </div>
           
-          <div className="messageContainer">
-            
+          <div className="messageContainer">         
             <Message 
               message={message}
               messageVisible={messageVisible}
@@ -403,35 +524,27 @@ function App() {
           handleClose={handleInfoClose}
           darkMode={darkMode}
           styles={modalStyles}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <EndGameModal
-          isOpen={modalIsOpen}
-          handleClose={closeModal}
+          isOpen={dayModeModalOpen}
+          handleClose={() => setDayModeModalOpen(false)}
           styles={modalStyles}
-          darkMode={darkMode}
           gameState={gameState}
           state={state}
           currentStreak={currentStreak}
           longestStreak={longestStreak}
           answer={answer}
-          playAgain={() => {
-            setAnswer(initialStates.answer)
-            setGameState(initialStates.gameState)
-            setBoard(initialStates.board)
-            setCellStatuses(initialStates.cellStatuses)
-            setCurrentRow(initialStates.currentRow)
-            setCurrentCol(initialStates.currentCol)
-            setLetterStatuses(initialStates.letterStatuses)
-            setRowsPlayed(0)
-            closeModal()
-            setMessage('')
-            setMyResults('')
-            streakUpdated.current = false
-          }}
           shareResults={() => {
             copyToClipboard()
           }}
           isCopied={copiedToClipboard}
+          percentage={percentageStatistic()}
+          totalPlayed={wins + losses}
+          message={clipboardMessage}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
@@ -439,12 +552,15 @@ function App() {
           styles={modalStyles}
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
+          getAnswer={getAnswer}
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
         />
         <EndGameButtons
           playAgain={() => {
-            setAnswer(initialStates.answer)
-            setGameState(initialStates.gameState)
+            setAnswer(getRandomAnswer())
             setBoard(initialStates.board)
+            setGameState(initialStates.gameState)
             setCellStatuses(initialStates.cellStatuses)
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
@@ -453,7 +569,6 @@ function App() {
             setRowsPlayed(0)
             setMyResults('')
             closeModal()
-            streakUpdated.current = false
           }}
           shareResults={() => {
             copyToClipboard()

@@ -15,5 +15,5 @@ export const dictionary = {
   DarkMode: 'Mód dorcha',
   IfYouAreEnjoyingThisGame: 'Má tá tú ag baint suilt as an chluiche seo, tabhair tacaíocht domh trí',
   BuyMeACoffee: 'pionta guinness a cheannacht domh',
-  Enter: 'Tomhas',
+  Enter: 'Tomhas'
 }

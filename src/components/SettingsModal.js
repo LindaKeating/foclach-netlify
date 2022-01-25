@@ -2,10 +2,21 @@ import { ReactComponent as Close } from '../data/Close.svg'
 import Modal from 'react-modal'
 import InstallPWA from './InstallPWA'
 import { dictionary } from '../constants'
+import { GameModePicker } from './gameModePicker/gameModePicker'
 
 Modal.setAppElement('#root')
 
-export const SettingsModal = ({ isOpen, handleClose, styles, darkMode, toggleDarkMode, downloadApp }) => {
+export const SettingsModal = ({ 
+  isOpen, 
+  handleClose, 
+  styles, 
+  darkMode, 
+  toggleDarkMode, 
+  downloadApp, 
+  getAnswer,
+  gameMode,
+  toggleGameMode
+ }) => {
   return (
     <Modal
       isOpen={isOpen}

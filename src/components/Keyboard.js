@@ -34,7 +34,7 @@ const Keyboard = (props) => {
       if (letters.includes(letter)) {
         props.addLetter(letter)
       } else if (letter === 'ENTER') {
-        props.onEnterPress()
+        props.onEnterPress(event)
         event.preventDefault()
       } else if (letter === 'BACKSPACE') {
         props.onDeletePress()
@@ -58,6 +58,7 @@ const Keyboard = (props) => {
               <button
                 onClick={props.onEnterPress}
                 className="TomhasButton keyboardButton"
+                disabled={props.gameDisabled}
               >
                 Tomhas
               </button>

@@ -70,5 +70,17 @@ export const dictionary = {
   OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
   DownloadNow: 'íoslódáil anois',
   About: 'Eolas',
-  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin'
+  AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin',
+  Statistics: 'Staitisticí',
+  Played: 'cluiche imeartha',
+  Wins: 'buanna',
+  Share: 'roinn',
+  ModeMessage: `Tá tú ag imirt sa MHÓD LAETHÚIL. Sa mhód seo, tugtar an tomhas céanna do gach imreoir gach tréimhse 24 uair, agus thig leat do thorthaí a roinnt ar líne. 
+  Más mian leat níos mó ná cluiche amháin a imirt sa lá, thig leat úsáid a bhaint as an MÓD CLEACHTA. 
+  Sa mhód cleachta thig leat imirt chomh minic agus is mian leat, ach ní thugtar rogha duit do thorthaí a roinnt ar líne`,
+  DayMode: 'Mód Laethúil',
+  PracticeMode: 'Mód cleachta',
+  CheadFoclachEile: 'An chéad FOCLACH eile',
+  PracticeModeMessage: `Tá tú ag imirt sa MHÓD CLEACHTA. Sa mhód seo ní chuirtear na buanna leis an scór agus níl rogha ann na torthaí a roinnt ar líne. 
+  Nuair a imrítear sa MHÓD LAETHÚIL tugtar an tomhas céanna gach lá do gach imreoir, cuirtear na buanna leis an scór agus bíonn deis agat do thorthaí a roinnt ar líne.`
 }
