@@ -67,7 +67,7 @@ export const dictionary = {
   DownloadAppToPhone: 'Íoslódáil an aip seo chuig d\'fhón',
   PlayTheGameOffline: 'Imir an cluiche as líne',
   UseLessData: 'Laghdaigh an méid sonraí a úsáidtear don chluiche',
-  OneClickAccessFromHomeScreen: 'Teacht ar an chluiche le clic amháin',
+  OneClickAccessFromHomeScreen: 'Aimsigh an chluiche le clic amháin',
   DownloadNow: 'íoslódáil anois',
   About: 'Eolas',
   AndroidChromeOnly: 'Oibríonn ar Android & Chrome amháin',

@@ -98,7 +98,7 @@ export const EndGameModal = ({
               <button className="endGameButton shareButton" 
                 disabled={!gameMode}
                 onClick={shareResults}>
-                ⭐   { message && gameMode ? message : dictionary['Share']}  ⭐ 
+                ⭐   { dictionary['Share']}  ⭐ 
               </button>
             </div>
           </div>
