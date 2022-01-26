@@ -190,6 +190,7 @@ function App() {
     } else {
       setBoard(initialStates.board)
       setCellStatuses(initialStates.cellStatuses)
+      setDailyLostGameMessage('')
     }
   }, [])
 
