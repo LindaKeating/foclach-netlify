@@ -108,8 +108,6 @@ function App() {
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
-  const [messageVisible, setMessageVisible] = useState(false)
-  const [message, setMessage] = useState(false)
   const [clipboardMessage, setClipboardMessage] = useState(false)
   const [lostDailyGameMessage, setDailyLostGameMessage] = useLocalStorage('dailyLostGameMessage','')
   const [currentWinStreak, setCurrentWinStreak] = useLocalStorage('current-win-streak', 0)
@@ -168,7 +166,6 @@ function App() {
     setCurrentCol(initialStates.currentCol)
     setLetterStatuses(initialStates.letterStatuses)
     setRowsPlayed(0)
-    setMessage('')
     setMyResults('')
   }
 
@@ -185,7 +182,7 @@ function App() {
       setBoard(dailyBoard)
       setCellStatuses(dailyCellStatuses)
       if (lostDailyGameMessage !== '') {
-        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`)
+        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { className: 'infoToast'} )
       }
     } else {
       setBoard(initialStates.board)
@@ -301,7 +298,6 @@ function App() {
 
   const onDeletePress = (event) => {
     setSubmittedInvalidWord(false)
-    setMessage('')
     if (currentCol === 0) return
 
     setBoard((prev) => {
@@ -386,7 +382,7 @@ function App() {
       if(gameMode) { setDailyCellStatuses(cellStatuses)}
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
-      showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart` )   
+      showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { autoClose: true, className: 'infoToast', toastClassName: 'infoToast' })   
       setRowsPlayed(6)
       gameRowEnded = 6
     }
@@ -447,7 +443,7 @@ function App() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText("FOCLACH " + getTodaysWordNumber() + ' - ' + rowsPlayed + "/6\x0A"  + myResults + "\x0A").then(function(){
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
-      showMessage(dictionary['ResultsCopiedToClipboard'])
+      showMessage(dictionary['ResultsCopiedToClipboard'], { className: 'infoToast'})
     }, function(){
       console.log('there was a problem heuston')
     });
@@ -524,13 +520,6 @@ function App() {
               ))
             )}
           </div>
-          
-          <div className="messageContainer">         
-            <Message 
-              message={message}
-              messageVisible={messageVisible}
-            />
-          </div>
           </div>     
         </div>
         
@@ -580,7 +569,6 @@ function App() {
             setCurrentRow(initialStates.currentRow)
             setCurrentCol(initialStates.currentCol)
             setLetterStatuses(initialStates.letterStatuses)
-            setMessage('')
             setRowsPlayed(0)
             setMyResults('')
             closeModal()
