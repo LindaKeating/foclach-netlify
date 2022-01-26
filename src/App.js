@@ -19,6 +19,10 @@ import { GameStats } from './components/gameStats'
 import { EndGameButtons } from './components/EndGameButtons'
 import { Message } from './components/Message'
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const state = {
   playing: 'playing',
@@ -82,8 +86,11 @@ function App() {
     },
     invalidWord: false,
     currentGuess: '',
-    message: ''
+    message: '',
+    lostGameMessage: ''
   }
+
+
 
   const [submittedInvalidWord, setSubmittedInvalidWord] = useState(false)
   const [answer, setAnswer] = useState(initialStates.answer)
@@ -102,8 +109,9 @@ function App() {
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
   const [messageVisible, setMessageVisible] = useState(false)
-  const [message, setMessage] = useState(initialStates.message)
+  const [message, setMessage] = useState(false)
   const [clipboardMessage, setClipboardMessage] = useState(false)
+  const [lostDailyGameMessage, setDailyLostGameMessage] = useLocalStorage('dailyLostGameMessage','')
   const [currentWinStreak, setCurrentWinStreak] = useLocalStorage('current-win-streak', 0)
   const [longestWinStreak, setLongestWinStreak] = useLocalStorage('longest-win-streak', 0)
   const [wins, setWins] = useLocalStorage('wins', 0)
@@ -118,6 +126,8 @@ function App() {
   const [myResults, setMyResults] = useState('')
   const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
   const [enterEvent, setEnterEvent] = useState(null)
+
+  const showMessage = (message, props) => toast(message, props);
 
   const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
@@ -173,7 +183,10 @@ function App() {
   useEffect (() => { 
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
       setBoard(dailyBoard)
-      setCellStatuses(dailyCellStatuses) 
+      setCellStatuses(dailyCellStatuses)
+      if (lostDailyGameMessage !== '') {
+        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`)
+      }
     } else {
       setBoard(initialStates.board)
       setCellStatuses(initialStates.cellStatuses)
@@ -265,8 +278,7 @@ function App() {
     setCurrentGuess(word)
     if (!isValidWord(word)) {
       setSubmittedInvalidWord(true)
-      setMessage(`Níl ${word} sa stór focal 😿`)
-      setMessageVisible(true)
+      showMessage(`Níl ${word} sa stór focal 😿`, { autoClose: true, className: 'infoToast', toastClassName: 'infoToast' } )
       return
     } else {
       setSubmittedInvalidWord(false)
@@ -289,7 +301,6 @@ function App() {
   const onDeletePress = (event) => {
     setSubmittedInvalidWord(false)
     setMessage('')
-    setMessageVisible(false)
     if (currentCol === 0) return
 
     setBoard((prev) => {
@@ -368,15 +379,13 @@ function App() {
       gameRowEnded = 6 - lastFilledRowIndex;
       gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
       if(gameMode) {setDailyCellStatuses(cellStatuses)}
-      setGameState(state.won)   
-      setMessage(` ⭐  Maith thú! ⭐  `)
-      setMessageVisible(true)
+      setGameState(state.won) 
     } else if (currentRow === 6) {
       gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
       if(gameMode) { setDailyCellStatuses(cellStatuses)}
-      setGameState(state.lost)      
-      setMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`  )
-      setMessageVisible(true)
+      setGameState(state.lost)
+      if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
+      showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart` )   
       setRowsPlayed(6)
       gameRowEnded = 6
     }
@@ -437,6 +446,7 @@ function App() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText("FOCLACH " + getTodaysWordNumber() + ' - ' + rowsPlayed + "/6\x0A"  + myResults + "\x0A").then(function(){
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
+      showMessage(dictionary['ResultsCopiedToClipboard'])
     }, function(){
       console.log('there was a problem heuston')
     });
@@ -587,7 +597,16 @@ function App() {
           onDeletePress={onDeletePress}
           gameDisabled={gameState !== state.playing}
         />
-
+        <ToastContainer 
+          position="top-center"
+          hideProgressBar={true}
+          newestOnTop={true}
+          closeOnClick={true}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     </div>
   )
