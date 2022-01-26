@@ -125,6 +125,7 @@ a {
 .gameStats {
   width: 100%;
   height: 140px;
+  margin-bottom: .5rem;
 }
 
 .gameStats {
@@ -308,11 +309,6 @@ a {
   padding-left: 12px;
 }
 
-.messageContainer {
-  width: 100%;
-  padding: 12px;
-}
-
 /* modals styles */
 
 .closeButton,
@@ -485,7 +481,7 @@ MEDIA QUERIES
 
 @media (max-height: 736px) {
   .letterTile {
-    height: 11vw;
+    height: 14vw;
   }
 
   .appHeader {
@@ -494,13 +490,5 @@ MEDIA QUERIES
 
   .siteTitle {
     font-size: 2em;
-  }
-
-  .keyboardContainer {
-    height: 110px;
-  }
-
-  .keyboardButton {
-    height: 30px;
   }
 }
