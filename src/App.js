@@ -400,10 +400,10 @@ function App() {
     for (var i = 0; i < item.length; i++) {
       switch (item[i]) {
         case "gray":
-          s = s + '\u26AA';
+          s = s + '⬜';
           break;
         case "unguessed":
-          s = s + '\u26AA';
+          s = s + '⬜';
           break;
         case "green":
           s = s + '💚';
@@ -412,7 +412,7 @@ function App() {
           s = s + '💛';
           break;
         default:
-          console.log('\u26AA', item);
+          console.log('⬜', item);
           s = s + '\x0A';
       }
     }
