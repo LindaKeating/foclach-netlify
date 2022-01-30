@@ -200,7 +200,7 @@ function App() {
     if (gameState !== state.playing && gameMode) {
       setTimeout(() => {
         setDayModeModalOpen(true)
-      }, 1000)    
+      }, 2500)    
     }
     if (gameState !== 'playing' && gameMode) {
       updateScores()
@@ -240,11 +240,11 @@ function App() {
 
     switch (cellStatuses[rowNumber][colNumber]) {
       case status.green:
-        return 'rightLetterRightPlace is-flipped'
+        return 'rightLetterRightPlace is-flippedColumn' + colNumber + ' delay' + colNumber
       case status.yellow:
-        return 'rightLetterWrongPlace is-flipped'
+        return 'rightLetterWrongPlace is-flippedColumn' + colNumber + ' delay' + colNumber
       case status.gray:
-        return 'wrongLetter is-flipped'
+        return 'wrongLetter transition is-flippedColumn' + colNumber + ' delay' + colNumber
       default:
         return ''
     }

@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @font-face {
   font-family: 'Ranade';
@@ -62,8 +61,6 @@ body {
   justify-content: center;
   vertical-align: middle;
   align-items: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
 }
 
 .keyboardButton,
@@ -201,19 +198,58 @@ a {
 
 .rightLetterWrongPlace {
   background-color: #ba7a39;
-  border: 2px dashed white;
+  border: 2px white;
+  border-style: dashed;
+  transition-property: 'background-color' border;
+  transition-duration: .5s;
 }
 
 .rightLetterRightPlace {
   background-color: #6aaa64;
   border: 2px solid white;
+  transition-property: 'background-color' border;
+  transition-duration: .5s;
+}
+
+.delay0 {
+  transition-delay: .5s;
+}
+
+.delay1 {
+  transition-delay: 1s;
+}
+
+.delay2 {
+  transition-delay: 1.5s;
+}
+
+.delay3 {
+  transition-delay: 2s;
+}
+
+.delay4 {
+  transition-delay: 2.5s;
+}
+
+@keyframes rightLetterRightPlace {
+  0% { background-color: #6aaa64;
+          border: 2px solid white; }
+}
+
+@keyframes rightLetterWrongPlace {
+  0% {
+    background-color: #ba7a39;
+    border: 2px dashed white;
+  }
 }
 
 .wrongLetter {
   /* PATTERN MAKER https://www.magicpattern.design/tools/css-backgrounds */
   background-color: #9a9aa0;
   opacity: 0.8;
-  background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px );
+  transition-property: 'background-color';
+  transition-duration: .5s;
+ /* background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px ); */
 }
 
 .invalidWordContainer {
@@ -237,6 +273,10 @@ a {
 
 .radio-btn input {
   margin-right: .5rem;
+}
+
+@keyframes flip-animation {
+  
 }
 
 @keyframes shake-animation {
@@ -447,11 +487,102 @@ CARD ANIMATIONS
 */
 
 .is-flipped {
-  transform: rotateY(180deg);
+  /*transform: rotateY(180deg); */
+  animation: column;
+  animation-duration: 1s;
+  animation-delay: 5s;
 }
 
 .is-flipped > span {
-  transform: rotateY(180deg);
+  animation: column;
+  /* transform: rotateY(180deg); */
+}
+
+.is-flippedColumn0 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn0 > span {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn1 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: .5s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn1 > span{
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: .5s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn2 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn2 > span {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn3 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in;
+}
+.is-flippedColumn3 > span {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn4 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn4 > span {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn5 {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-in;
+}
+
+.is-flippedColumn5 > span {
+  animation: column;
+  animation-duration: .5s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes column {
+  80% { transform: rotateY(90deg); }
 }
 
 /*
