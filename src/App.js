@@ -382,7 +382,9 @@ function App() {
       if(gameMode) { setDailyCellStatuses(cellStatuses)}
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
-      showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { autoClose: true, className: 'infoToast', toastClassName: 'infoToast' })   
+      setTimeout(() => {
+        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { autoClose: true, className: 'infoToast', toastClassName: 'infoToast' })  
+      }, 3000)  
       setRowsPlayed(6)
       gameRowEnded = 6
     }
