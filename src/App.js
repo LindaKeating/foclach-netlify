@@ -408,7 +408,7 @@ function App() {
           s = s + '⬛';
           break;
         case "green":
-          s = s + '💚';
+          s = s + '☘️';
           break;
         case "yellow":
           s = s + '💛';
