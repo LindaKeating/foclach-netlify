@@ -14,16 +14,13 @@ import { ReactComponent as Statistics } from './data/Statistics.svg'
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
-import { InvalidWord } from './components/invalidWord'
-import { GameStats } from './components/gameStats'
 import { EndGameButtons } from './components/EndGameButtons'
-import { Message } from './components/Message'
 
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-
+/* eslint-disable */
 const state = {
   playing: 'playing',
   won: 'won',
