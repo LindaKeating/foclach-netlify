@@ -1,8 +1,7 @@
-import { keyboardLetters, status, letters, dictionary} from '../constants'
+import { keyboardLetters, status, letters } from '../constants'
 import { useEffect, useCallback } from 'react'
-
+/* eslint-disable */
 const Keyboard = (props) => {
-  const isVisible = props.gameDisabled;
   const getKeyStyle = (letter) => {
     switch (props.letterStatuses[letter]) {
       case status.green:

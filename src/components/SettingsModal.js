@@ -2,7 +2,6 @@ import { ReactComponent as Close } from '../data/Close.svg'
 import Modal from 'react-modal'
 import InstallPWA from './InstallPWA'
 import { dictionary } from '../constants'
-import { GameModePicker } from './gameModePicker/gameModePicker'
 
 Modal.setAppElement('#root')
 
@@ -58,12 +57,12 @@ export const SettingsModal = ({
           <div className="flex flex-col items-center">
             <div className="mb-4">
               {dictionary['IfYouAreEnjoyingThisGame']}{' '}
-              <a href="https://www.buymeacoffee.com/lindamary" target="_blank">
+              <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener">
                 {dictionary['BuyMeACoffee']}
               </a>{' '}
               💛
             </div>
-            <a href="https://www.buymeacoffee.com/lindamary" target="_blank">
+            <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener">
               <img
                 alt="buy me a coffee"
                 src="https://img.buymeacoffee.com/button-api/?text=Ceannaigh beoir domh&emoji=&slug=lindamary&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
