@@ -303,11 +303,6 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 3
     },
-    '2022-04-01': {
-        word: 'FEARR',
-        meaning: 'jdfksdjsl',
-        number: 3
-    },
     '2022-04-02': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
