@@ -158,70 +158,65 @@ const dailyWord = {
         word: 'ÁBHAR',
         number: 36
     },
-    '2022-03-01': {
+    '2022-03-02': {
         word: 'FÉACH',
         number: 37
     },
-    '2022-03-02': {
+    '2022-03-03': {
         word: 'SIÚIL',
         number: 38
     },
-    '2022-03-03': {
+    '2022-03-04': {
         word: 'ÉIGIN',
         number: 39
     },
-    '2022-03-04': {
+    '2022-03-05': {
         word: 'BUAIL',
         number: 40
     },
-    '2022-03-05': {
+    '2022-03-06': {
         word: 'RIAMH',
         number: 41
     },
-    '2022-03-06': {
+    '2022-03-07': {
         word: 'FOCAL',
         number: 42
     },
-    '2022-03-07': {
+    '2022-03-08': {
         word: 'BEIRT',
         number: 43
     },
-    '2022-03-08': {
+    '2022-03-09': {
         word: 'MEASA',
         number: 44
     },
-    '2022-03-09': {
+    '2022-03-10': {
         word: 'CLOIS',
         number: 45
     },
-    '2022-03-10': {
+    '2022-03-11': {
         word: 'CÓNAÍ',
         number: 46
-    },
-    '2022-03-11': {
-        word: 'FEARR',
-        meaning: 'jdfksdjsl',
-        number: 47
     },
     '2022-03-12': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
-        number: 48
+        number: 47
     },
     '2022-03-13': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
-        number: 49
+        number: 48
     },
     '2022-03-14': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
-        number: 50
+        number: 49
     },
     '2022-03-15': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
-        number: 3
+        number: 50
     },
     '2022-03-16': {
         word: 'FEARR',
@@ -249,14 +244,14 @@ const dailyWord = {
         number: 3
     },
     '2022-03-21': {
-        word: 'SEALL',
-        meaning: 'jdfksdjsl',
-        number: 2
-    },
-    '2022-03-22': {
         word: 'FEARR',
         meaning: 'jdfksdjsl',
         number: 3
+    },
+    '2022-03-22': {
+        word: 'SEALL',
+        meaning: 'jdfksdjsl',
+        number: 2
     },
     '2022-03-23': {
         word: 'FEARR',

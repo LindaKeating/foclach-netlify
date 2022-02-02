@@ -1,4 +1,3 @@
-import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { dictionary } from '../../constants'
 export const GameModePicker = ({ gameMode, toggleGameMode}) => {
     return (
