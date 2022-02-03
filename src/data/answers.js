@@ -668,7 +668,6 @@ const answers = [
   'gasra',
   'lúfar',
   'sáinn',
-  'Laois',
   'suirí',
   'geábh',
   'creig',
