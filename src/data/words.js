@@ -134,6 +134,7 @@ const words = {
   fosta: true,
   dalta: true,
   droim: true,
+  droch: true,
   troid: true,
   bhuel: true,
   ócáid: true,
