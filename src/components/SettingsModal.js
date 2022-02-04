@@ -37,7 +37,7 @@ export const SettingsModal = ({
             </button>
           </div>
           <div className="getHelpContainer">
-            <h1 className="downloadTitle">HELP</h1>
+            <h1 className="downloadTitle">TACAÍOCHT</h1>
             <p className="SettingModal-paragraph">             
             Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
               <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur chugainn </a> <br/>
