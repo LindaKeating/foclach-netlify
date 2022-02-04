@@ -5,17 +5,18 @@ import { dictionary } from '../constants'
 
 Modal.setAppElement('#root')
 
+
+
 export const SettingsModal = ({ 
   isOpen, 
   handleClose, 
   styles, 
-  darkMode, 
-  toggleDarkMode, 
-  downloadApp, 
-  getAnswer,
-  gameMode,
-  toggleGameMode
+  darkMode
  }) => {
+  const appVersion = navigator.appVersion;
+  const userAgent = navigator.userAgent;
+  const platform = navigator.platform;
+  const vendor = navigator.vendor;
   return (
     <Modal
       isOpen={isOpen}
@@ -35,6 +36,14 @@ export const SettingsModal = ({
               <Close />
             </button>
           </div>
+          <div className="getHelpContainer">
+            <h1 className="downloadTitle">HELP</h1>
+            <p className="SettingModal-paragraph">             
+            Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
+              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur chugainn </a> <br/>
+               Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ar ndícheall é a chóiriú chomh luath agus is féidir.
+            </p>
+          </div>
           <div className="downloadAppContainer">
             <h1 className="downloadTitle">{dictionary['DownloadAppToPhone']}</h1>
             <ul className="downloadBenefits">
@@ -45,14 +54,14 @@ export const SettingsModal = ({
             <InstallPWA />
           </div>
           <h1 className="modalTitle">{dictionary['About']}</h1>
-          <p className="mb-[1rem]">
+          <p className="SettingModal-paragraph">
             Tá an cluiche Foclach bunaithe ar an chluiche Wordle le <i>Josh Wardle</i> <a href="https://twitter.com/powerlanguish">@powerlanguish </a>
           </p>
-          <p className="mb-[1rem]">
+          <p className="SettingModal-paragraph">
             Rinneadh an cód foinseach a chraobhú ón stór a rinne <a href="https://octokatherine.github.io/word-master/">octokatherine</a> - a bhunaigh an cód agus an dearadh ar an chluiche focal Wordle le @powerlanguish </p>
-          <p className="mb-[1rem]">
+          <p className="SettingModal-paragraph">
             Tógadh liosta na bhfocal ón liosta seo, le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
-          <p className="mb-[1rem]">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, foilsithe ag Éabhlóid:  Bailiúchán tomhasanna ón bhéaloideas.
+          <p className="SettingModal-paragraph">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, foilsithe ag Éabhlóid:  Bailiúchán tomhasanna ón bhéaloideas.
           </p>
           <div className="flex flex-col items-center">
             <div className="mb-4">
