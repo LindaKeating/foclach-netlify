@@ -380,12 +380,11 @@ function App() {
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
       setTimeout(() => {
-        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { autoClose: true, className: 'infoToast', toastClassName: 'infoToast' })  
+        showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { autoClose: false, className: 'infoToast', toastClassName: 'infoToast' })  
       }, 3000)  
       setRowsPlayed(6)
       gameRowEnded = 6
     }
-
     let results = '';
 
     for (var i = 0; i < gameRowEnded; i++) {
