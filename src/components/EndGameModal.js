@@ -13,10 +13,11 @@ export const EndGameModal = ({
   longestStreak,
   percentage,
   totalPlayed, 
-  message,
+  gameState,
   shareResults,
   gameMode,
-  toggleGameMode
+  toggleGameMode,
+  answer
  }) => {
    const timeToMidnight = () => {
     let now = new Date(),
@@ -29,6 +30,10 @@ export const EndGameModal = ({
     let hsMsSs = new Date(diff).toISOString().slice(11,19)
     return { hours: hsMsSs.slice(0,2), minutes: hsMsSs.slice(3,5), seconds: hsMsSs.slice(6,8)}
    }
+
+   const getDisplayDefinition = (playingState) => {
+     return playingState !== 'playing' ? '' : 'hidden'
+  }
   return (
     <Modal
       isOpen={isOpen}
@@ -39,6 +44,8 @@ export const EndGameModal = ({
       percentage={percentage}
       totalPlayed={totalPlayed}
       shareResults={shareResults}
+      answer={answer}
+      gameState={gameState}
     >
       <div className="h-full endGameModal dark">
         
@@ -95,6 +102,11 @@ export const EndGameModal = ({
           </div>
           <div className="endGameModal-Share">
             <div className="endGameButtons">
+              <a href={`https://www.teanglann.ie/en/fgb/${answer}`} 
+                 target="_blank" rel="noopener noreferrer"
+                 className={`${getDisplayDefinition(
+                    gameState               
+                  )} `}>Brí an fhocail</a>
               <button className="endGameButton shareButton" 
                 disabled={!gameMode}
                 onClick={shareResults}>
