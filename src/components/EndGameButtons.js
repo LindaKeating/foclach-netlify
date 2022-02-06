@@ -1,7 +1,7 @@
 import { dictionary } from '../constants'
 
-const EndGameButtons = (props ) => {
-    const isVisible = props.isOpen
+const EndGameButtons = (props) => {
+    const isVisible = props.isOpen && !props.gameMode
     if (isVisible) {
         return <div className="endGameButtons">
         <button className="endGameButton"
