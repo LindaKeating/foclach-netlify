@@ -584,6 +584,7 @@ function App() {
           shareResults={() => {
             copyToClipboard()
           }}
+          gameMode={gameMode}
           isOpen={modalIsOpen}
         ></EndGameButtons>
         <Keyboard
