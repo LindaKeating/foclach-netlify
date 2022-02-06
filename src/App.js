@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
+import CacheBuster from 'react-cache-buster';
+import packInfo from '../package.json';
 import { dictionary, letters, status } from './constants'
 import { Keyboard } from './components/Keyboard'
 import answers from './data/answers'
@@ -60,6 +62,7 @@ const playedAlreadyToday = (date) => {
 
 
 function App() {
+  const isProduction = process.env.NODE_ENV === 'production';
   const initialStates = {
     answer: () => getAnswer(true),
     gameState: state.playing,
@@ -476,6 +479,12 @@ function App() {
   }
 
   return (
+    <CacheBuster
+      currentVersion={packInfo.version}
+      isEnabled={true} //If false, the library is disabled.
+      isVerboseMode={false} //If true, the library writes verbose logs to console.
+    >
+   
     <div className={darkMode ? 'dark' : ''}>
       <div className={`appContainer`}>
         <header className="appHeader">
@@ -597,6 +606,7 @@ function App() {
         />
       </div>
     </div>
+     </CacheBuster>
   )
 }
 
