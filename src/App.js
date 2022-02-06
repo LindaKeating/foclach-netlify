@@ -105,6 +105,7 @@ function App() {
   const [dailyCellStatuses, setDailyCellStatuses] = useLocalStorage('dailyCellStatuses', initialStates.cellStatuses)
   const [cellStatuses, setCellStatuses] = useState(initialStates.cellStatuses)
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
+  const [dailyCurrentRow, setDailyCurrentRow] = useLocalStorage('dailyCurrentRow', null)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
@@ -162,7 +163,7 @@ function App() {
     dailyModeAndPlayedToday ? setBoard(dailyBoard) : setBoard( initialStates.board)
     dailyModeAndPlayedToday ? setCellStatuses(dailyCellStatuses) : setCellStatuses(initialStates.cellStatuses)
     setGameState(initialStates.gameState)
-    setCurrentRow(initialStates.currentRow)
+    dailyModeAndPlayedToday ? setCurrentRow(dailyCurrentRow) : setCurrentRow(initialStates.currentRow)
     setCurrentCol(initialStates.currentCol)
     setLetterStatuses(initialStates.letterStatuses)
     setRowsPlayed(0)
@@ -179,6 +180,7 @@ function App() {
   // on mount event I think?
   useEffect (() => { 
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
+      setCurrentRow(dailyCurrentRow)
       setBoard(dailyBoard)
       setCellStatuses(dailyCellStatuses)
       if (lostDailyGameMessage !== '') {
@@ -213,20 +215,6 @@ function App() {
   }, [gameMode])
 
   const getCellStyles = (rowNumber, colNumber, letter) => {
-    if (rowNumber === 0 && enterEvent !== 'Enter' ) {
-      switch (cellStatuses[rowNumber][colNumber]) {
-        case status.green:
-          return 'rightLetterRightPlace'
-        case status.yellow:
-          return 'rightLetterWrongPlace'
-        case status.gray:
-          return 'wrongLetter'
-        default:
-          console.log('trying to get first row to return styles')
-          return ''
-      }
-    }
-
     if (rowNumber === currentRow) {
       if (letter) {
         return ` ${
@@ -368,18 +356,21 @@ function App() {
 
     let gameRowEnded = 0
 
+    if (gameMode) {
+      setDailyBoard(board)
+      setTodaysDate()
+      setDailyCurrentRow(currentRow)
+      setDailyCellStatuses(cellStatuses)
+    }
+
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
       let lastFilledRowIndex = reversedStatuses.findIndex((r) => {
         return (r[0]) !== status.unguessed
       })
       setRowsPlayed(6 - lastFilledRowIndex)
-      gameRowEnded = 6 - lastFilledRowIndex;
-      gameMode ? setDailyBoard(board): setPracticeBoard(initialStates.board)
-      if(gameMode) {setDailyCellStatuses(cellStatuses)}
+      gameRowEnded = 6 - lastFilledRowIndex;          
       setGameState(state.won) 
     } else if (currentRow === 6) {
-      gameMode ? setDailyBoard(board) : setPracticeBoard(initialStates.board)
-      if(gameMode) { setDailyCellStatuses(cellStatuses)}
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
       setTimeout(() => {
