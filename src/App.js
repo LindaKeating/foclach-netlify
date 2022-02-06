@@ -482,7 +482,7 @@ function App() {
     <CacheBuster
       currentVersion={packInfo.version}
       isEnabled={true} //If false, the library is disabled.
-      isVerboseMode={false} //If true, the library writes verbose logs to console.
+      isVerboseMode={true} //If true, the library writes verbose logs to console.
     >
    
     <div className={darkMode ? 'dark' : ''}>
