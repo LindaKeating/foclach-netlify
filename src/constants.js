@@ -50,7 +50,7 @@ export const dictionary = {
   GuessAnyValidWord: 'Glactar le mórchuid na bhfocal bailí Gaeilge. Ní ghlactar le hainmneacha dílse.',
   AfterEachGuessLetterWillTurnDifferentColour: 'I ndiaidh gach tomhas a dhéanann tú, cuirfear dath glas, buí nó liath ar na litreacha a chuir tú isteach.',
   CorrectLetterCorrectSpot: 'An litir cheart, san áit cheart',
-  CorrectLetterWrongSpot: 'An litir cheart, san áit mícheart',
+  CorrectLetterWrongSpot: 'An litir cheart, san áit mhícheart',
   WrongLetter: 'An litir mhícheart',
   ProjectIsOpenSource: 'Tá an tionscnamh seo ar fáil ar fhoinse fhoscailte.',
   PlayAgain: 'Imir Arís',

@@ -40,8 +40,8 @@ export const SettingsModal = ({
             <h1 className="downloadTitle">TACAÍOCHT</h1>
             <p className="SettingModal-paragraph">             
             Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
-              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur chugainn </a> <br/>
-               Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ar ndícheall é a chóiriú chomh luath agus is féidir.
+              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur </a> chugainn. 
+               Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ár ndícheall é a chóiriú chomh luath agus is féidir.
             </p>
           </div>
           <div className="downloadAppContainer">
@@ -69,7 +69,7 @@ export const SettingsModal = ({
               <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener noreferrer">
                 {dictionary['BuyMeACoffee']}
               </a>{' '}
-              💛
+              💛 <br/>
             </div>
             <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener noreferrer">
               <img
