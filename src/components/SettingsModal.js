@@ -40,8 +40,8 @@ export const SettingsModal = ({
             <h1 className="downloadTitle">TACAÍOCHT</h1>
             <p className="SettingModal-paragraph">             
             Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
-              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur chugainn </a> <br/>
-               Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ar ndícheall é a chóiriú chomh luath agus is féidir.
+              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur </a> chugainn. 
+               Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ár ndícheall é a chóiriú chomh luath agus is féidir.
             </p>
           </div>
           <div className="downloadAppContainer">
@@ -60,8 +60,8 @@ export const SettingsModal = ({
           <p className="SettingModal-paragraph">
             Rinneadh an cód foinseach a chraobhú ón stór a rinne <a href="https://octokatherine.github.io/word-master/">octokatherine</a> - a bhunaigh an cód agus an dearadh ar an chluiche focal Wordle le @powerlanguish </p>
           <p className="SettingModal-paragraph">
-            Tógadh liosta na bhfocal ón liosta seo, le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
-          <p className="SettingModal-paragraph">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, foilsithe ag Éabhlóid:  Bailiúchán tomhasanna ón bhéaloideas.
+            Tógadh liosta na bhfocal ón liosta seo le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
+          <p className="SettingModal-paragraph">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, bailiúchán tomhasanna ón bhéaloideas foilsithe ag Éabhlóid.
           </p>
           <div className="flex flex-col items-center">
             <div className="mb-4">
@@ -69,7 +69,7 @@ export const SettingsModal = ({
               <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener noreferrer">
                 {dictionary['BuyMeACoffee']}
               </a>{' '}
-              💛
+              💛 <br/>
             </div>
             <a href="https://www.buymeacoffee.com/lindamary" target="_blank" rel="noopener noreferrer">
               <img
