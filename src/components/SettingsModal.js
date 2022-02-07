@@ -60,8 +60,8 @@ export const SettingsModal = ({
           <p className="SettingModal-paragraph">
             Rinneadh an cód foinseach a chraobhú ón stór a rinne <a href="https://octokatherine.github.io/word-master/">octokatherine</a> - a bhunaigh an cód agus an dearadh ar an chluiche focal Wordle le @powerlanguish </p>
           <p className="SettingModal-paragraph">
-            Tógadh liosta na bhfocal ón liosta seo, le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
-          <p className="SettingModal-paragraph">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, foilsithe ag Éabhlóid:  Bailiúchán tomhasanna ón bhéaloideas.
+            Tógadh liosta na bhfocal ón liosta seo le Michal Měchura: <a href="https://github.com/michmech/irish-word-frequency">michmech irish word frequency</a> </p>
+          <p className="SettingModal-paragraph">Más maith leat cluichí focal agus tomhasanna as Gaeilge, b’fhéidir go mbeadh dúil agat sa leabhar <a href="https://eabhloid.com/siopa/tomhas-orm-tomhas-ort">Tomhas Orm, Tomhas Ort!</a>, bailiúchán tomhasanna ón bhéaloideas foilsithe ag Éabhlóid.
           </p>
           <div className="flex flex-col items-center">
             <div className="mb-4">
