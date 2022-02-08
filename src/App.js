@@ -97,6 +97,7 @@ function App() {
   const [boardState, setBoardState] = useLocalStorage('boardState', null)
   const [gameMode, setGameMode] = useLocalStorage('daily', true)
   const [lastPlayedDate, setLastPlayedDate] = useLocalStorage('lastPlayedDate', null)
+  const [lastScoredDate, setLastScoredDate] = useLocalStorage('lastScoredDate', null)
   const boards = gameMode && lastPlayedDate ? boardState : initialStates.board
   const [gameState, setGameState] = useState(initialStates.gameState)
   const [practiceBoard, setPracticeBoard] = useLocalStorage('practiceBoard', initialStates.board)
@@ -141,18 +142,21 @@ function App() {
   }
 
   const updateScores = () => {
-    if (gameMode && !playedAlreadyToday(lastPlayedDate)) {
+    if (gameMode && !playedAlreadyToday(lastScoredDate)) {
       if ((gameState === state.won) && gameMode) {
+
         if (currentWinStreak >= longestWinStreak) {
           setLongestWinStreak((prev) => prev + 1)
         }
         setCurrentWinStreak((prev) => prev + 1)
         setWins((prev) => prev + 1)
         streakUpdated.current = true
+        setLastScoredDate(new Date().toISOString())
       } else if ((gameState === state.lost) && gameMode) {
         setLosses((prev) => prev + 1)
         setCurrentWinStreak(0)
         streakUpdated.current = true
+        setLastScoredDate(new Date().toISOString())
       }
     }
    }
@@ -369,7 +373,7 @@ function App() {
       })
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;          
-      setGameState(state.won) 
+      setGameState(state.won)      
     } else if (currentRow === 6) {
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }

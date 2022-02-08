@@ -199,147 +199,147 @@ const dailyWord = {
         number: 46
     },
     '2022-03-12': {
-        word: 'FEARR',
+        word: 'thart',
         meaning: 'jdfksdjsl',
         number: 47
     },
     '2022-03-13': {
-        word: 'FEARR',
+        word: 'minic',
         meaning: 'jdfksdjsl',
         number: 48
     },
     '2022-03-14': {
-        word: 'FEARR',
+        word: 'anuas',
         meaning: 'jdfksdjsl',
         number: 49
     },
     '2022-03-15': {
-        word: 'FEARR',
+        word: 'ionad',
         meaning: 'jdfksdjsl',
         number: 50
     },
     '2022-03-16': {
-        word: 'FEARR',
+        word: 'uisce',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-17': {
-        word: 'FEARR',
+        word: 'geall',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-18': {
-        word: 'FEARR',
+        word: 'cúpla',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-19': {
-        word: 'FEARR',
+        word: 'cúirt',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-20': {
-        word: 'FEARR',
+        word: 'doras',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-21': {
-        word: 'FEARR',
+        word: 'oifig',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-22': {
-        word: 'SEALL',
+        word: 'córas',
         meaning: 'jdfksdjsl',
         number: 2
     },
     '2022-03-23': {
-        word: 'FEARR',
+        word: 'mórán',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-24': {
-        word: 'FEARR',
+        word: 'sásta',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-25': {
-        word: 'FEARR',
+        word: 'suigh',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-26': {
-        word: 'FEARR',
+        word: 'breis',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-27': {
-        word: 'FEARR',
+        word: 'sráid',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-28': {
-        word: 'FEARR',
+        word: 'caill',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-29': {
-        word: 'FEARR',
+        word: 'gearr',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-30': {
-        word: 'FEARR',
+        word: 'creid',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-03-31': {
-        word: 'FEARR',
+        word: 'luath',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-01': {
-        word: 'FEARR',
+        word: 'fadhb',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-02': {
-        word: 'FEARR',
+        word: 'scéim',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-03': {
-        word: 'FEARR',
+        word: 'seans',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-04': {
-        word: 'FEARR',
+        word: 'bocht',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-05': {
-        word: 'FEARR',
+        word: 'thiar',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-06': {
-        word: 'FEARR',
+        word: 'tuill',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-07': {
-        word: 'FEARR',
+        word: 'lacha',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-08': {
-        word: 'FEARR',
+        word: 'gaoth',
         meaning: 'jdfksdjsl',
         number: 3
     },
     '2022-04-09': {
-        word: 'FEARR',
+        word: 'dream',
         meaning: 'jdfksdjsl',
         number: 3
     },
