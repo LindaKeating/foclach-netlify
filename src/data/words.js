@@ -1,5 +1,6 @@
 /* eslint-disable */
 const words = {
+  gaeil: true,
   duine: true,
   abair: true,
   maith: true,
