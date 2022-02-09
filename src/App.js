@@ -580,6 +580,7 @@ function App() {
           }}
           gameMode={gameMode}
           isOpen={modalIsOpen}
+          answer={answer.toLowerCase()}
         ></EndGameButtons>
         <Keyboard
           isNotOpen={modalIsOpen}
