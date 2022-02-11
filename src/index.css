@@ -41,6 +41,18 @@ body {
   background: rgb(25,42,73);
   background: linear-gradient(0deg, rgb(47, 55, 69) 0%,    rgb(34, 66, 79) 42%, rgba(70, 107, 120, 0.995)    100%);
 }
+
+.practiceMode {
+  background: linear-gradient(0deg,#8e6389,#4971a6 42%,rgb(201 120 120));
+  color: #fff;
+}
+
+.subTitleMode {
+  font-size: 8px;
+  line-height: 0;
+  display: block;
+}
+
 .h-fill {
   height: 120vh;
   max-height: -webkit-fill-available;
@@ -334,7 +346,6 @@ a {
   align-items: center;
   flex-grow: 1;
   overflow: hidden;
-  overflow-y: scroll;
 }
 
 .gameBoard {

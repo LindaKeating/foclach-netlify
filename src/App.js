@@ -241,6 +241,10 @@ function App() {
     }
   }
 
+  const getModeDisplay = (gameMode) => {
+    if (gameMode) return 'hidden'
+  }
+
   const addLetter = (letter) => {
     setSubmittedInvalidWord(false)
     setBoard((prev) => {
@@ -479,7 +483,7 @@ function App() {
       isVerboseMode={true} //If true, the library writes verbose logs to console.
     >
    
-    <div className={darkMode ? 'dark' : ''}>
+    <div className={gameMode ? '' : 'practiceMode'}>
       <div className={`appContainer`}>
         <header className="appHeader">
           <button type="button" onClick={() => setSettingsModalIsOpen(true)}>
@@ -487,6 +491,7 @@ function App() {
           </button>
           <h1 className="siteTitle">
             FOCLACH
+              <small className={`${getModeDisplay(gameMode)} subTitleMode`}>{dictionary['PracticeMode']}</small>
           </h1>
           <div>
              <button 
