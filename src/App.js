@@ -108,6 +108,7 @@ function App() {
   const [currentRow, setCurrentRow] = useState(initialStates.currentRow)
   const [dailyCurrentRow, setDailyCurrentRow] = useLocalStorage('dailyCurrentRow', null)
   const [currentCol, setCurrentCol] = useState(initialStates.currentCol)
+  const [dailyLetterStatuses, setDailyLetterStatuses] = useLocalStorage('dailyLetterStatuses', initialStates.letterStatuses)
   const [letterStatuses, setLetterStatuses] = useState(initialStates.letterStatuses)
   const [copiedToClipboard, setCopiedToClipboard] = useState(false)
   const [clipboardMessage, setClipboardMessage] = useState(false)
@@ -168,7 +169,7 @@ function App() {
     setGameState(initialStates.gameState)
     dailyModeAndPlayedToday ? setCurrentRow(dailyCurrentRow) : setCurrentRow(initialStates.currentRow)
     setCurrentCol(initialStates.currentCol)
-    setLetterStatuses(initialStates.letterStatuses)
+    dailyModeAndPlayedToday ? setLetterStatuses(dailyLetterStatuses) : setLetterStatuses(initialStates.letterStatuses)
     setRowsPlayed(0)
     setMyResults('')
   }
@@ -181,17 +182,19 @@ function App() {
   const toggleDarkMode = () => setDarkMode((prev) => !prev)
 
   // on mount event I think?
-  useEffect (() => { 
+  useEffect (() => {
     if (gameMode && playedAlreadyToday(lastPlayedDate)) {
       setCurrentRow(dailyCurrentRow)
       setBoard(dailyBoard)
       setCellStatuses(dailyCellStatuses)
+      setLetterStatuses(dailyLetterStatuses)
       if (lostDailyGameMessage !== '') {
         showMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`, { className: 'infoToast'} )
       }
     } else {
       setBoard(initialStates.board)
       setCellStatuses(initialStates.cellStatuses)
+      setLetterStatuses(initialStates.letterStatuses)
       setDailyLostGameMessage('')
     }
   }, [])
@@ -368,6 +371,7 @@ function App() {
       setTodaysDate()
       setDailyCurrentRow(currentRow)
       setDailyCellStatuses(cellStatuses)
+      setDailyLetterStatuses(letterStatuses)
     }
 
     if (lastFilledRow && isRowAllGreen(lastFilledRow)) {
