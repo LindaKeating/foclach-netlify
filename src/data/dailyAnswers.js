@@ -95,7 +95,7 @@ const dailyWord = {
         number: 20
     },
     '2022-02-14': {
-        word: 'ANSIN',
+        word: 'PEATA',
         number: 21
     },
     '2022-02-15': {
