@@ -467,6 +467,10 @@ a {
   padding-right: 1rem;
 }
 
+.EndGameModal-Icon {
+  margin-right: .5em;
+}
+
 h1 {
   font-weight: 700;
   font-size: 16px;

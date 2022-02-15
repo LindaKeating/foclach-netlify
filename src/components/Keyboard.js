@@ -76,7 +76,7 @@ const Keyboard = (props) => {
                 onClick={props.onDeletePress}
                 className="keyboardButton"
               >
-                siar
+                <i class="fa-solid fa-delete-left"></i>
               </button>
             )}
           </div>
