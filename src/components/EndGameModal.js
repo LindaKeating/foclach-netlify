@@ -110,7 +110,8 @@ export const EndGameModal = ({
               <button className="endGameButton shareButton" 
                 disabled={!gameMode}
                 onClick={shareResults}>
-                ⭐   { dictionary['Share']}  ⭐ 
+                <i className="fa-solid fa-share-nodes EndGameModal-Icon"></i>
+                 { dictionary['Share']}
               </button>
             </div>
           </div>
