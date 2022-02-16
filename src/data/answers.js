@@ -737,7 +737,6 @@ const answers = [
   'gnaoi',
   'meirg',
   'liric',
-  'iompó',
   'seang',
   'fríth',
   'cealg',
