@@ -102,7 +102,7 @@ export const EndGameModal = ({
           </div>
           <div className="endGameModal-Share">
             <div className="endGameButtons">
-              <a href={`https://www.teanglann.ie/en/fgb/${answer}`} 
+              <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
                  target="_blank" rel="noopener noreferrer"
                  className={`${getDisplayDefinition(
                     gameState               
