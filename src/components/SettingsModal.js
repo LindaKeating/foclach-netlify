@@ -18,7 +18,6 @@ export const SettingsModal = ({
   const vendor = navigator.vendor;
   const screenWidth = window.screen.availWidth;
   const screenHeight = window.screen.availHeight;
-  const appVersion = navigator.appVersion;
   return (
     <Modal
       isOpen={isOpen}
