@@ -13,10 +13,12 @@ export const SettingsModal = ({
   styles, 
   darkMode
  }) => {
-  const appVersion = navigator.appVersion;
+  const platform = navigator?.userAgentData?.platform || navigator?.platform || 'unknown'
   const userAgent = navigator.userAgent;
-  const platform = navigator.platform;
   const vendor = navigator.vendor;
+  const screenWidth = window.screen.availWidth;
+  const screenHeight = window.screen.availHeight;
+  const appVersion = navigator.appVersion;
   return (
     <Modal
       isOpen={isOpen}
@@ -40,7 +42,7 @@ export const SettingsModal = ({
             <h1 className="downloadTitle">TACAÍOCHT</h1>
             <p className="SettingModal-paragraph">             
             Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
-              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=****NB NA SCRIOS NA SONRAÍ SEO.  PLEASE DO NOT DELETE THESE DETAILS.  I NEED THEM TO HELP ME IDENTIFY PROBLEMS QUICKER. Seo iad mo shonraí appVersion=${appVersion} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur </a> chugainn. 
+              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=****NB NA SCRIOS NA SONRAÍ SEO.  PLEASE DO NOT DELETE THESE DETAILS.  I NEED THEM TO HELP ME IDENTIFY PROBLEMS QUICKER. Seo iad mo shonraí width=${screenWidth} height=${screenHeight} userAgent=${userAgent} platform=${platform} vendor=${vendor}`}> ríomhphost a chur </a> chugainn. 
                Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ár ndícheall é a chóiriú chomh luath agus is féidir.
             </p>
           </div>
