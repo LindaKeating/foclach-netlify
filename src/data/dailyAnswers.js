@@ -183,7 +183,7 @@ const dailyWord = {
         number: 42
     },
     '2022-03-08': {
-        word: 'BEIRT',
+        word: 'INÍON',
         number: 43
     },
     '2022-03-09': {
@@ -219,7 +219,7 @@ const dailyWord = {
         number: 50
     },
     '2022-03-16': {
-        word: 'UISCE',
+        word: 'CÓRAS',
         meaning: 'jdfksdjsl',
         number: 51
     },
@@ -239,17 +239,17 @@ const dailyWord = {
         number: 54
     },
     '2022-03-20': {
-        word: 'DORAS',
+        word: 'SÁSTA',
         meaning: 'jdfksdjsl',
         number: 55
     },
     '2022-03-21': {
-        word: 'OIFIG',
+        word: 'ÉIGSE', //OIFIG
         meaning: 'jdfksdjsl',
         number: 56
     },
     '2022-03-22': {
-        word: 'CÓRAS',
+        word: 'UISCE',
         meaning: 'jdfksdjsl',
         number: 57
     },
@@ -259,7 +259,7 @@ const dailyWord = {
         number: 58
     },
     '2022-03-24': {
-        word: 'SÁSTA',
+        word: 'DORAS',
         meaning: 'jdfksdjsl',
         number: 59
     },
@@ -369,7 +369,7 @@ const dailyWord = {
         number: 80
     },
     '2022-04-15': {
-        word: 'CLANN',
+        word: 'LÉAMH',
         meaning: 'jdfksdjsl',
         number: 81
     },
@@ -519,7 +519,7 @@ const dailyWord = {
         number: 110
     },
     '2022-05-15': {
-        word: 'LÉAMH',
+        word: 'CLANN',
         meaning: 'jdfksdjsl',
         number: 111
     },
@@ -679,7 +679,7 @@ const dailyWord = {
         number: 142
     }, 
     '2022-06-16': {
-        word: 'INÍON',
+        word: 'BEIRT',
         meaning: 'jdfksdjsl',
         number: 143
     }, 
