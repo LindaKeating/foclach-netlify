@@ -17,7 +17,8 @@ export const EndGameModal = ({
   shareResults,
   gameMode,
   toggleGameMode,
-  answer
+  answer,
+  version
  }) => {
    const timeToMidnight = () => {
     let now = new Date(),
@@ -46,6 +47,7 @@ export const EndGameModal = ({
       shareResults={shareResults}
       answer={answer}
       gameState={gameState}
+      version={version}
     >
       <div className="h-full endGameModal dark">
         
@@ -125,6 +127,9 @@ export const EndGameModal = ({
               gameMode={gameMode}
               toggleGameMode={toggleGameMode}
             />
+          </div>
+          <div>
+            <small>leagan: {version}</small>
           </div>
         </div> 
       </div>

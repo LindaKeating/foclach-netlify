@@ -560,6 +560,7 @@ function App() {
           message={clipboardMessage}
           gameMode={gameMode}
           toggleGameMode={toggleGameMode}
+          version={packInfo.version}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
