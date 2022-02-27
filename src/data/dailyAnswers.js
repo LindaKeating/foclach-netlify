@@ -151,7 +151,7 @@ const dailyWord = {
         number: 34
     },
     '2022-02-28': {
-        word: 'CAINT',
+        word: 'CRÓGA',
         number: 35
     },
     '2022-03-01': {

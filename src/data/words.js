@@ -73,6 +73,7 @@ const words = {
   grúpa: true,
   fadhb: true,
   scéim: true,
+  easca: true,
   seans: true,
   bocht: true,
   thiar: true,
