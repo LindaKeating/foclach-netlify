@@ -37,9 +37,8 @@ html, body, #root, #root > div {
 }
 
 body {
-  color: white;
-  background: rgb(25,42,73);
-  background: linear-gradient(0deg, rgb(47, 55, 69) 0%,    rgb(34, 66, 79) 42%, rgba(70, 107, 120, 0.995)    100%);
+  background: linear-gradient(0deg,#4a5568,#3f8892 42%,rgba(70,107,120,.995));
+  color: #fff;
 }
 
 .practiceMode {
