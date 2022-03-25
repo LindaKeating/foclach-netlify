@@ -274,7 +274,7 @@ const dailyWord = {
         number: 61
     },
     '2022-03-27': {
-        word: 'BREIS',
+        word: 'MAMAÍ',
         meaning: 'jdfksdjsl',
         number: 62
     },
