@@ -36,14 +36,16 @@ const getRandomAnswer = () => {
 }
 
 const getTodaysAnswer = () => {
-  const fullDate = new Date()
+  const d = new Date()
+  const fullDate = new Date(d.getTime() - d.getTimezoneOffset() * 60000)
   const dateSubstring = fullDate.toISOString().substring(0, 10)
   const todaysWord = dailyAnswers[dateSubstring]['word']
   return todaysWord
 }
 
 const getTodaysWordNumber = () => {
-  const today = new Date().toISOString().substring(0, 10)
+  const d = new Date()
+  const today = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().substring(0, 10)
   const todaysWordNumber = dailyAnswers[today]['number']
   return todaysWordNumber
 }
@@ -139,7 +141,8 @@ function App() {
   }
 
   const setTodaysDate = () => {
-    setLastPlayedDate(new Date().toISOString())
+    let d = new Date()
+    setLastPlayedDate(new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString())
   }
 
   const updateScores = () => {
@@ -151,12 +154,14 @@ function App() {
         setCurrentWinStreak((prev) => prev + 1)
         setWins((prev) => prev + 1)
         streakUpdated.current = true
-        setLastScoredDate(new Date().toISOString())
+        let d = new Date()
+        setLastScoredDate(new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString())
       } else if ((gameState === state.lost) && gameMode) {
         setLosses((prev) => prev + 1)
         setCurrentWinStreak(0)
         streakUpdated.current = true
-        setLastScoredDate(new Date().toISOString())
+        let d = new Date()
+        setLastScoredDate(new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString())
       }
     }
    }
