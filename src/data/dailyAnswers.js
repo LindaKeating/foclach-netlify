@@ -299,7 +299,7 @@ const dailyWord = {
         number: 66
     },
     '2022-04-01': {
-        word: 'CREID',
+        word: 'BÓMÁN',
         meaning: 'jdfksdjsl',
         number: 67
     },
