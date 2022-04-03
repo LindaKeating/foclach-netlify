@@ -41,7 +41,7 @@ export const SettingsModal = ({
             <h1 className="downloadTitle">TACAÍOCHT</h1>
             <p className="SettingModal-paragraph">             
             Tabhair le fios dúinn, le do thoil, má thugann tú faoi deara aon rud nach bhfuil ag obair i gceart, trí
-              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=****NB NA SCRIOS NA SONRAÍ SEO.  PLEASE DO NOT DELETE THESE DETAILS.  I NEED THEM TO HELP ME IDENTIFY PROBLEMS QUICKER. Seo iad mo shonraí width:${screenWidth} height:${screenHeight} userAgent:${userAgent} platform:${platform} vendor:${vendor}`}> ríomhphost a chur </a> chugainn. 
+              <a href={`mailto:linda.mary.keating@gmail.com?subject=Fadhb le Foclach&body=****NB NA SCRIOS NA SONRAÍ SEO.  PLEASE DO NOT DELETE THESE DETAILS.  Seo iad mo shonraí width:${screenWidth} height:${screenHeight} userAgent:${userAgent} platform:${platform} vendor:${vendor} leagan:${process.env.REACT_APP_VERSION}`}> ríomhphost a chur </a> chugainn. 
                Mínigh, chomh cruinn agus is féidir, caidé nach bhfuil ag obair duit agus déanfaidh muid ár ndícheall é a chóiriú chomh luath agus is féidir.
             </p>
           </div>
