@@ -55,7 +55,8 @@ const getAnswer = (mode) => {
 }
 
 const playedAlreadyToday = (date) => {
-  if (date && date.substring(0, 10) === new Date().toISOString().substring(0, 10)) {
+  const d = new Date()
+  if (date && date.substring(0, 10) === new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().substring(0, 10)) {
     return true
   } else {
     return false
