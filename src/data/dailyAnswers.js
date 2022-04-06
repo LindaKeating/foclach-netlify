@@ -325,17 +325,17 @@ const dailyWord = {
     },
     '2022-04-06': {
         word: 'SEANS',
-        meaning: 'jdfksdjsl',
+        meaning: 'tarlú gan choinne nó de thaisme',
         number: 72
     },
     '2022-04-07': {
         word: 'BOCHT',
-        meaning: 'jdfksdjsl',
+        meaning: 'gan dóthain de riachtanais na beatha',
         number: 73
     },
     '2022-04-08': {
         word: 'THIAR',
-        meaning: 'jdfksdjsl',
+        meaning: 'an treo a dtéann an ghrian faoi',
         number: 74
     },
     '2022-04-09': {
@@ -345,42 +345,42 @@ const dailyWord = {
     },
     '2022-04-10': {
         word: 'LACHA',
-        meaning: 'jdfksdjsl',
+        meaning: 'éan uisce agus gob fada leathan air',
         number: 76
     },
     '2022-04-11': {
         word: 'GAOTH',
-        meaning: 'jdfksdjsl',
+        meaning: 'aer ag gluaiseacht',
         number: 77
     },
     '2022-04-12': {
         word: 'DREAM',
-        meaning: 'jdfksdjsl',
+        meaning: 'grúpa daoine',
         number: 78
     },
     '2022-04-13': {
         word: 'CUMAS',
-        meaning: 'jdfksdjsl',
+        meaning: 'ábaltacht, neart',
         number: 79
     },
     '2022-04-14': {
         word: 'TRÁTH',
-        meaning: 'jdfksdjsl',
+        meaning: 'uair; am, ócáid; lá, tréimhse',
         number: 80
     },
     '2022-04-15': {
         word: 'LÉAMH',
-        meaning: 'jdfksdjsl',
+        meaning: 'focail nó siombailí scríofa a thuiscint',
         number: 81
     },
     '2022-04-16': {
         word: 'STAIR',
-        meaning: 'jdfksdjsl',
+        meaning: 'cuntas ar an saol atá caite',
         number: 82
     },
     '2022-04-17': {
         word: 'CÚRAM',
-        meaning: 'jdfksdjsl',
+        meaning: 'aire, freagracht',
         number: 83
     },
     '2022-04-18': {
@@ -394,7 +394,7 @@ const dailyWord = {
         number: 85
     },
     '2022-04-20': {
-        word: 'CRANN',
+        word: 'LITIR',
         meaning: 'jdfksdjsl',
         number: 86
     },
@@ -419,7 +419,7 @@ const dailyWord = {
         number: 90
     },
     '2022-04-25': {
-        word: 'LITIR',
+        word: 'CRANN', // LITIR
         meaning: 'jdfksdjsl',
         number: 91
     },
@@ -439,12 +439,12 @@ const dailyWord = {
         number: 94
     },
     '2022-04-29': {
-        word: 'ROGHA',
+        word: 'RINCE', //ROGHA
         meaning: 'jdfksdjsl',
         number: 95
     },
     '2022-04-30': {
-        word: 'LEATH',
+        word: 'DEASA', // International Jazz Day  LEATH
         meaning: 'jdfksdjsl',
         number: 96
     },
@@ -544,7 +544,7 @@ const dailyWord = {
         number: 115
     },
     '2022-05-20': {
-        word: 'DEARG',
+        word: 'BEACH', // World bee day DEARG
         meaning: 'jdfksdjsl',
         number: 116
     },
@@ -1404,7 +1404,7 @@ const dailyWord = {
         number: 287
     }, 
     '2022-11-08': {
-        word: 'RINCE',
+        word: 'ROGHA',
         meaning: 'jdfksdjsl',
         number: 288
     }, 
