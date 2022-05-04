@@ -83,5 +83,5 @@ export const dictionary = {
   CheadFoclachEile: 'An chéad FOCLACH eile',
   PracticeModeMessage: `Tá tú ag imirt sa MHÓD CLEACHTAIDH. Sa mhód seo ní chuirtear na buanna leis an scór agus níl rogha ann na torthaí a roinnt ar líne. 
   Nuair a imrítear sa MHÓD LAETHÚIL tugtar an tomhas céanna gach lá do gach imreoir, cuirtear na buanna leis an scór agus bíonn deis agat do thorthaí a roinnt ar líne.`,
-  distribution: 'Dáileach na dTomhas'
+  distribution: 'Dáileadh na dTomhas'
 }
