@@ -2,7 +2,8 @@ import Modal from 'react-modal'
 import { dictionary } from '../constants'
 import { ReactComponent as Close } from '../data/Close.svg'
 import { CountdownTimer } from './countdownTimer/CountdownTimer';
-import { GameModePicker } from './gameModePicker/gameModePicker'
+import { GameModePicker } from './gameModePicker/gameModePicker';
+import { GuessDistribution } from './guessDistribution/GuessDistribution';
 Modal.setAppElement('#root')
 
 export const EndGameModal = ({ 
@@ -18,10 +19,11 @@ export const EndGameModal = ({
   gameMode,
   toggleGameMode,
   answer,
-  version
+  version,
+  distribution,
  }) => {
    const timeToMidnight = () => {
-    let now = new Date(),
+     let now = new Date(),
     midnight = new Date(
         now.getFullYear(),
         now.getMonth(),
@@ -48,6 +50,7 @@ export const EndGameModal = ({
       answer={answer}
       gameState={gameState}
       version={version}
+      distribution={distribution}
     >
       <div className="h-full endGameModal dark">
         
@@ -96,11 +99,13 @@ export const EndGameModal = ({
             {dictionary['LongestStreak']}
             </div>              
         </div>
-          </div>
-          <div className="endGameModal-Countdown">
-            <h1>{dictionary['CheadFoclachEile']}</h1>
-            <CountdownTimer 
-              hoursMinsSecs={timeToMidnight()}/>
+      </div>
+      <h1>{dictionary['distribution']}</h1>
+      <GuessDistribution distribution={distribution} />
+  <div className="endGameModal-Countdown">
+    <h1>{dictionary['CheadFoclachEile']}</h1>
+      <CountdownTimer 
+        hoursMinsSecs={timeToMidnight()}/>
           </div>
           <div className="endGameModal-Share">
             <div className="endGameButtons">

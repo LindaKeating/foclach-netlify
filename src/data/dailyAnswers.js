@@ -694,7 +694,7 @@ const dailyWord = {
         number: 145
     }, 
     '2022-06-19': {
-        word: 'BRONN',
+        word: 'DAIDÍ', // fathers day
         meaning: 'jdfksdjsl',
         number: 146
     }, 

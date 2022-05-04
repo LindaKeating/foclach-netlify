@@ -90,7 +90,16 @@ function App() {
     invalidWord: false,
     currentGuess: '',
     message: '',
-    lostGameMessage: ''
+    lostGameMessage: '',
+    distribution: {
+      '1': { 'amount': 0 ,  'percentage': 0 },
+      '2': { 'amount': 0 ,  'percentage': 0 },
+      '3': { 'amount': 0 ,  'percentage': 0 },
+      '4': { 'amount': 0 ,  'percentage': 0 },
+      '5': { 'amount': 0 ,  'percentage': 0 },
+      '6': { 'amount': 0 ,  'percentage': 0 },
+      'total': 0
+    }
   }
 
 
@@ -130,6 +139,7 @@ function App() {
   const [myResults, setMyResults] = useState('')
   const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
   const [enterEvent, setEnterEvent] = useState(null)
+  const [distribution, setDistribution] = useLocalStorage('distribution', initialStates.distribution)
 
   const showMessage = (message, props) => toast(message, props);
 
@@ -369,7 +379,6 @@ function App() {
       return r[0] !== status.unguessed
     })
 
-
     let gameRowEnded = 0
 
     if (gameMode) {
@@ -385,8 +394,11 @@ function App() {
         return (r[0]) !== status.unguessed
       })
       setRowsPlayed(6 - lastFilledRowIndex)
-      gameRowEnded = 6 - lastFilledRowIndex;          
+      gameRowEnded = 6 - lastFilledRowIndex;
+              
       setGameState(state.won) 
+      updateDistribution(gameRowEnded)
+
     } else if (currentRow === 6) {
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
@@ -428,6 +440,25 @@ function App() {
     return (
       s = s + '\x0A'
     )
+  }
+
+  const updateDistribution = (rowNumber) => {
+    if(!playedAlreadyToday(lastScoredDate)) {
+        setDistribution((prev) => {
+        const newDistribution = { ...prev }
+        if (rowNumber) { 
+          newDistribution['total'] += 1;
+          newDistribution[rowNumber]['amount'] += 1;
+          newDistribution[1]['percentage'] = newDistribution[1]['amount'] / newDistribution['total'] * 100
+          newDistribution[2]['percentage'] = newDistribution[2]['amount'] / newDistribution['total'] * 100
+          newDistribution[3]['percentage'] = newDistribution[3]['amount'] / newDistribution['total'] * 100
+          newDistribution[4]['percentage'] = newDistribution[4]['amount'] / newDistribution['total'] * 100
+          newDistribution[5]['percentage'] = newDistribution[5]['amount'] / newDistribution['total'] * 100
+          newDistribution[6]['percentage'] = newDistribution[6]['amount'] / newDistribution['total'] * 100
+        }
+        return newDistribution
+        })
+    }
   }
 
   const updateLetterStatuses = (word) => {
@@ -567,6 +598,7 @@ function App() {
           gameMode={gameMode}
           toggleGameMode={toggleGameMode}
           version={packInfo.version}
+          distribution={distribution}
         />
         <SettingsModal
           isOpen={settingsModalIsOpen}
