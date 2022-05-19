@@ -445,19 +445,32 @@ function App() {
   const updateDistribution = (rowNumber) => {
     if(!playedAlreadyToday(lastScoredDate)) {
         setDistribution((prev) => {
-        const newDistribution = { ...prev }
-        if (rowNumber) { 
-          newDistribution['total'] += 1;
-          newDistribution[rowNumber]['amount'] += 1;
-          newDistribution[1]['percentage'] = newDistribution[1]['amount'] / newDistribution['total'] * 100
-          newDistribution[2]['percentage'] = newDistribution[2]['amount'] / newDistribution['total'] * 100
-          newDistribution[3]['percentage'] = newDistribution[3]['amount'] / newDistribution['total'] * 100
-          newDistribution[4]['percentage'] = newDistribution[4]['amount'] / newDistribution['total'] * 100
-          newDistribution[5]['percentage'] = newDistribution[5]['amount'] / newDistribution['total'] * 100
-          newDistribution[6]['percentage'] = newDistribution[6]['amount'] / newDistribution['total'] * 100
-        }
+          const newDistribution = { ...prev }
+          if (rowNumber) {
+            newDistribution[rowNumber]['amount'] += 1;
+          }
+
+          let largestAmount = 0;
+          let objectKeyLargestAmount;
+
+          // find largest amount
+          for (const [key, value] of Object.entries(newDistribution)) {
+            if (value.amount > largestAmount) {
+              largestAmount = value.amount
+              objectKeyLargestAmount = key
+            }
+          }
+        
+          // set all the percentages relative to the largest amount
+          for (const [key, value] of Object.entries(newDistribution)) {
+            if (key === objectKeyLargestAmount) {
+              newDistribution[key]['percentage'] = 100;
+            } else {
+            newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
+            }
         return newDistribution
-        })
+        }
+      })
     }
   }
 

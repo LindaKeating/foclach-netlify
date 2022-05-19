@@ -536,6 +536,7 @@ h1 {
 
 .num-guesses {
   align-self: center;
+  margin-right: .2em;
 }
 
 .guess {
