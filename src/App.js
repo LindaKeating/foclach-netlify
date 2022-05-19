@@ -468,8 +468,8 @@ function App() {
             } else {
             newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
             }
-        return newDistribution
         }
+        return newDistribution
       })
     }
   }
