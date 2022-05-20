@@ -549,7 +549,7 @@ const dailyWord = {
         number: 116
     },
     '2022-05-21': {
-        word: 'EAGLA',
+        word: 'DEARG', // Dearg le Fearg Eagla
         meaning: 'jdfksdjsl',
         number: 117
     },
