@@ -76,10 +76,10 @@ export const EndGameModal = ({
         </div>
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
-            {percentage}
+            {percentage}<small className="percentage">%</small>
           </div>
           <div className="label">
-            {dictionary['Wins']} %
+            {dictionary['Wins']} 
           </div>
         </div> 
         <div className="endGameMode-statisticContainer">

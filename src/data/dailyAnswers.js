@@ -614,9 +614,10 @@ const dailyWord = {
         number: 129
     },
     '2022-06-03': {
-        word: 'GREIM',
+        word: 'GREIM', 
         meaning: 'jdfksdjsl',
-        number: 130
+        number: 130,
+        emoji: '🚲' // world bicycle day
     }, 
     '2022-06-04': {
         word: 'FOSTA',
@@ -641,7 +642,8 @@ const dailyWord = {
     '2022-06-08': {
         word: 'BHUEL',
         meaning: 'jdfksdjsl',
-        number: 135
+        number: 135,
+        emoji: '🌊' // world oceans day
     }, 
     '2022-06-09': {
         word: 'ÓCÁID',
@@ -851,7 +853,8 @@ const dailyWord = {
     '2022-07-20': {
         word: 'LEASÚ',
         meaning: 'jdfksdjsl',
-        number: 177
+        number: 177,
+        emoji: '🌙' // International Moon Day
     }, 
     '2022-07-21': {
         word: 'CÓSTA',
@@ -1236,7 +1239,8 @@ const dailyWord = {
     '2022-10-05': {
         word: 'UAIGH',
         meaning: 'jdfksdjsl',
-        number: 254
+        number: 254,
+        emoji: '👩‍🏫' // world teachers' day
     }, 
     '2022-10-06': {
         word: 'CLUIN',
