@@ -97,7 +97,8 @@ function App() {
       '3': { 'amount': 0 ,  'percentage': 0 },
       '4': { 'amount': 0 ,  'percentage': 0 },
       '5': { 'amount': 0 ,  'percentage': 0 },
-      '6': { 'amount': 0 ,  'percentage': 0 }
+      '6': { 'amount': 0 ,  'percentage': 0 },
+      total: 0
     }
   }
 
@@ -443,9 +444,7 @@ function App() {
 
   const updateDistribution = (rowNumber) => {
     if(!playedAlreadyToday(lastScoredDate)) {
-      console.log('distribution', distribution)
       let newDistribution = { ...distribution}
-      console.log(newDistribution, 'newDistribution')
       if(rowNumber) {
         newDistribution[rowNumber]['amount'] += 1;
       }
@@ -463,7 +462,7 @@ function App() {
         if (key === objectKeyLargestAmount) {
           newDistribution[key]['percentage'] =  100
         } else {
-          if(newDistribution[key] !== 'total') {
+          if(key !== 'total') {
             newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
           }        
         }
