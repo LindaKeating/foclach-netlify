@@ -461,7 +461,9 @@ function App() {
         if (key === objectKeyLargestAmount) {
           newDistribution[key]['percentage'] =  100
         } else {
-          newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
+          if(newDistribution[key] !== 'total') {
+            newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
+          }        
         }
       }
       setDistribution(newDistribution)
