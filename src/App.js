@@ -443,12 +443,14 @@ function App() {
 
   const updateDistribution = (rowNumber) => {
     if(!playedAlreadyToday(lastScoredDate)) {
+      console.log('distribution', distribution)
       let newDistribution = { ...distribution}
+      console.log(newDistribution, 'newDistribution')
       if(rowNumber) {
         newDistribution[rowNumber]['amount'] += 1;
       }
       let largestAmount = 0;
-      let objectKeyLargestAmount;
+      let objectKeyLargestAmount = '';
 
       for(const[key, value] of Object.entries(newDistribution)) {
         if(value.amount > largestAmount) {
