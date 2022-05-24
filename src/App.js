@@ -97,8 +97,7 @@ function App() {
       '3': { 'amount': 0 ,  'percentage': 0 },
       '4': { 'amount': 0 ,  'percentage': 0 },
       '5': { 'amount': 0 ,  'percentage': 0 },
-      '6': { 'amount': 0 ,  'percentage': 0 },
-      'total': 0
+      '6': { 'amount': 0 ,  'percentage': 0 }
     }
   }
 
@@ -444,33 +443,28 @@ function App() {
 
   const updateDistribution = (rowNumber) => {
     if(!playedAlreadyToday(lastScoredDate)) {
-        setDistribution((prev) => {
-          const newDistribution = { ...prev }
-          if (rowNumber) {
-            newDistribution[rowNumber]['amount'] += 1;
-          }
+      let newDistribution = { ...distribution}
+      if(rowNumber) {
+        newDistribution[rowNumber]['amount'] += 1;
+      }
+      let largestAmount = 0;
+      let objectKeyLargestAmount;
 
-          let largestAmount = 0;
-          let objectKeyLargestAmount;
-
-          // find largest amount
-          for (const [key, value] of Object.entries(newDistribution)) {
-            if (value.amount > largestAmount) {
-              largestAmount = value.amount
-              objectKeyLargestAmount = key
-            }
-          }
-        
-          // set all the percentages relative to the largest amount
-          for (const [key, value] of Object.entries(newDistribution)) {
-            if (key === objectKeyLargestAmount) {
-              newDistribution[key]['percentage'] = 100;
-            } else {
-            newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
-            }
+      for(const[key, value] of Object.entries(newDistribution)) {
+        if(value.amount > largestAmount) {
+          largestAmount  = value.amount
+          objectKeyLargestAmount = key
         }
-        return newDistribution
-      })
+      }
+
+      for (const[key, value] of Object.entries(newDistribution)) {
+        if (key === objectKeyLargestAmount) {
+          newDistribution[key]['percentage'] =  100
+        } else {
+          newDistribution[key]['percentage'] = newDistribution[key]['amount'] / newDistribution[objectKeyLargestAmount]['amount'] * 100
+        }
+      }
+      setDistribution(newDistribution)
     }
   }
 
