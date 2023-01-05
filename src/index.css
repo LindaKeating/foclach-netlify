@@ -6,6 +6,11 @@
   src: url('/public/assets/Ranade-Variable.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('/public/assets/LatoLatin-Regular.woff') format('woff');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.cdnfonts.com/css/futura?v=2');
 
@@ -14,7 +19,7 @@
 *,
 body {
   margin: 0;
-  font-family: 'Ranade', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+  font-family: 'LatoLatin', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -146,6 +151,16 @@ a {
   text-align: center;
 }
 
+.endGameButton-Litreach {
+  position: relative;
+}
+
+.endGameButton-LitreachLogo {
+  width: 20px;
+  display: inline;
+  margin-left: 0.5rem;
+}
+
 .endGameButtons {
   display: flex;
   justify-content: space-around;
@@ -154,14 +169,13 @@ a {
 }
 
 .endGameButton {
-  background-color: #c3ac14;
   padding: .375rem .75rem;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-color: #9a9aa0;
+  border-radius: 1.5rem;
   width: inherit;
-  color:rgb(47, 55, 69);
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: .8rem;
 }
 
 .shareButton {
@@ -404,6 +418,12 @@ a {
   font-size: .8em;
 }
 
+.endGameMode-Heading,
+.endGameMode-Label,
+.endGameModal-ModeMessage {
+  color: #dcdcdcc4;
+}
+
 .endGameMode-StatisticNumber {
   font-size: 30px;
   font-weight: 400;
@@ -413,11 +433,13 @@ a {
   text-align: center;
   letter-spacing: 0.05em;
   font-variant-numeric: proportional-nums;
+  line-height: 1em;
  }
 
  .endGameMode-statisticContainer {
    flex: 1;
    min-width: 50%;
+   margin-bottom: 1rem;
  }
 
  .endGameModal-Header {
@@ -468,13 +490,13 @@ a {
 
 .EndGameModal-Icon {
   margin-right: .5em;
+  margin-left: 0.5rem;
 }
 
 h1 {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -506,7 +528,7 @@ h1 {
 #guess-distribution {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .graph-container {

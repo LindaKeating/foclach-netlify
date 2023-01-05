@@ -4,6 +4,7 @@ import { ReactComponent as Close } from '../data/Close.svg'
 import { CountdownTimer } from './countdownTimer/CountdownTimer';
 import { GameModePicker } from './gameModePicker/gameModePicker';
 import { GuessDistribution } from './guessDistribution/GuessDistribution';
+import { ReactComponent as LitreachSVG } from '../data/Asset18.svg';
 Modal.setAppElement('#root')
 
 export const EndGameModal = ({ 
@@ -57,68 +58,72 @@ export const EndGameModal = ({
         <div className="endGameModal-Container">
           <div className="endGameModal-Header">
             <button></button>
-            <h1>{dictionary['Statistics']}</h1>
+            <h1></h1>
             <button
               className="closeButton"
               onClick={handleClose}
             >
               <Close />
             </button>
-          </div>      
-          <div className="endGameModal-Statistics">
+          </div>
+          <h1 className="endGameMode-Heading">{dictionary['Statistics']}</h1>    
+          <div className="endGameModal-Statistics"> 
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
             {totalPlayed}
           </div>
-          <div className="label">
+          <label className="label endGameMode-Label">
             {dictionary['Played']}
-          </div>
+          </label>
         </div>
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
-            {percentage}<small className="percentage">%</small>
+            {percentage}<small className="percentage"></small>
           </div>
-          <div className="label">
-            {dictionary['Wins']} 
-          </div>
+          <label className="label endGameMode-Label">
+            {dictionary['Wins']} %
+          </label>
         </div> 
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
             {currentStreak}
           </div>
-          <div className="label">
+          <label className="label endGameMode-Label">
           {dictionary['CurrentStreak']}
-            </div>
+            </label>
           
         </div> 
         <div className="endGameMode-statisticContainer">
           <div className="endGameMode-StatisticNumber">
             {longestStreak}
           </div>
-          <div className="label">
+          <label className="label endGameMode-Label">
             {dictionary['LongestStreak']}
-            </div>              
+            </label>              
         </div>
       </div>
-      <h1>{dictionary['distribution']}</h1>
+      <h1 className="endGameMode-Heading">{dictionary['distribution']}</h1>
       <GuessDistribution distribution={distribution} />
   <div className="endGameModal-Countdown">
-    <h1>{dictionary['CheadFoclachEile']}</h1>
-      <CountdownTimer 
-        hoursMinsSecs={timeToMidnight()}/>
-          </div>
-          <div className="endGameModal-Share">
-            <div className="endGameButtons">
-              <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
+    <h1 className="endGameMode-Heading">{dictionary['CheadFoclachEile']}</h1>
+    <CountdownTimer 
+      hoursMinsSecs={timeToMidnight()}/>
+    <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
                  target="_blank" rel="noopener noreferrer"
                  className={`${getDisplayDefinition(
                     gameState               
                   )} `}>Brí an fhocail</a>
+  </div>
+          <div className="endGameModal-Share">
+            <div className="endGameButtons">
+              <a href="https://litreach.ie?utm_source=Foclach" className="endGameButton endGameButton-Litreach">Imir Litreach 
+              <LitreachSVG className="endGameButton-LitreachLogo"/>
+              </a>
               <button className="endGameButton shareButton" 
                 disabled={!gameMode}
                 onClick={shareResults}>
-                <i className="fa-solid fa-share-nodes EndGameModal-Icon"></i>
-                 { dictionary['Share']}
+                 { dictionary['Share']} 
+                 <i className="fa-solid fa-share-nodes EndGameModal-Icon"></i>
               </button>
             </div>
           </div>
