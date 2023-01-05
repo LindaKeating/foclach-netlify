@@ -58,7 +58,7 @@ export const EndGameModal = ({
         <div className="endGameModal-Container">
           <div className="endGameModal-Header">
             <button></button>
-            <h1></h1>
+            <h1 className="EndGameModal-Heading">Staitisticí</h1>
             <button
               className="closeButton"
               onClick={handleClose}

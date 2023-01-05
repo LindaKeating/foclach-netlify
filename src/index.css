@@ -424,6 +424,10 @@ a {
   color: #dcdcdcc4;
 }
 
+.EndGameModal-Heading {
+  display: none;
+}
+
 .endGameMode-StatisticNumber {
   font-size: 30px;
   font-weight: 400;
