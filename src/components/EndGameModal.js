@@ -36,7 +36,7 @@ export const EndGameModal = ({
    }
 
    const getDisplayDefinition = (playingState) => {
-     return playingState !== 'playing' ? '' : 'hidden'
+     return playingState !== 'playing' ? 'BriAnFhocail' : 'hidden'
   }
   return (
     <Modal

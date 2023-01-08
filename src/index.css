@@ -335,6 +335,13 @@ a {
   width: 2rem;
 }
 
+.BriAnFhocail {
+  justify-content: center;
+  display: flex;
+  color: #dcdcdcc4;
+  text-decoration-color: #dcdcdcc4;
+}
+
 .appHeader {
   display: flex;
   justify-content: space-between;
@@ -417,6 +424,10 @@ a {
 .gitHubLink {
   margin-top: 3em;
   font-size: .8em;
+}
+
+.endGameMode-Heading {
+  margin-bottom: 0;
 }
 
 .endGameMode-Heading,
