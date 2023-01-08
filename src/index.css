@@ -719,7 +719,7 @@ MEDIA QUERIES
 
 @media (max-height: 736px) {
   .letterTile {
-    height: 14vw;
+    height: 13vw;
   }
 
   .appHeader {
