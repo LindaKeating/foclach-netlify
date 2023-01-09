@@ -335,6 +335,26 @@ a {
   width: 2rem;
 }
 
+.AnswerHistory-Heading,
+hr {
+  color: #dcdcdcc4;
+}
+
+.AnswersHistory-List {
+  width: 100%;
+  
+}
+
+.AnswersHistory-List th {
+  text-align: left;
+  color: #dcdcdcc4;
+}
+
+.AnswersHistory-List th,
+.AnswersHistory-List td {
+  padding: .5rem;
+}
+
 .BriAnFhocail {
   justify-content: center;
   display: flex;
@@ -350,8 +370,13 @@ a {
   align-items: baseline;
 }
 
-.statisticIcon {
+.statisticIcon,
+.InfoIcon {
   margin-right: 1rem;
+}
+
+.HistoryIcon {
+  color: white;
 }
 
 .siteTitle {

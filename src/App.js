@@ -12,11 +12,13 @@ import { useLocalStorage } from './hooks/useLocalStorage'
 import { ReactComponent as Info } from './data/Info.svg'
 import { ReactComponent as Settings } from './data/Settings.svg'
 import { ReactComponent as Statistics } from './data/Statistics.svg'
+import { ReactComponent as History } from './data/History.svg';
 
 import { InfoModal } from './components/InfoModal'
 import { SettingsModal } from './components/SettingsModal'
 import { EndGameModal } from './components/EndGameModal'
 import { EndGameButtons } from './components/EndGameButtons'
+import { AnswersHistory } from './components/AnswersHistory';
 
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -135,11 +137,13 @@ function App() {
   const [firstTime, setFirstTime] = useLocalStorage('first-time', true)
   const [infoModalIsOpen, setInfoModalIsOpen] = useState(firstTime)
   const [settingsModalIsOpen, setSettingsModalIsOpen] = useState(false)
+  const [answerHistoryModalIsOpen, setAnswerHistoryModalIsOpen] = useState(false)
   const [currentGuess, setCurrentGuess] = useState(initialStates.currentGuess)
   const [myResults, setMyResults] = useState('')
   const [dayModeModalOpen, setDayModeModalOpen] = useState(false)
   const [enterEvent, setEnterEvent] = useState(null)
   const [distribution, setDistribution] = useLocalStorage('distribution', initialStates.distribution)
+  const [answerHistory, setAnswerHistory] = useState(null)
 
   const showMessage = (message, props) => toast(message, props);
 
@@ -213,6 +217,7 @@ function App() {
       setLetterStatuses(initialStates.letterStatuses)
       setDailyLostGameMessage('')
     }
+
   }, [])
 
   useEffect(() => {
@@ -551,8 +556,15 @@ function App() {
               onClick={() => setDayModeModalOpen(true)}>
             <Statistics />
           </button>
-          <button type="button" onClick={() => setInfoModalIsOpen(true)}>
+          <button 
+            className="InfoIcon"
+            type="button" onClick={() => setInfoModalIsOpen(true)}>
             <Info />
+          </button>
+          <button 
+            className="HistoryIcon"
+            type="button" onClick={() => setAnswerHistoryModalIsOpen(true)}>
+            <History />
           </button>
           </div>
          
@@ -580,6 +592,13 @@ function App() {
           </div>
           </div>     
         </div>
+
+        <AnswersHistory 
+          styles={modalStyles}
+          historicalAnswers={[dailyAnswers]}
+          isOpen={answerHistoryModalIsOpen}
+          handleClose={() => setAnswerHistoryModalIsOpen(false)}
+        />
         
         <InfoModal
           isOpen={infoModalIsOpen}
