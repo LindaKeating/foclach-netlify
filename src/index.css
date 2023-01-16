@@ -768,3 +768,35 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orient
      padding-left: 14px;
    }
 }
+
+@media (min-width: 1100px) {
+
+    .ReactModal__Overlay.ReactModal__Overlay--after-open {
+	display: contents;  /* allow interaction with main board */
+    }
+
+    .ReactModal__Content.ReactModal__Content--after-open {
+	/* !important to overcome inline style */
+	transform: translate(0, -50%) !important;
+	position: fixed !important;  /* do what the overlay was doing */
+	animation: fade-in 0.5s normal forwards ease-in-out;
+    }
+
+    .ReactModal__Body--open .appContainer {
+	transform: translateX(-50%);
+	position: relative;
+	z-index: 1;  /* for Toastify to appear above */
+    }
+
+    .ReactModal__Body--open .Toastify__toast-container--top-center {
+	transform: translateX(calc(-50% + 250px)) !important;  /* center across both sides */
+    }
+
+    .ReactModal__Body--open .appContainer .appHeader button {
+	visibility: hidden;  /* a quick hack rather than try to work out how to switch between modals */
+    }
+
+    .infoModal-Container .endGameButton {
+	display: none;  /* not needed as the board is visible on left at this screen width */
+    }
+}
