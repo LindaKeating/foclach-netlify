@@ -400,10 +400,13 @@ function App() {
       })
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
-              
-      setGameState(state.won) 
+
       updateDistribution(gameRowEnded)
 
+      // delay to allow player to see that all five letters are green
+      setTimeout(() => {
+        setGameState(state.won)
+      }, 500)
     } else if (currentRow === 6) {
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
