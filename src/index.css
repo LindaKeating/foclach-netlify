@@ -227,14 +227,14 @@ a {
   background-color: #ba7a39;
   border: 2px white;
   border-style: dashed;
-  transition-property: 'background-color' border;
+  transition-property: background-color, border;
   transition-duration: .5s;
 }
 
 .rightLetterRightPlace {
   background-color: #6aaa64;
   border: 2px solid white;
-  transition-property: 'background-color' border;
+  transition-property: background-color, border;
   transition-duration: .5s;
 }
 
