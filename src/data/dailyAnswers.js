@@ -1841,7 +1841,7 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 381
     },'2023-02-10': {
-        word: 'FIRIC',
+        word: 'FÍRIC',
         meaning: 'jdfksdjsl',
         number: 382
     },'2023-02-11': {
