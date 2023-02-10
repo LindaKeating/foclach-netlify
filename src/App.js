@@ -400,10 +400,13 @@ function App() {
       })
       setRowsPlayed(6 - lastFilledRowIndex)
       gameRowEnded = 6 - lastFilledRowIndex;
-              
-      setGameState(state.won) 
+
       updateDistribution(gameRowEnded)
 
+      // delay to allow player to see that all five letters are green
+      setTimeout(() => {
+        setGameState(state.won)
+      }, 1000)
     } else if (currentRow === 6) {
       setGameState(state.lost)
       if (gameMode ) { setDailyLostGameMessage(`😿 Mí ááádh 😿  ${ answer } an freagra ceart`) }
@@ -477,27 +480,61 @@ function App() {
   }
 
   const updateLetterStatuses = (word) => {
-    setLetterStatuses((prev) => {
-      const newLetterStatuses = { ...prev }
-      const wordLength = word.length
-      for (let i = 0; i < wordLength; i++) {
-        if (newLetterStatuses[word[i]] === status.green) continue
-
-        if (word[i] === answer[i]) {
-          newLetterStatuses[word[i]] = status.green
-        } else if (answer.includes(word[i])) {
-          newLetterStatuses[word[i]] = status.yellow
-        } else {
-          newLetterStatuses[word[i]] = status.gray
-        }
-      }
-      return newLetterStatuses
+    let i = 0
+    word.split('').forEach((letter) => {
+      const answer_letter = answer[i]
+      setTimeout(() => {
+        setLetterStatuses((prev) => {
+          const newLetterStatuses = { ...prev }
+          if (newLetterStatuses[letter] === status.green) return newLetterStatuses
+          if (letter === answer_letter) {
+            newLetterStatuses[letter] = status.green
+          } else if (answer.includes(letter)) {
+            newLetterStatuses[letter] = status.yellow
+          } else {
+            newLetterStatuses[letter] = status.gray
+          }
+          return newLetterStatuses
+        })
+      }, (1 + i) * 500)
+      i++
     })
   }
 
-  const copyToClipboard = () => {
+  function testNativeShare(shareData) {
+    return matchMedia('(pointer:coarse)').matches &&  // ~ is mobile - native share not wanted on desktop
+      navigator.userAgent.toLowerCase().indexOf('firefox') === -1 &&  // firefox for Android reports that it can share, but doesn't support the `text` param (firefox on iOS can use the native share, but doesn't include 'firefox', instead includes 'FxiOS')
+      navigator.share &&   // should catch lack of support in webview on Android?
+      navigator.canShare(shareData);  // can actually share what we want to
+  }
+
+  const shareResults = () => {
     let rowString = gameState === state.lost ? 'X' : rowsPlayed
-    navigator.clipboard.writeText("FOCLACH " + getTodaysWordNumber() + ' - ' + rowString + "/6\x0A"  + myResults + "\x0A").then(function(){
+    const shareText = "FOCLACH " + getTodaysWordNumber() + ' - ' + rowString + "/6\x0A"  + myResults + "\x0A";
+    const shareData = {
+      text: shareText,
+      // url: 'https://www.foclach.com/',  // disabled: a URL here overrides instead of complements the .text  on iOS
+    }
+
+    if (document.location.protocol !== 'https:') {
+      // dev: both methods seem to fail silently on iOS without https
+      alert(shareData.text);
+    } else if (testNativeShare(shareData)) {
+      navigator.share(shareData)
+        .then(() => {
+          //console.log('Successful share')
+        })
+        .catch((error) => {
+          // this can be fine, e.g. 'AbortError: Abort due to cancellation of share'
+          // don't want to copyToClipboard now if user pressed the 'x', but also we'd get a 'NotAllowedError' on iOS as it doesn't work as in a promise callback because it's not directly initiated by user
+        });
+    } else {
+      copyToClipboard(shareText);
+    }
+  }
+
+  const copyToClipboard = (shareText) => {
+    navigator.clipboard.writeText(shareText).then(function(){
       setClipboardMessage(dictionary['ResultsCopiedToClipboard'])
       showMessage(dictionary['ResultsCopiedToClipboard'], { className: 'infoToast'})
     }, function(){
@@ -617,9 +654,7 @@ function App() {
           currentStreak={currentWinStreak}
           longestStreak={longestWinStreak}
           answer={answer}
-          shareResults={() => {
-            copyToClipboard()
-          }}
+          shareResults={shareResults}
           isCopied={copiedToClipboard}
           percentage={percentageStatistic()}
           totalPlayed={wins + losses}
@@ -652,9 +687,7 @@ function App() {
             setMyResults('')
             closeModal()
           }}
-          shareResults={() => {
-            copyToClipboard()
-          }}
+          shareResults={shareResults}
           gameMode={gameMode}
           isOpen={modalIsOpen}
           answer={answer.toLowerCase()}

@@ -227,14 +227,14 @@ a {
   background-color: #ba7a39;
   border: 2px white;
   border-style: dashed;
-  transition-property: 'background-color' border;
+  transition-property: background-color, border;
   transition-duration: .5s;
 }
 
 .rightLetterRightPlace {
   background-color: #6aaa64;
   border: 2px solid white;
-  transition-property: 'background-color' border;
+  transition-property: background-color, border;
   transition-duration: .5s;
 }
 
@@ -274,7 +274,7 @@ a {
   /* PATTERN MAKER https://www.magicpattern.design/tools/css-backgrounds */
   background-color: #9a9aa0;
   opacity: 0.8;
-  transition-property: 'background-color';
+  transition-property: background-color;
   transition-duration: .5s;
  /* background: repeating-linear-gradient( -45deg, #838383, #838383   2px, #9a9aa0 2px, #9a9aa0 10px ); */
 }
