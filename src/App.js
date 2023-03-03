@@ -333,7 +333,7 @@ function App() {
       const newCellStatuses = [...prev]
       newCellStatuses[rowNumber] = [...prev[rowNumber]]
       const wordLength = word.length
-      const answerLetters = answer.split('')
+      const answerLetters = answer.toLowerCase().split('')
 
       // set all to gray
       for (let i = 0; i < wordLength; i++) {
@@ -350,9 +350,10 @@ function App() {
 
       // check yellows
       for (let i = 0; i < wordLength; i++) {
+        console.log('yellow', answerLetters)
         if (answerLetters.includes(word[i].toLowerCase()) && newCellStatuses[rowNumber][i] !== status.green) {
           newCellStatuses[rowNumber][i] = status.yellow
-          answerLetters.splice(answerLetters.indexOf(word[i]), 1)
+          answerLetters.splice(answerLetters.indexOf(word[i].toLowerCase()), 1)
         }
       }
 
@@ -487,7 +488,7 @@ function App() {
         setLetterStatuses((prev) => {
           const newLetterStatuses = { ...prev }
           if (newLetterStatuses[letter] === status.green) return newLetterStatuses
-          if (letter === answer_letter) {
+          if (letter.toLowerCase() === answer_letter.toLowerCase()) {
             newLetterStatuses[letter] = status.green
           } else if (answer.includes(letter)) {
             newLetterStatuses[letter] = status.yellow
