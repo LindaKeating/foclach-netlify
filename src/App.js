@@ -342,7 +342,7 @@ function App() {
 
       // check greens
       for (let i = wordLength - 1; i >= 0; i--) {
-        if (word[i] === answer[i]) {
+        if (word[i].toLowerCase() === answer[i].toLowerCase()) {
           newCellStatuses[rowNumber][i] = status.green
           answerLetters.splice(i, 1)
         }
@@ -350,7 +350,7 @@ function App() {
 
       // check yellows
       for (let i = 0; i < wordLength; i++) {
-        if (answerLetters.includes(word[i]) && newCellStatuses[rowNumber][i] !== status.green) {
+        if (answerLetters.includes(word[i].toLowerCase()) && newCellStatuses[rowNumber][i] !== status.green) {
           newCellStatuses[rowNumber][i] = status.yellow
           answerLetters.splice(answerLetters.indexOf(word[i]), 1)
         }
