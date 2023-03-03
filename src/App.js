@@ -69,7 +69,7 @@ const playedAlreadyToday = (date) => {
 function App() {
   const isProduction = process.env.NODE_ENV === 'production';
   const initialStates = {
-    answer: () => getAnswer(true),
+    answer: () => getAnswer(true).toLowerCase(),
     gameState: state.playing,
     board: [
       ['', '', '', '', ''],
