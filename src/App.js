@@ -489,7 +489,7 @@ function App() {
           if (newLetterStatuses[letter] === status.green) return newLetterStatuses
           if (letter.toLowerCase() === answer_letter.toLowerCase()) {
             newLetterStatuses[letter] = status.green
-          } else if (answer.includes(letter).toLowerCase()) {
+          } else if (answer.includes(letter.toLowerCase())) {
             newLetterStatuses[letter] = status.yellow
           } else {
             newLetterStatuses[letter] = status.gray
