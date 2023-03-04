@@ -108,11 +108,20 @@ export const EndGameModal = ({
     <h1 className="endGameMode-Heading">{dictionary['CheadFoclachEile']}</h1>
     <CountdownTimer 
       hoursMinsSecs={timeToMidnight()}/>
+    
+    <div className="endGameButtons">
     <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
                  target="_blank" rel="noopener noreferrer"
                  className={`${getDisplayDefinition(
                     gameState               
                   )} `}>Brí an fhocail</a>
+    <a href={`http://www.potafocal.com/beo/?s=${answer}`} 
+             target="_blank" rel="noopener noreferrer"
+             className={`${getDisplayDefinition(
+                gameState               
+              )} `}>An focal beo</a>
+    </div>
+
   </div>
           <div className="endGameModal-Share">
             <div className="endGameButtons">
