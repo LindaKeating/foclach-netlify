@@ -350,7 +350,6 @@ function App() {
 
       // check yellows
       for (let i = 0; i < wordLength; i++) {
-        console.log('yellow', answerLetters)
         if (answerLetters.includes(word[i].toLowerCase()) && newCellStatuses[rowNumber][i] !== status.green) {
           newCellStatuses[rowNumber][i] = status.yellow
           answerLetters.splice(answerLetters.indexOf(word[i].toLowerCase()), 1)
@@ -490,7 +489,7 @@ function App() {
           if (newLetterStatuses[letter] === status.green) return newLetterStatuses
           if (letter.toLowerCase() === answer_letter.toLowerCase()) {
             newLetterStatuses[letter] = status.green
-          } else if (answer.includes(letter)) {
+          } else if (answer.includes(letter).toLowerCase()) {
             newLetterStatuses[letter] = status.yellow
           } else {
             newLetterStatuses[letter] = status.gray
