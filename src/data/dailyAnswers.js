@@ -1999,43 +1999,43 @@ const dailyWord = {
     },'2023-03-21': {
         word: 'plána',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 421
     },'2023-03-22': {
         word: 'beola',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 422
     },'2023-03-23': {
         word: 'creat',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 423
     },'2023-03-24': {
         word: 'cróga',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 424
     },'2023-03-25': {
         word: 'mothú',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 425
     },'2023-03-26': {
         word: 'aoibh',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 426
     },'2023-03-27': {
         word: 'sicín',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 427
     },'2023-03-28': {
         word: 'bearr',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 428
     },'2023-03-29': {
         word: 'féith',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 429
     },'2023-03-30': {
         word: 'ortha',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 430
     },'2023-03-31': {
         word: 'forás',
         meaning: 'jdfksdjsl',
