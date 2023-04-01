@@ -2039,247 +2039,247 @@ const dailyWord = {
     },'2023-03-31': {
         word: 'forás',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 431
     },'2023-04-01': {
         word: 'masla',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 432
     },'2023-04-02': {
         word: 'cónra',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 433
     },'2023-04-03': {
         word: 'trian',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 434
     },'2023-04-04': {
         word: 'dhein',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 435
     },'2023-04-05': {
         word: 'tosaí',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 436
     },'2023-04-06': {
         word: 'staon',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 437
     },'2023-04-07': {
         word: 'goile',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 438
     },'2023-04-08': {
         word: 'tuama',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 439
     },'2023-04-09': {
         word: 'uacht',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 440
     },'2023-04-10': {
         word: 'peata',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 441
     },'2023-04-11': {
         word: 'laige',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 442
     },'2023-04-12': {
         word: 'stoca',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 443
     },'2023-04-13': {
         word: 'DRAOI',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 444
     },'2023-04-14': {
         word: 'BEANN',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 445
     },'2023-04-15': {
         word: 'GLÓIR',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 446
     },'2023-04-16': {
         word: 'TEILG',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 447
     },'2023-04-17': {
         word: 'PÉIST',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 448
     },'2023-04-18': {
         word: 'LUASC',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 449
     },'2023-04-19': {
         word: 'CATHÚ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 450
     },'2023-04-20': {
         word: 'SÉALA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 451
     },'2023-04-21': {
         word: 'RACHT',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 452
     },'2023-04-22': {
         word: 'ÍDIGH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 453
     },'2023-04-23': {
         word: 'SNÁTH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 454
     },'2023-04-24': {
         word: 'UAIMH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 455
     },'2023-04-25': {
         word: 'CASÓG',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 456
     },'2023-04-26': {
         word: 'OILTE',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 457
     },'2023-04-27': {
         word: 'SMIOR',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 458
     },'2023-04-28': {
         word: 'CÚISÍ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 459
     },'2023-04-29': {
         word: 'CÍSTE',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 460
     },'2023-04-30': {
         word: 'TARLÚ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 461
     },'2023-05-01': {
         word: 'BALBH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 462
     },'2023-05-02': {
         word: 'COTHÚ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 463
     },'2023-05-03': {
         word: 'PÚDAR',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 464
     },'2023-05-04': {
         word: 'SONAS',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 465
     },'2023-05-05': {
         word: 'SEIFT',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 466
     },'2023-05-06': {
         word: 'BEOIR',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 467
     },'2023-05-07': {
         word: 'LAMPA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 468
     },'2023-05-08': {
         word: 'CAIFÉ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 469
     },'2023-05-09': {
         word: 'STRAE',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 470
     },'2023-05-10': {
         word: 'MAMAÍ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 471
     },'2023-05-11': {
         word: 'UMHAL',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 472
     },'2023-05-12': {
         word: 'MIONN',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 473
     },'2023-05-13': {
         word: 'CÍOCH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 474
     },'2023-05-14': {
         word: 'COISC',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 475
     },'2023-05-15': {
         word: 'TUATA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 476
     },'2023-05-16': {
         word: 'TÉAMH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 477
     },'2023-05-17': {
         word: 'DREAP',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 478
     },'2023-05-18': {
         word: 'UATHA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 479
     },'2023-05-19': {
         word: 'SEILF',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 480
     },'2023-05-20': {
         word: 'LEOGA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 481
     },'2023-05-21': {
         word: 'NÓCHA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 482
     },'2023-05-22': {
         word: 'GONTA',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 483
     },'2023-05-23': {
         word: 'IOMRÁ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 484
     },'2023-05-24': {
         word: 'DREAS',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 485
     },'2023-05-25': {
         word: 'DÍOBH',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 486
     },'2023-05-26': {
         word: 'GREAD',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 487
     },'2023-05-27': {
         word: 'LEANN',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 488
     },'2023-05-28': {
         word: 'OLCAS',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 489
     },'2023-05-29': {
         word: 'URNAÍ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 490
     },'2023-05-30': {
         word: 'GORTÚ',
         meaning: 'jdfksdjsl',
-        number: 344
+        number: 491
     },'2023-05-31': {
         word: 'CEARN',
         meaning: 'jdfksdjsl',
