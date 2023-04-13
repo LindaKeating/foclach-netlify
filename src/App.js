@@ -480,25 +480,26 @@ function App() {
   }
 
   const updateLetterStatuses = (word) => {
-    let i = 0
-    word.split('').forEach((letter) => {
-      const answer_letter = answer[i]
-      setTimeout(() => {
-        setLetterStatuses((prev) => {
-          const newLetterStatuses = { ...prev }
-          if (newLetterStatuses[letter] === status.green) return newLetterStatuses
-          if (letter.toLowerCase() === answer_letter.toLowerCase()) {
-            newLetterStatuses[letter] = status.green
-          } else if (answer.includes(letter.toLowerCase())) {
-            newLetterStatuses[letter] = status.yellow
+
+    setTimeout(() => { 
+      setLetterStatuses((prev) => {
+        const newLetterStatuses = { ...prev }
+        const wordLength = word.length
+        for (let i = 0; i < wordLength; i++) {
+          if (newLetterStatuses[word[i]] === status.green) continue
+  
+          if (word[i] === answer[i]) {
+            newLetterStatuses[word[i]] = status.green
+          } else if (answer.includes(word[i])) {
+            newLetterStatuses[word[i]] = status.yellow
           } else {
-            newLetterStatuses[letter] = status.gray
+            newLetterStatuses[word[i]] = status.gray
           }
-          return newLetterStatuses
-        })
-      }, (1 + i) * 500)
-      i++
-    })
+        }
+        return newLetterStatuses
+      })
+    }, 2500)
+    
   }
 
   function testNativeShare(shareData) {
