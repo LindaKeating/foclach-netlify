@@ -3144,19 +3144,19 @@ const dailyWord = {
         word: 'DOIRE',
         meaning: 'jdfksdjsl',
         number: 707
-    },'2024-02-02': {
+    },'2024-01-02': {
         word: 'DALBA',
         meaning: 'jdfksdjsl',
         number: 708
-    },'2024-02-03': {
+    },'2024-01-03': {
         word: 'SEARC',
         meaning: 'jdfksdjsl',
         number: 709
-    },'2024-02-04': {
+    },'2024-01-04': {
         word: 'CASÁN',
         meaning: 'jdfksdjsl',
         number: 710
-    },'2024-02-05': {
+    },'2024-01-05': {
         word: 'TOILL',
         meaning: 'jdfksdjsl',
         number: 711
