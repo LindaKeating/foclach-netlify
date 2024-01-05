@@ -3160,6 +3160,14 @@ const dailyWord = {
         word: 'TOILL',
         meaning: 'jdfksdjsl',
         number: 711
+    },'2024-01-06': {
+        word: 'TRUNC',
+        meaning: 'jdfksdjsl',
+        number: 712
+    },'2024-01-07': {
+        word: 'CUMAR',
+        meaning: 'jdfksdjsl',
+        number: 713
     }
 }
 
