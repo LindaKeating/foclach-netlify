@@ -3168,6 +3168,11 @@ const dailyWord = {
         word: 'CUMAR',
         meaning: 'jdfksdjsl',
         number: 713
+    },
+    '2024-01-08': {
+        word: 'ANÁLÚ',
+        meaning: 'jdfksdjsl',
+        number: 714
     }
 }
 
