@@ -3173,6 +3173,16 @@ const dailyWord = {
         word: 'ANÁLÚ',
         meaning: 'jdfksdjsl',
         number: 714
+    },
+    '2024-01-09': {
+        word: 'SCÁIN',
+        meaning: 'jdfksdjsl',
+        number: 715
+    },
+    '2024-01-10': {
+        word: 'SCINE',
+        meaning: 'jdfksdjsl',
+        number: 716
     }
 }
 
