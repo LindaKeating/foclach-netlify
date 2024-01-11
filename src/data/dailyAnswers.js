@@ -3183,7 +3183,18 @@ const dailyWord = {
         word: 'SCINE',
         meaning: 'jdfksdjsl',
         number: 716
-    }
+    },
+    '2024-01-11': {
+        word: 'CUILT',
+        meaning: 'jdfksdjsl',
+        number: 717
+    },
+    '2024-01-12': {
+        word: 'MUIRÍ',
+        meaning: 'jdfksdjsl',
+        number: 718
+    },
+
 }
 
 export default dailyWord;
