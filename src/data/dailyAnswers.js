@@ -3194,7 +3194,16 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 718
     },
-
+    '2024-01-13': {
+        word: 'TRÚIG',
+        meaning: 'jdfksdjsl',
+        number: 719
+    },
+    '2024-01-14': {
+        word: 'LACHT',
+        meaning: 'jdfksdjsl',
+        number: 720
+    }
 }
 
 export default dailyWord;
