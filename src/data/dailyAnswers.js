@@ -3203,6 +3203,21 @@ const dailyWord = {
         word: 'LACHT',
         meaning: 'jdfksdjsl',
         number: 720
+    },
+    '2024-01-15': {
+        word: 'CÁITH',
+        meaning: 'jdfksdjsl',
+        number: 721
+    },
+    '2024-01-16': {
+        word: 'SOTAL',
+        meaning: 'jdfksdjsl',
+        number: 721
+    },
+    '2024-01-17': {
+        word: 'TEACH',
+        meaning: 'jdfksdjsl',
+        number: 722
     }
 }
 
