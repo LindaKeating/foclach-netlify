@@ -3218,6 +3218,26 @@ const dailyWord = {
         word: 'TEACH',
         meaning: 'jdfksdjsl',
         number: 722
+    },
+    '2024-01-18': {
+        word: 'MÚISC',
+        meaning: 'jdfksdjsl',
+        number: 723
+    },
+    '2024-01-19': {
+        word: 'CURAÍ',
+        meaning: 'jdfksdjsl',
+        number: 724
+    },
+    '2024-01-20': {
+        word: 'BUIRG',
+        meaning: 'jdfksdjsl',
+        number: 725
+    },
+    '2024-01-21': {
+        word: 'RACÁN',
+        meaning: 'jdfksdjsl',
+        number: 726
     }
 }
 
