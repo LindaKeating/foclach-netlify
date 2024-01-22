@@ -3238,6 +3238,16 @@ const dailyWord = {
         word: 'RACÁN',
         meaning: 'jdfksdjsl',
         number: 726
+    },
+    '2024-01-22': {
+        word: 'LÉIMT',
+        meaning: 'jdfksdjsl',
+        number: 727
+    },
+    '2024-01-23': {
+        word: 'BRÁCA',
+        meaning: 'jdfksdjsl',
+        number: 728
     }
 }
 
