@@ -3258,6 +3258,63 @@ const dailyWord = {
         word: 'LÁBÁN',
         meaning: 'jdfksdjsl',
         number: 730
+    },
+    '2024-01-26': {
+        word: 'COLPA',
+        meaning: 'jdfksdjsl',
+        number: 731
+    },'2024-01-27': {
+        word: 'OGHAM',
+        meaning: 'jdfksdjsl',
+        number: 732
+    },'2024-01-28': {
+        word: 'CALÓG',
+        meaning: 'jdfksdjsl',
+        number: 733
+    },'2024-01-29': {
+        word: 'CÉIDE',
+        meaning: 'jdfksdjsl',
+        number: 734
+    },'2024-01-30': {
+        word: 'DAMNÚ',
+        meaning: 'jdfksdjsl',
+        number: 735
+    },'2024-01-31': {
+        word: 'DLAOI',
+        meaning: 'jdfksdjsl',
+        number: 736
+    },'2024-02-01': {
+        word: 'EIPIC',
+        meaning: 'jdfksdjsl',
+        number: 737
+    },'2024-02-03': {
+        word: 'AIBÍD',
+        meaning: 'jdfksdjsl',
+        number: 738
+    },'2024-02-04': {
+        word: 'MOING',
+        meaning: 'jdfksdjsl',
+        number: 739
+    },'2024-02-05': {
+        word: 'LORGA',
+        meaning: 'jdfksdjsl',
+        number: 740
+    },'2024-02-06': {
+        word: 'BULLA',
+        meaning: 'jdfksdjsl',
+        number: 741
+    },'2024-02-07': {
+        word: 'STÁCA',
+        meaning: 'jdfksdjsl',
+        number: 742
+    },'2024-02-08': {
+        word: 'PAILM',
+        meaning: 'jdfksdjsl',
+        number: 743
+    },'2024-02-09': {
+        word: 'CAISE',
+        meaning: 'jdfksdjsl',
+        number: 744
     }
 }
 
