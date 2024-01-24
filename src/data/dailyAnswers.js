@@ -3248,6 +3248,16 @@ const dailyWord = {
         word: 'BRÁCA',
         meaning: 'jdfksdjsl',
         number: 728
+    },
+    '2024-01-24': {
+        word: 'STRÓC',
+        meaning: 'jdfksdjsl',
+        number: 729
+    },
+    '2024-01-25': {
+        word: 'LÁBÁN',
+        meaning: 'jdfksdjsl',
+        number: 730
     }
 }
 
