@@ -3287,31 +3287,31 @@ const dailyWord = {
         word: 'EIPIC',
         meaning: 'jdfksdjsl',
         number: 737
-    },'2024-02-03': {
+    },'2024-02-02': {
         word: 'AIBÍD',
         meaning: 'jdfksdjsl',
         number: 738
-    },'2024-02-04': {
+    },'2024-02-03': {
         word: 'MOING',
         meaning: 'jdfksdjsl',
         number: 739
-    },'2024-02-05': {
+    },'2024-02-04': {
         word: 'LORGA',
         meaning: 'jdfksdjsl',
         number: 740
-    },'2024-02-06': {
+    },'2024-02-05': {
         word: 'BULLA',
         meaning: 'jdfksdjsl',
         number: 741
-    },'2024-02-07': {
+    },'2024-02-06': {
         word: 'STÁCA',
         meaning: 'jdfksdjsl',
         number: 742
-    },'2024-02-08': {
+    },'2024-02-07': {
         word: 'PAILM',
         meaning: 'jdfksdjsl',
         number: 743
-    },'2024-02-09': {
+    },'2024-02-08': {
         word: 'CAISE',
         meaning: 'jdfksdjsl',
         number: 744
