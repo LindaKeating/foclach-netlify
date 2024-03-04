@@ -3411,6 +3411,38 @@ const dailyWord = {
         word: 'ANOIS',
         meaning: 'jdfksdjsl',
         number: 768
+    },'2024-03-04': {
+        word: 'CÉILE',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-05': {
+        word: 'TEACH',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-06': {
+        word: 'CEART',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-07': {
+        word: 'ROIMH',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-08': {
+        word: 'SCÉAL',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-09': {
+        word: 'CEIST',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-10': {
+        word: 'ANSIN',
+        meaning: 'jdfksdjsl',
+        number: 768
+    },'2024-03-11': {
+        word: 'DÓIGH',
+        meaning: 'jdfksdjsl',
+        number: 768
     }
 
 }
