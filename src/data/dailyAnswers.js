@@ -3414,35 +3414,63 @@ const dailyWord = {
     },'2024-03-04': {
         word: 'CÉILE',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 769
     },'2024-03-05': {
         word: 'TEACH',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 770
     },'2024-03-06': {
         word: 'CEART',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 771
     },'2024-03-07': {
         word: 'ROIMH',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 772
     },'2024-03-08': {
         word: 'SCÉAL',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 773
     },'2024-03-09': {
         word: 'CEIST',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 774
     },'2024-03-10': {
         word: 'ANSIN',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 775
     },'2024-03-11': {
         word: 'DÓIGH',
         meaning: 'jdfksdjsl',
-        number: 768
+        number: 776
+    }, '2024-03-12': {
+        word: 'POBAL',
+        meaning: 'jdfksdjsl',
+        number: 777
+    },'2024-03-13': {
+        word: 'SCOIL',
+        meaning: 'jdfksdjsl',
+        number: 778
+    },'2024-03-14': {
+        word: 'ROINN',
+        meaning: 'jdfksdjsl',
+        number: 779
+    },'2024-03-15': {
+        word: 'ÚSÁID',
+        meaning: 'jdfksdjsl',
+        number: 780
+    },'2024-03-16': {
+        word: 'LEITH',
+        meaning: 'jdfksdjsl',
+        number: 781
+    },'2024-03-17': {
+        word: 'ANSEO',
+        meaning: 'jdfksdjsl',
+        number: 782
+    },'2024-03-18': {
+        word: 'OÍCHE',
+        meaning: 'jdfksdjsl',
+        number: 783
     }
 
 }
