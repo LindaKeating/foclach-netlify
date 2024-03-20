@@ -3472,6 +3472,16 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 783
     }
+    ,'2024-03-19': {
+        word: 'BAILE',
+        meaning: 'jdfksdjsl',
+        number: 784
+    }
+    ,'2024-03-20': {
+        word: 'LUCHT',
+        meaning: 'jdfksdjsl',
+        number: 785
+    }
 
 }
 
