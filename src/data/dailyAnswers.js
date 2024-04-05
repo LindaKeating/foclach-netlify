@@ -3546,27 +3546,27 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 781
     },'2024-04-06': {
-        word: 'ÁBHAR',
+        word: 'PÁIRC',
         meaning: 'jdfksdjsl',
         number: 782
     },'2024-04-07': {
-        word: 'FÉACH',
+        word: 'LÉANN',
         meaning: 'jdfksdjsl',
         number: 783
     },'2024-04-08': {
-        word: 'SIÚIL',
+        word: 'ROGHA',
         meaning: 'jdfksdjsl',
         number: 784
     },'2024-04-09': {
-        word: 'ÉIGIN',
+        word: 'LEATH',
         meaning: 'jdfksdjsl',
         number: 785
     },'2024-04-10': {
-        word: 'BUAIL',
+        word: 'FÉILE',
         meaning: 'jdfksdjsl',
         number: 786
     },'2024-04-11': {
-        word: 'RIAMH',
+        word: 'UASAL',
         meaning: 'jdfksdjsl',
         number: 787
     },'2024-04-12': {
