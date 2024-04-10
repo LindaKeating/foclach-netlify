@@ -3570,19 +3570,19 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 787
     },'2024-04-12': {
-        word: 'FOCAL',
+        word: 'CONAS',
         meaning: 'jdfksdjsl',
         number: 788
     },'2024-04-13': {
-        word: 'BEIRT',
+        word: 'GRIAN',
         meaning: 'jdfksdjsl',
         number: 789
     },'2024-04-14': {
-        word: 'MEASC',
+        word: 'DÓCHA',
         meaning: 'jdfksdjsl',
         number: 790
     },'2024-04-15': {
-        word: 'CLOIS',
+        word: 'PÍOSA',
         meaning: 'jdfksdjsl',
         number: 791
     },'2024-04-16': {
