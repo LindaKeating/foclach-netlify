@@ -3669,107 +3669,106 @@ const dailyWord = {
         word: 'RIAIL',
         meaning: 'jdfksdjsl',
         number: 793
-    },'2024-05-06': {
-        word: 'FÓGRA',
-        meaning: 'jdfksdjsl',
-        number: 794
     },'2024-05-07': {
         word: 'THUAS',
         meaning: 'jdfksdjsl',
-        number: 795
+        number: 794
     },'2024-05-08': {
         word: 'BEART',
         meaning: 'jdfksdjsl',
-        number: 796
+        number: 795
     },'2024-05-09': {
         word: 'LÉAMH',
         meaning: 'jdfksdjsl',
-        number: 797
+        number: 796
     },'2024-05-10': {
         word: 'DEARA',
         meaning: 'jdfksdjsl',
-        number: 798
+        number: 797
     },'2024-05-11': {
         word: 'SIOPA',
         meaning: 'jdfksdjsl',
-        number: 799
+        number: 798
     },'2024-05-12': {
         word: 'LEABA',
         meaning: 'jdfksdjsl',
-        number: 800
+        number: 799
     },'2024-05-13': {
         word: 'DEICH',
         meaning: 'jdfksdjsl',
-        number: 801
+        number: 800
     },'2024-05-14': {
         word: 'DEARG',
         meaning: 'jdfksdjsl',
-        number: 802
+        number: 801
     },'2024-05-15': {
         word: 'EAGLA',
         meaning: 'jdfksdjsl',
-        number: 803
+        number: 802
     },'2024-05-16': {
         word: 'BAINT',
         meaning: 'jdfksdjsl',
-        number: 804
+        number: 803
     },'2024-05-17': {
         word: 'GARDA',
         meaning: 'jdfksdjsl',
-        number: 805
+        number: 804
     },'2024-05-18': {
         word: 'DRÁMA',
         meaning: 'jdfksdjsl',
-        number: 806
+        number: 805
     },'2024-05-19': {
         word: 'FICHE',
         meaning: 'jdfksdjsl',
-        number: 807
+        number: 806
     },'2024-05-20': {
         word: 'LUACH',
         meaning: 'jdfksdjsl',
-        number: 808
+        number: 807
     },'2024-05-21': {
         word: 'RÉIDH',
         meaning: 'jdfksdjsl',
-        number: 809
+        number: 808
     },'2024-05-22': {
         word: 'NEART',
         meaning: 'jdfksdjsl',
-        number: 810
+        number: 809
     },'2024-05-23': {
         word: 'TRIÚR',
         meaning: 'jdfksdjsl',
-        number: 811
+        number: 810
     },'2024-05-24': {
         word: 'AONAR',
         meaning: 'jdfksdjsl',
-        number: 812
+        number: 811
     },'2024-05-25': {
         word: 'MARBH',
         meaning: 'jdfksdjsl',
-        number: 813
+        number: 812
     },'2024-05-26': {
         word: 'DEOCH',
         meaning: 'jdfksdjsl',
-        number: 814
+        number: 813
     },'2024-05-27': {
         word: 'GREIM',
         meaning: 'jdfksdjsl',
-        number: 815
+        number: 814
     },'2024-05-28': {
         word: 'FOSTA',
         meaning: 'jdfksdjsl',
-        number: 816
+        number: 815
     },'2024-05-29': {
         word: 'DALTA',
         meaning: 'jdfksdjsl',
-        number: 817
+        number: 816
     },'2024-05-30': {
         word: 'DROIM',
         meaning: 'jdfksdjsl',
-        number: 818
-    }
+        number: 817
+    },'2024-06-01': {
+        word: 'FÓGRA',
+        meaning: 'jdfksdjsl',
+        number: 818}
 
 
 }
