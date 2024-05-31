@@ -3765,10 +3765,14 @@ const dailyWord = {
         word: 'DROIM',
         meaning: 'jdfksdjsl',
         number: 817
-    },'2024-06-01': {
+    },'2024-05-31': {
         word: 'FÓGRA',
         meaning: 'jdfksdjsl',
-        number: 818}
+        number: 818      
+    },'2024-06-01': {
+        word: 'THUAS',
+        meaning: 'jdfksdjsl',
+        number: 819}
 
 
 }
