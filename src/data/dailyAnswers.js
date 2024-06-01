@@ -3772,9 +3772,132 @@ const dailyWord = {
     },'2024-06-01': {
         word: 'THUAS',
         meaning: 'jdfksdjsl',
-        number: 819}
-
-
+        number: 819 }
+    ,'2024-06-03': {
+        word: 'BEART',
+        meaning: 'jdfksdjsl',
+        number: 820 }
+    ,'2024-06-04': {
+        word: 'LÉAMH',
+        meaning: 'jdfksdjsl',
+        number: 821 }
+    ,'2024-06-05': {
+        word: 'DEARA',
+        meaning: 'jdfksdjsl',
+        number: 822 }
+    ,'2024-06-06': {
+        word: 'SIOPA',
+        meaning: 'jdfksdjsl',
+        number: 823 }
+    ,'2024-06-07': {
+        word: 'LEABA',
+        meaning: 'jdfksdjsl',
+        number: 824 }
+    ,'2024-06-08': {
+        word: 'DEICH',
+        meaning: 'jdfksdjsl',
+        number: 825 }
+    ,'2024-06-09': {
+        word: 'DEARG',
+        meaning: 'jdfksdjsl',
+        number: 826 }
+    ,'2024-06-10': {
+        word: 'EAGLA',
+        meaning: 'jdfksdjsl',
+        number: 827 }
+    ,'2024-06-11': {
+        word: 'BAINT',
+        meaning: 'jdfksdjsl',
+        number: 828 }
+    ,'2024-06-12': {
+        word: 'GARDA',
+        meaning: 'jdfksdjsl',
+        number: 829 }
+    ,'2024-06-13': {
+        word: 'DRÁMA',
+        meaning: 'jdfksdjsl',
+        number: 830 }
+    ,'2024-06-14': {
+        word: 'FICHE',
+        meaning: 'jdfksdjsl',
+        number: 831
+    },'2024-06-15': {
+        word: 'LUACH',
+        meaning: 'jdfksdjsl',
+        number: 832
+    },'2024-06-16': {
+        word: 'RÉIDH',
+        meaning: 'jdfksdjsl',
+        number: 833
+    },'2024-06-17': {
+        word: 'NEART',
+        meaning: 'jdfksdjsl',
+        number: 834
+    },'2024-06-18': {
+        word: 'TRIÚR',
+        meaning: 'jdfksdjsl',
+        number: 835
+    },'2024-06-19': {
+        word: 'AONAR',
+        meaning: 'jdfksdjsl',
+        number: 836
+    },'2024-06-20': {
+        word: 'MARBH',
+        meaning: 'jdfksdjsl',
+        number: 837
+    },'2024-06-21': {
+        word: 'DEOCH',
+        meaning: 'jdfksdjsl',
+        number: 838
+    },'2024-06-22': {
+        word: 'GREIM',
+        meaning: 'jdfksdjsl',
+        number: 839
+    },'2024-06-23': {
+        word: 'FOSTA',
+        meaning: 'jdfksdjsl',
+        number: 840
+    },'2024-06-24': {
+        word: 'DALTA',
+        meaning: 'jdfksdjsl',
+        number: 841
+    },'2024-06-25': {
+        word: 'DROIM',
+        meaning: 'jdfksdjsl',
+        number: 842
+    },'2024-06-26': {
+        word: 'TROID',
+        meaning: 'jdfksdjsl',
+        number: 843
+    },'2024-06-27': {
+        word: 'BHUEL',
+        meaning: 'jdfksdjsl',
+        number: 844
+    },'2024-06-27': {
+        word: 'ÓCÁID',
+        meaning: 'jdfksdjsl',
+        number: 845
+    },'2024-06-29': {
+        word: 'TUATH',
+        meaning: 'jdfksdjsl',
+        number: 846
+    },'2024-06-30': {
+        word: 'BRATH',
+        meaning: 'jdfksdjsl',
+        number: 847
+    },'2024-07-01': {
+        word: 'CIALL',
+        meaning: 'jdfksdjsl',
+        number: 848
+    },'2024-07-02': {
+        word: 'AIRDE',
+        meaning: 'jdfksdjsl',
+        number: 849
+    },'2024-07-03': {
+        word: 'FORAS',
+        meaning: 'jdfksdjsl',
+        number: 850
+    }
 }
 
 export default dailyWord;
