@@ -3873,7 +3873,7 @@ const dailyWord = {
         word: 'BHUEL',
         meaning: 'jdfksdjsl',
         number: 844
-    },'2024-06-27': {
+    },'2024-06-28': {
         word: 'ÓCÁID',
         meaning: 'jdfksdjsl',
         number: 845
