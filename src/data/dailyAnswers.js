@@ -3842,63 +3842,63 @@ const dailyWord = {
         meaning: 'jdfksdjsl',
         number: 836
     },'2024-06-19': {
-        word: 'AONAR',
+        word: 'URLÁR',
         meaning: 'jdfksdjsl',
         number: 837
     },'2024-06-20': {
-        word: 'MARBH',
+        word: 'IOMAÍ',
         meaning: 'jdfksdjsl',
         number: 838
     },'2024-06-21': {
-        word: 'DEOCH',
+        word: 'TEANN',
         meaning: 'jdfksdjsl',
         number: 839
     },'2024-06-22': {
-        word: 'GREIM',
+        word: 'CROCH',
         meaning: 'jdfksdjsl',
         number: 840
     },'2024-06-23': {
-        word: 'FOSTA',
+        word: 'FÓRSA',
         meaning: 'jdfksdjsl',
         number: 841
     },'2024-06-24': {
-        word: 'DALTA',
+        word: 'MADRA',
         meaning: 'jdfksdjsl',
         number: 842
     },'2024-06-25': {
-        word: 'DROIM',
+        word: 'LAOCH',
         meaning: 'jdfksdjsl',
         number: 843
     },'2024-06-26': {
-        word: 'TROID',
+        word: 'LEASÚ',
         meaning: 'jdfksdjsl',
         number: 844
     },'2024-06-27': {
-        word: 'BHUEL',
+        word: 'CÓSTA',
         meaning: 'jdfksdjsl',
         number: 845
     },'2024-06-28': {
-        word: 'ÓCÁID',
+        word: 'CRUTH',
         meaning: 'jdfksdjsl',
         number: 846
     },'2024-06-29': {
-        word: 'TUATH',
+        word: 'ÁTHAS',
         meaning: 'jdfksdjsl',
         number: 847
     },'2024-06-30': {
-        word: 'BRATH',
+        word: 'ANONN',
         meaning: 'jdfksdjsl',
         number: 848
     },'2024-07-01': {
-        word: 'CIALL',
+        word: 'TÉACS',
         meaning: 'jdfksdjsl',
         number: 849
     },'2024-07-02': {
-        word: 'AIRDE',
+        word: 'FEIRM',
         meaning: 'jdfksdjsl',
         number: 850
     },'2024-07-03': {
-        word: 'FORAS',
+        word: 'HALLA',
         meaning: 'jdfksdjsl',
         number: 851
     }
