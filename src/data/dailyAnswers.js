@@ -3901,6 +3901,10 @@ const dailyWord = {
         word: 'HALLA',
         meaning: 'jdfksdjsl',
         number: 851
+    },'2024-07-04': {
+        word: 'ARAON',
+        meaning: 'jdfksdjsl',
+        number: 852
     }
 }
 
