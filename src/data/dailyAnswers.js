@@ -4489,6 +4489,14 @@ const dailyWord = {
         word: 'EITIL',
         meaning: 'jdfksdjsl',
         number: 998
+    },'2024-11-28': {
+        word: 'FEITH',
+        meaning: 'jdfksdjsl',
+        number: 999
+    },'2024-11-29': {
+        word: 'TOBAC',
+        meaning: 'jdfksdjsl',
+        number: 100
     }
 }
 
