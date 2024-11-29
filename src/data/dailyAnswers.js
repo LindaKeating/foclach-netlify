@@ -4496,7 +4496,31 @@ const dailyWord = {
     },'2024-11-29': {
         word: 'TOBAC',
         meaning: 'jdfksdjsl',
-        number: 100
+        number: 1000
+    },'2024-11-30': {
+        word: 'FIONN',
+        meaning: 'jdfksdjsl',
+        number: 1001
+    },'2024-11-31': {
+        word: 'CRITH',
+        meaning: 'jdfksdjsl',
+        number: 1002
+    },'2024-12-01': {
+        word: 'TEIST',
+        meaning: 'jdfksdjsl',
+        number: 1003
+    },'2024-12-02': {
+        word: 'BRÁID',
+        meaning: 'jdfksdjsl',
+        number: 1004
+    },'2024-12-03': {
+        word: 'LÉINE',
+        meaning: 'jdfksdjsl',
+        number: 1005
+    },'2024-12-04': {
+        word: 'SCATA',
+        meaning: 'jdfksdjsl',
+        number: 1006
     }
 }
 
