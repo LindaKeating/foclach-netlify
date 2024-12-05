@@ -4641,19 +4641,19 @@ const dailyWord = {
         word: 'TOGRA',
         meaning: 'jdfksdjsl',
         number: 1036
-    },'2025-01-02': {
+    },'2025-01-04': {
         word: 'ÓRÁID',
         meaning: 'jdfksdjsl',
         number: 1037
-    },'2025-01-03': {
+    },'2025-01-05': {
         word: 'BLAIS',
         meaning: 'jdfksdjsl',
         number: 1038
-    },'2025-01-04': {
+    },'2025-01-06': {
         word: 'SEACH',
         meaning: 'jdfksdjsl',
         number: 1039
-    },'2025-01-05': {
+    },'2025-01-07': {
         word: 'NEACH',
         meaning: 'jdfksdjsl',
         number: 1040
