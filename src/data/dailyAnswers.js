@@ -4657,6 +4657,66 @@ const dailyWord = {
         word: 'NEACH',
         meaning: 'jdfksdjsl',
         number: 1040
+    },'2025-01-08': {
+        word: 'FAILL',
+        meaning: 'jdfksdjsl',
+        number: 1041
+    },'2025-01-09': {
+        word: 'MILIS',
+        meaning: 'jdfksdjsl',
+        number: 1042
+    },'2025-01-10': {
+        word: 'TARBH',
+        meaning: 'jdfksdjsl',
+        number: 1043
+    },'2025-01-11': {
+        word: 'MÚNLA',
+        meaning: 'jdfksdjsl',
+        number: 1044
+    },'2025-01-12': {
+        word: 'MÉARA',
+        meaning: 'jdfksdjsl',
+        number: 1045
+    },'2025-01-13': {
+        word: 'FÍRIC',
+        meaning: 'jdfksdjsl',
+        number: 1046
+    },'2025-01-14': {
+        word: 'BUAMA',
+        meaning: 'jdfksdjsl',
+        number: 1047
+    },'2025-01-15': {
+        word: 'BAIST',
+        meaning: 'jdfksdjsl',
+        number: 1048
+    },'2025-01-16': {
+        word: 'CRIOS',
+        meaning: 'jdfksdjsl',
+        number: 1049
+    },'2025-01-17': {
+        word: 'LEAID',
+        meaning: 'jdfksdjsl',
+        number: 1050
+    },'2025-01-18': {
+        word: 'MEATH',
+        meaning: 'jdfksdjsl',
+        number: 1051
+    },'2025-01-19': {
+        word: 'AOSTA',
+        meaning: 'jdfksdjsl',
+        number: 1052
+    },'2025-01-20': {
+        word: 'SEILG',
+        meaning: 'jdfksdjsl',
+        number: 1053
+    },'2025-01-21': {
+        word: 'GOILL',
+        meaning: 'jdfksdjsl',
+        number: 1054
+    },'2025-01-22': {
+        word: 'SÉIMH',
+        meaning: 'jdfksdjsl',
+        number: 1040
     }
 }
 
