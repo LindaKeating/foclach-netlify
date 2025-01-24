@@ -4725,6 +4725,10 @@ const dailyWord = {
         word: 'PUINN',
         meaning: 'jdfksdjsl',
         number: 1042
+    },'2025-01-25': {
+        word: 'RIALÚ',
+        meaning: 'jdfksdjsl',
+        number: 1043
     }
 }
 
