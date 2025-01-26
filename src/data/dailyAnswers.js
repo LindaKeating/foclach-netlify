@@ -4733,6 +4733,14 @@ const dailyWord = {
         word: 'GADAÍ',
         meaning: 'jdfksdjsl',
         number: 1044
+    },'2025-01-27': {
+        word: 'MAISE',
+        meaning: 'jdfksdjsl',
+        number: 1045
+    },'2025-01-28': {
+        word: 'IMIRT',
+        meaning: 'jdfksdjsl',
+        number: 1046
     }
 }
 
