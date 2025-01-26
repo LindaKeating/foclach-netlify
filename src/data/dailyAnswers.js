@@ -4729,6 +4729,10 @@ const dailyWord = {
         word: 'RIALÚ',
         meaning: 'jdfksdjsl',
         number: 1043
+    },'2025-01-26': {
+        word: 'GADAÍ',
+        meaning: 'jdfksdjsl',
+        number: 1044
     }
 }
 
