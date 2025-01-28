@@ -4741,6 +4741,18 @@ const dailyWord = {
         word: 'IMIRT',
         meaning: 'jdfksdjsl',
         number: 1046
+    },'2025-01-29': {
+        word: 'OCHTÓ',
+        meaning: 'jdfksdjsl',
+        number: 1047
+    },'2025-01-30': {
+        word: 'CRAIC',
+        meaning: 'jdfksdjsl',
+        number: 1048
+    },'2025-01-31': {
+        word: 'OLANN',
+        meaning: 'jdfksdjsl',
+        number: 1049
     }
 }
 
