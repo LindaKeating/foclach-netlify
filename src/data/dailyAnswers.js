@@ -4753,6 +4753,34 @@ const dailyWord = {
         word: 'OLANN',
         meaning: 'jdfksdjsl',
         number: 1049
+    },'2025-02-01': {
+        word: 'SÚIGH',
+        meaning: 'jdfksdjsl',
+        number: 1050
+    },'2025-02-02': {
+        word: 'DOCHT',
+        meaning: 'jdfksdjsl',
+        number: 1051
+    },'2025-02-03': {
+        word: 'AILSE',
+        meaning: 'jdfksdjsl',
+        number: 1052
+    },'2025-02-04': {
+        word: 'CANNA',
+        meaning: 'jdfksdjsl',
+        number: 1053
+    },'2025-02-05': {
+        word: 'FAIRE',
+        meaning: 'jdfksdjsl',
+        number: 1054
+    },'2025-02-06': {
+        word: 'CAOCH',
+        meaning: 'jdfksdjsl',
+        number: 1055
+    },'2025-02-07': {
+        word: 'SÍODA',
+        meaning: 'jdfksdjsl',
+        number: 1056
     }
 }
 
