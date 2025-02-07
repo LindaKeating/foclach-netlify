@@ -4781,6 +4781,34 @@ const dailyWord = {
         word: 'SÍODA',
         meaning: 'jdfksdjsl',
         number: 1056
+    },'2025-02-08': {
+        word: 'EADAR',
+        meaning: 'jdfksdjsl',
+        number: 1057
+    },'2025-02-09': {
+        word: 'CUMHA',
+        meaning: 'jdfksdjsl',
+        number: 1058
+    },'2025-02-10': {
+        word: 'CAIFE',
+        meaning: 'jdfksdjsl',
+        number: 1059
+    },'2025-02-11': {
+        word: 'SÓLÁS',
+        meaning: 'jdfksdjsl',
+        number: 1060
+    },'2025-02-12': {
+        word: 'SÁITH',
+        meaning: 'jdfksdjsl',
+        number: 1061
+    },'2025-02-13': {
+        word: 'RÁFLA',
+        meaning: 'jdfksdjsl',
+        number: 1061
+    },'2025-02-14': {
+        word: 'CUACH',
+        meaning: 'jdfksdjsl',
+        number: 1062
     }
 }
 
