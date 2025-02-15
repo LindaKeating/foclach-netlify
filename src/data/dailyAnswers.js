@@ -4809,6 +4809,34 @@ const dailyWord = {
         word: 'CUACH',
         meaning: 'jdfksdjsl',
         number: 1062
+    },'2025-02-15': {
+        word: 'AIRNE',
+        meaning: 'jdfksdjsl',
+        number: 1063
+    },'2025-02-16': {
+        word: 'ALCÓL',
+        meaning: 'jdfksdjsl',
+        number: 1064
+    },'2025-02-17': {
+        word: 'LUIBH',
+        meaning: 'jdfksdjsl',
+        number: 1065
+    },'2025-02-18': {
+        word: 'TNÚTH',
+        meaning: 'jdfksdjsl',
+        number: 1066
+    },'2025-02-18': {
+        word: 'CEARR',
+        meaning: 'jdfksdjsl',
+        number: 1067
+    },'2025-02-19': {
+        word: 'TACHT',
+        meaning: 'jdfksdjsl',
+        number: 1068
+    },'2025-02-20': {
+        word: 'TUILE',
+        meaning: 'jdfksdjsl',
+        number: 1069
     }
 }
 
