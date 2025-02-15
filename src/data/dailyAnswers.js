@@ -4825,15 +4825,15 @@ const dailyWord = {
         word: 'TNÚTH',
         meaning: 'jdfksdjsl',
         number: 1066
-    },'2025-02-18': {
+    },'2025-02-19': {
         word: 'CEARR',
         meaning: 'jdfksdjsl',
         number: 1067
-    },'2025-02-19': {
+    },'2025-02-20': {
         word: 'TACHT',
         meaning: 'jdfksdjsl',
         number: 1068
-    },'2025-02-20': {
+    },'2025-02-21': {
         word: 'TUILE',
         meaning: 'jdfksdjsl',
         number: 1069
