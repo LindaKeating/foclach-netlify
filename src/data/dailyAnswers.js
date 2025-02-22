@@ -4841,6 +4841,34 @@ const dailyWord = {
         word: 'BEACH',
         meaning: 'jdfksdjsl',
         number: 1070
+    },'2025-02-23': {
+        word: 'ÉINDÍ',
+        meaning: 'jdfksdjsl',
+        number: 1071
+    },'2025-02-24': {
+        word: 'ANOIR',
+        meaning: 'jdfksdjsl',
+        number: 1072
+    },'2025-02-25': {
+        word: 'SCIAR',
+        meaning: 'jdfksdjsl',
+        number: 1073
+    },'2025-02-26': {
+        word: 'PLÁNA',
+        meaning: 'jdfksdjsl',
+        number: 1074
+    },'2025-02-27': {
+        word: 'BEOLA',
+        meaning: 'jdfksdjsl',
+        number: 1075
+    },'2025-02-28': {
+        word: 'CREAT',
+        meaning: 'jdfksdjsl',
+        number: 1076
+    },'2025-02-29': {
+        word: 'CRÓGA',
+        meaning: 'jdfksdjsl',
+        number: 1077
     }
 }
 
