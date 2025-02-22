@@ -4837,6 +4837,10 @@ const dailyWord = {
         word: 'TUILE',
         meaning: 'jdfksdjsl',
         number: 1069
+    },'2025-02-22': {
+        word: 'BEACH',
+        meaning: 'jdfksdjsl',
+        number: 1070
     }
 }
 
