@@ -4869,6 +4869,10 @@ const dailyWord = {
         word: 'CRÓGA',
         meaning: 'jdfksdjsl',
         number: 1077
+    },'2025-03-01': {
+        word: 'MOTHÚ',
+        meaning: 'jdfksdjsl',
+        number: 1078
     }
 }
 
