@@ -4873,6 +4873,30 @@ const dailyWord = {
         word: 'MOTHÚ',
         meaning: 'jdfksdjsl',
         number: 1078
+    },'2025-03-02': {
+        word: 'THUSA',
+        meaning: 'jdfksdjsl',
+        number: 1079
+    },'2025-03-03': {
+        word: 'AOIBH',
+        meaning: 'jdfksdjsl',
+        number: 1080
+    },'2025-03-04': {
+        word: 'SICÍN',
+        meaning: 'jdfksdjsl',
+        number: 1081
+    },'2025-03-05': {
+        word: 'BEARR',
+        meaning: 'jdfksdjsl',
+        number: 1082
+    },'2025-03-06': {
+        word: 'FÉITH',
+        meaning: 'jdfksdjsl',
+        number: 1083
+    },'2025-03-07': {
+        word: 'ORTHA',
+        meaning: 'jdfksdjsl',
+        number: 1084
     }
 }
 
