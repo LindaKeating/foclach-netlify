@@ -4897,6 +4897,10 @@ const dailyWord = {
         word: 'ORTHA',
         meaning: 'jdfksdjsl',
         number: 1084
+    },'2025-03-08': {
+        word: 'FORÁS',
+        meaning: 'jdfksdjsl',
+        number: 1085
     }
 }
 
