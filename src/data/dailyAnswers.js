@@ -4901,6 +4901,14 @@ const dailyWord = {
         word: 'FORÁS',
         meaning: 'jdfksdjsl',
         number: 1085
+    },'2025-03-09': {
+        word: 'MASLA',
+        meaning: 'jdfksdjsl',
+        number: 1086
+    },'2025-03-10': {
+        word: 'CÓNRA',
+        meaning: 'jdfksdjsl',
+        number: 1087
     }
 }
 
