@@ -4913,6 +4913,46 @@ const dailyWord = {
         word: 'TRIAN',
         meaning: 'jdfksdjsl',
         number: 1088
+    },'2025-03-12': {
+        word: 'DHEIN',
+        meaning: 'jdfksdjsl',
+        number: 1089
+    },'2025-03-13': {
+        word: 'CEILT',
+        meaning: 'jdfksdjsl',
+        number: 1090
+    },'2025-03-14': {
+        word: 'TOSAÍ',
+        meaning: 'jdfksdjsl',
+        number: 1091
+    },'2025-03-15': {
+        word: 'STAON',
+        meaning: 'jdfksdjsl',
+        number: 1092
+    },'2025-03-16': {
+        word: 'GOILE',
+        meaning: 'jdfksdjsl',
+        number: 1093
+    },'2025-03-17': {
+        word: 'TUAMA',
+        meaning: 'jdfksdjsl',
+        number: 1094
+    },'2025-03-18': {
+        word: 'UACHT',
+        meaning: 'jdfksdjsl',
+        number: 1095
+    },'2025-03-19': {
+        word: 'PEATA',
+        meaning: 'jdfksdjsl',
+        number: 1096
+    },'2025-03-20': {
+        word: 'LAIGE',
+        meaning: 'jdfksdjsl',
+        number: 1097
+    },'2025-03-21': {
+        word: 'STOCA',
+        meaning: 'jdfksdjsl',
+        number: 1098
     }
 }
 
