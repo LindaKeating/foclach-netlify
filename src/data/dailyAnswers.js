@@ -4909,6 +4909,10 @@ const dailyWord = {
         word: 'CÓNRA',
         meaning: 'jdfksdjsl',
         number: 1087
+    },'2025-03-11': {
+        word: 'TRIAN',
+        meaning: 'jdfksdjsl',
+        number: 1088
     }
 }
 
