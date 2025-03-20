@@ -4953,6 +4953,10 @@ const dailyWord = {
         word: 'STOCA',
         meaning: 'jdfksdjsl',
         number: 1098
+    },'2025-03-22': {
+        word: 'FRÁMA',
+        meaning: 'jdfksdjsl',
+        number: 1099
     }
 }
 
