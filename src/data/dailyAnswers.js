@@ -4961,6 +4961,10 @@ const dailyWord = {
         word: 'SCAIF',
         meaning: 'jdfksdjsl',
         number: 2000
+    },'2025-03-24': {
+        word: 'DRAOI',
+        meaning: 'jdfksdjsl',
+        number: 2001
     }
 }
 
