@@ -4957,6 +4957,10 @@ const dailyWord = {
         word: 'FRÁMA',
         meaning: 'jdfksdjsl',
         number: 1099
+    },'2025-03-23': {
+        word: 'SCAIF',
+        meaning: 'jdfksdjsl',
+        number: 2000
     }
 }
 
