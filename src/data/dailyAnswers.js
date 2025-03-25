@@ -5001,119 +5001,119 @@ const dailyWord = {
         word: 'ÍDIGH',
         meaning: 'jdfksdjsl',
         number: 2010
-    },'2025-04-01': {
+    },'2025-04-02': {
         word: 'SNÁTH',
         meaning: 'jdfksdjsl',
         number: 2011
-    },'2025-04-02': {
+    },'2025-04-03': {
         word: 'UAIMH',
         meaning: 'jdfksdjsl',
         number: 2012
-    },'2025-04-03': {
+    },'2025-04-04': {
         word: 'CASÓG',
         meaning: 'jdfksdjsl',
         number: 2013
-    },'2025-04-04': {
+    },'2025-04-05': {
         word: 'OILTE',
         meaning: 'jdfksdjsl',
         number: 2014
-    },'2025-04-05': {
+    },'2025-04-06': {
         word: 'SMIOR',
         meaning: 'jdfksdjsl',
         number: 2015
-    },'2025-04-06': {
+    },'2025-04-07': {
         word: 'CÚISÍ',
         meaning: 'jdfksdjsl',
         number: 2016
-    },'2025-04-07': {
+    },'2025-04-08': {
         word: 'CÍSTE',
         meaning: 'jdfksdjsl',
         number: 2017
-    },'2025-04-08': {
+    },'2025-04-09': {
         word: 'IREAS',
         meaning: 'jdfksdjsl',
         number: 2018
-    },'2025-04-09': {
+    },'2025-04-10': {
         word: 'TARLÚ',
         meaning: 'jdfksdjsl',
         number: 2019
-    },'2025-04-10': {
+    },'2025-04-11': {
         word: 'BALBH',
         meaning: 'jdfksdjsl',
         number: 2020
-    },'2025-04-11': {
+    },'2025-04-12': {
         word: 'COTHÚ',
         meaning: 'jdfksdjsl',
         number: 2021
-    },'2025-04-12': {
+    },'2025-04-13': {
         word: 'PÚDAR',
         meaning: 'jdfksdjsl',
         number: 2022
-    },'2025-04-13': {
+    },'2025-04-14': {
         word: 'SONAS',
         meaning: 'jdfksdjsl',
         number: 2023
-    },'2025-04-14': {
+    },'2025-04-15': {
         word: 'SEIFT',
         meaning: 'jdfksdjsl',
         number: 2024
-    },'2025-04-15': {
+    },'2025-04-16': {
         word: 'BEOIR',
         meaning: 'jdfksdjsl',
         number: 2025
-    },'2025-04-16': {
+    },'2025-04-17': {
         word: 'LAMPA',
         meaning: 'jdfksdjsl',
         number: 2026
-    },'2025-04-17': {
+    },'2025-04-18': {
         word: 'MEAIG',
         meaning: 'jdfksdjsl',
         number: 2027
-    },'2025-04-18': {
+    },'2025-04-19': {
         word: 'CAIFÉ',
         meaning: 'jdfksdjsl',
         number: 2028
-    },'2025-04-19': {
+    },'2025-04-20': {
         word: 'ÉIRIM',
         meaning: 'jdfksdjsl',
         number: 2029
-    },'2025-04-20': {
+    },'2025-04-21': {
         word: 'STRAE',
         meaning: 'jdfksdjsl',
         number: 2030
-    },'2025-04-21': {
+    },'2025-04-22': {
         word: 'MAMAÍ',
         meaning: 'jdfksdjsl',
         number: 2031
-    },'2025-04-22': {
+    },'2025-04-23': {
         word: 'UMHAL',
         meaning: 'jdfksdjsl',
         number: 2032
-    },'2025-04-23': {
+    },'2025-04-24': {
         word: 'MIONN',
         meaning: 'jdfksdjsl',
         number: 2033
-    },'2025-04-24': {
+    },'2025-04-25': {
         word: 'CÍOCH',
         meaning: 'jdfksdjsl',
         number: 2034
-    },'2025-04-25': {
+    },'2025-04-26': {
         word: 'COISC',
         meaning: 'jdfksdjsl',
         number: 2035
-    },'2025-04-26': {
+    },'2025-04-27': {
         word: 'TUATA',
         meaning: 'jdfksdjsl',
         number: 2036
-    },'2025-04-27': {
+    },'2025-04-28': {
         word: 'TÉAMH',
         meaning: 'jdfksdjsl',
         number: 2037
-    },'2025-04-28': {
+    },'2025-04-29': {
         word: 'INMHE',
         meaning: 'jdfksdjsl',
         number: 2038
-    },'2025-04-29': {
+    },'2025-04-30': {
         word: 'DREAP',
         meaning: 'jdfksdjsl',
         number: 2039
