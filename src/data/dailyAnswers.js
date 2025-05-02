@@ -5117,6 +5117,10 @@ const dailyWord = {
         word: 'DREAP',
         meaning: 'jdfksdjsl',
         number: 2039
+    },'2025-05-02': {
+        word: 'BHEIR',
+        meaning: 'jdfksdjsl',
+        number: 2039
     }
 }
 
