@@ -5120,7 +5120,11 @@ const dailyWord = {
     },'2025-05-02': {
         word: 'BHEIR',
         meaning: 'jdfksdjsl',
-        number: 2039
+        number: 2040
+    },'2025-05-03': {
+        word: 'UATHA',
+        meaning: 'jdfksdjsl',
+        number: 2041
     }
 }
 
