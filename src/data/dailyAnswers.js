@@ -5129,6 +5129,10 @@ const dailyWord = {
         word: 'SEILF',
         meaning: 'jdfksdjsl',
         number: 2042
+    },'2025-05-05': {
+        word: 'LEOGA',
+        meaning: 'jdfksdjsl',
+        number: 2043
     }
 }
 
