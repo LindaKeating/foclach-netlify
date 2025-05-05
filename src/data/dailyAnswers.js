@@ -5133,6 +5133,10 @@ const dailyWord = {
         word: 'LEOGA',
         meaning: 'jdfksdjsl',
         number: 2043
+    },'2025-05-06': {
+        word: 'NÓCHA',
+        meaning: 'jdfksdjsl',
+        number: 2044
     }
 }
 
