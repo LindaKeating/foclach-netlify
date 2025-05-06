@@ -5137,6 +5137,10 @@ const dailyWord = {
         word: 'NÓCHA',
         meaning: 'jdfksdjsl',
         number: 2044
+    },'2025-05-07': {
+        word: 'GONTA',
+        meaning: 'jdfksdjsl',
+        number: 2045
     }
 }
 
