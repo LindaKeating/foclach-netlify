@@ -5145,6 +5145,22 @@ const dailyWord = {
         word: 'IOMRÁ',
         meaning: 'jdfksdjsl',
         number: 2046
+    },'2025-05-09': {
+        word: 'DREAS',
+        meaning: 'jdfksdjsl',
+        number: 2047
+    },'2025-05-10': {
+        word: 'DÉIRC',
+        meaning: 'jdfksdjsl',
+        number: 2048
+    },'2025-05-11': {
+        word: 'ADAMH',
+        meaning: 'jdfksdjsl',
+        number: 2049
+    },'2025-05-12': {
+        word: 'DÍOBH',
+        meaning: 'jdfksdjsl',
+        number: 2050
     }
 }
 
