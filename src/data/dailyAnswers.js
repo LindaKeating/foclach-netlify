@@ -5165,6 +5165,10 @@ const dailyWord = {
         word: 'GREAD',
         meaning: 'jdfksdjsl',
         number: 2051
+    },'2025-05-14': {
+        word: 'LEANN',
+        meaning: 'jdfksdjsl',
+        number: 2052
     }
 }
 
