@@ -5169,6 +5169,10 @@ const dailyWord = {
         word: 'LEANN',
         meaning: 'jdfksdjsl',
         number: 2052
+    },'2025-05-15': {
+        word: 'OLCAS',
+        meaning: 'jdfksdjsl',
+        number: 2053
     }
 }
 
