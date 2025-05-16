@@ -5177,6 +5177,10 @@ const dailyWord = {
         word: 'URNAÍ',
         meaning: 'jdfksdjsl',
         number: 2054
+    },'2025-05-17': {
+        word: 'GORTÚ',
+        meaning: 'jdfksdjsl',
+        number: 2055
     }
 }
 
