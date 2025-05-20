@@ -5189,6 +5189,22 @@ const dailyWord = {
         word: 'IOLRA',
         meaning: 'jdfksdjsl',
         number: 2056
+    },'2025-05-20': {
+        word: 'GNÚIS',
+        meaning: 'jdfksdjsl',
+        number: 2057
+    },'2025-05-21': {
+        word: 'PÉINT',
+        meaning: 'jdfksdjsl',
+        number: 2058
+    },'2025-05-22': {
+        word: 'STAIC',
+        meaning: 'jdfksdjsl',
+        number: 2059
+    },'2025-05-23': {
+        word: 'BUAIR',
+        meaning: 'jdfksdjsl',
+        number: 2060
     }
 }
 
