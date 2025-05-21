@@ -5205,6 +5205,38 @@ const dailyWord = {
         word: 'BUAIR',
         meaning: 'jdfksdjsl',
         number: 2060
+    },'2025-05-24': {
+        word: 'TOCHT',
+        meaning: 'jdfksdjsl',
+        number: 2061
+    },'2025-05-25': {
+        word: 'FOSTÚ',
+        meaning: 'jdfksdjsl',
+        number: 2062
+    },'2025-05-26': {
+        word: 'URRÚS',
+        meaning: 'jdfksdjsl',
+        number: 2063
+    },'2025-05-27': {
+        word: 'LEAMH',
+        meaning: 'jdfksdjsl',
+        number: 2064
+    },'2025-05-28': {
+        word: 'DÓITE',
+        meaning: 'jdfksdjsl',
+        number: 2065
+    },'2025-05-29': {
+        word: 'TOISE',
+        meaning: 'jdfksdjsl',
+        number: 2066
+    },'2025-05-30': {
+        word: 'DAIDÍ',
+        meaning: 'jdfksdjsl',
+        number: 2067
+    },'2025-05-31': {
+        word: 'GEALT',
+        meaning: 'jdfksdjsl',
+        number: 2068
     }
 }
 
