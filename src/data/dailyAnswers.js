@@ -5241,6 +5241,10 @@ const dailyWord = {
         word: 'TONNA',
         meaning: 'jdfksdjsl',
         number: 2068
+    },'2025-06-02': {
+        word: 'FOCLA',
+        meaning: 'jdfksdjsl',
+        number: 2069
     }
 }
 
