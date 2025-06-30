@@ -5361,6 +5361,18 @@ const dailyWord = {
         word: 'COPAR',
         meaning: 'jdfksdjsl',
         number: 2098
+    },'2025-07-02': {
+        word: 'AICÍD',
+        meaning: 'jdfksdjsl',
+        number: 2099
+    },'2025-07-03': {
+        word: 'SPÍON',
+        meaning: 'jdfksdjsl',
+        number: 3000
+    },'2025-07-04': {
+        word: 'STUIF',
+        meaning: 'jdfksdjsl',
+        number: 3001
     }
 }
 
