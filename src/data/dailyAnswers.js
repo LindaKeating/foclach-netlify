@@ -5373,6 +5373,30 @@ const dailyWord = {
         word: 'STUIF',
         meaning: 'jdfksdjsl',
         number: 3001
+    },'2025-07-05': {
+        word: 'GIALL',
+        meaning: 'jdfksdjsl',
+        number: 3002
+    },'2025-07-06': {
+        word: 'COIRE',
+        meaning: 'jdfksdjsl',
+        number: 3003
+    },'2025-07-07': {
+        word: 'DIAGA',
+        meaning: 'jdfksdjsl',
+        number: 3004
+    },'2025-07-08': {
+        word: 'GRÁIN',
+        meaning: 'jdfksdjsl',
+        number: 3005
+    },'2025-07-09': {
+        word: 'BÁÚIL',
+        meaning: 'jdfksdjsl',
+        number: 3006
+    },'2025-07-10': {
+        word: 'SODAR',
+        meaning: 'jdfksdjsl',
+        number: 3007
     }
 }
 
