@@ -5397,6 +5397,42 @@ const dailyWord = {
         word: 'SODAR',
         meaning: 'jdfksdjsl',
         number: 3007
+    },'2025-07-11': {
+        word: 'MODÚL',
+        meaning: 'jdfksdjsl',
+        number: 3008
+    },'2025-07-12': {
+        word: 'DEASC',
+        meaning: 'jdfksdjsl',
+        number: 3009
+    },'2025-07-13': {
+        word: 'DEOIN',
+        meaning: 'jdfksdjsl',
+        number: 3010
+    },'2025-07-14': {
+        word: 'UAINE',
+        meaning: 'jdfksdjsl',
+        number: 3011
+    },'2025-07-15': {
+        word: 'BUAIC',
+        meaning: 'jdfksdjsl',
+        number: 3012
+    },'2025-07-16': {
+        word: 'STRUS',
+        meaning: 'jdfksdjsl',
+        number: 3013
+    },'2025-07-17': {
+        word: 'ÉIGSE',
+        meaning: 'jdfksdjsl',
+        number: 3014
+    },'2025-07-18': {
+        word: 'PUTÓG',
+        meaning: 'jdfksdjsl',
+        number: 3015
+    },'2025-07-19': {
+        word: 'LOISC',
+        meaning: 'jdfksdjsl',
+        number: 3016
     }
 }
 
