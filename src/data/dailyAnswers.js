@@ -5433,6 +5433,10 @@ const dailyWord = {
         word: 'LOISC',
         meaning: 'jdfksdjsl',
         number: 3016
+    },'2025-07-20': {
+        word: 'LÍOMH',
+        meaning: 'jdfksdjsl',
+        number: 3017
     }
 }
 
