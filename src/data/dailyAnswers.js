@@ -5437,6 +5437,42 @@ const dailyWord = {
         word: 'LÍOMH',
         meaning: 'jdfksdjsl',
         number: 3017
+    },'2025-07-21': {
+        word: 'ANEAS',
+        meaning: 'jdfksdjsl',
+        number: 3018
+    },'2025-07-22': {
+        word: 'CLÁRÚ',
+        meaning: 'jdfksdjsl',
+        number: 3019
+    },'2025-07-23': {
+        word: 'SEOID',
+        meaning: 'jdfksdjsl',
+        number: 3020
+    },'2025-07-24': {
+        word: 'DAOFA',
+        meaning: 'jdfksdjsl',
+        number: 3021
+    },'2025-07-25': {
+        word: 'FÁSRA',
+        meaning: 'jdfksdjsl',
+        number: 3022
+    },'2025-07-26': {
+        word: 'DRUMA',
+        meaning: 'jdfksdjsl',
+        number: 3023
+    },'2025-07-27': {
+        word: 'IONGA',
+        meaning: 'jdfksdjsl',
+        number: 3024
+    },'2025-07-28': {
+        word: 'BOGHA',
+        meaning: 'jdfksdjsl',
+        number: 3025
+    },'2025-07-29': {
+        word: 'TRÁTA',
+        meaning: 'jdfksdjsl',
+        number: 3026
     }
 }
 
