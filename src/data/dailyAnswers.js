@@ -5473,6 +5473,14 @@ const dailyWord = {
         word: 'TRÁTA',
         meaning: 'jdfksdjsl',
         number: 3026
+    },'2025-07-30': {
+        word: 'BACÁN',
+        meaning: 'jdfksdjsl',
+        number: 3027
+    },'2025-07-31': {
+        word: 'TACAR',
+        meaning: 'jdfksdjsl',
+        number: 3028
     }
 }
 
