@@ -5481,6 +5481,46 @@ const dailyWord = {
         word: 'TACAR',
         meaning: 'jdfksdjsl',
         number: 3028
+    },'2025-08-01': {
+        word: 'CASÚR',
+        meaning: 'jdfksdjsl',
+        number: 3029
+    },'2025-08-02': {
+        word: 'ROLLA',
+        meaning: 'jdfksdjsl',
+        number: 3030
+    },'2025-08-03': {
+        word: 'CLÚMH',
+        meaning: 'jdfksdjsl',
+        number: 3031
+    },'2025-08-04': {
+        word: 'LEASC',
+        meaning: 'jdfksdjsl',
+        number: 3032
+    },'2025-08-05': {
+        word: 'LÍOFA',
+        meaning: 'jdfksdjsl',
+        number: 3034
+    },'2025-08-06': {
+        word: 'GRÉAS',
+        meaning: 'jdfksdjsl',
+        number: 3035
+    },'2025-08-07': {
+        word: 'SLÁNÚ',
+        meaning: 'jdfksdjsl',
+        number: 3036
+    },'2025-08-08': {
+        word: 'PLÚCH',
+        meaning: 'jdfksdjsl',
+        number: 3037
+    },'2025-08-09': {
+        word: 'CUING',
+        meaning: 'jdfksdjsl',
+        number: 3038
+    },'2025-08-10': {
+        word: 'ALLTA',
+        meaning: 'jdfksdjsl',
+        number: 3039
     }
 }
 
