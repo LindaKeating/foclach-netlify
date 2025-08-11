@@ -5521,6 +5521,10 @@ const dailyWord = {
         word: 'ALLTA',
         meaning: 'jdfksdjsl',
         number: 3039
+    },'2025-08-11': {
+        word: 'CORCA',
+        meaning: 'jdfksdjsl',
+        number: 3040
     }
 }
 
