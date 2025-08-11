@@ -5524,7 +5524,43 @@ const dailyWord = {
     },'2025-08-11': {
         word: 'CORCA',
         meaning: 'jdfksdjsl',
-        number: 3040
+        number: 3041
+    },'2025-08-12': {
+        word: 'IOLAR',
+        meaning: 'jdfksdjsl',
+        number: 3042
+    },'2025-08-13': {
+        word: 'ARANN',
+        meaning: 'jdfksdjsl',
+        number: 3043
+    },'2025-08-14': {
+        word: 'SFÉAR',
+        meaning: 'jdfksdjsl',
+        number: 3044
+    },'2025-08-15': {
+        word: 'FUAID',
+        meaning: 'jdfksdjsl',
+        number: 3045
+    },'2025-08-16': {
+        word: 'DRÉIM',
+        meaning: 'jdfksdjsl',
+        number: 3046
+    },'2025-08-17': {
+        word: 'TEIBÍ',
+        meaning: 'jdfksdjsl',
+        number: 3047
+    },'2025-08-18': {
+        word: 'GÁTAR',
+        meaning: 'jdfksdjsl',
+        number: 3048
+    },'2025-08-19': {
+        word: 'PRIOC',
+        meaning: 'jdfksdjsl',
+        number: 3049
+    },'2025-08-20': {
+        word: 'SPRID',
+        meaning: 'jdfksdjsl',
+        number: 3050
     }
 }
 
