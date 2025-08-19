@@ -5561,6 +5561,42 @@ const dailyWord = {
         word: 'SPRID',
         meaning: 'jdfksdjsl',
         number: 3050
+    },'2025-08-21': {
+        word: 'SMÉAR',
+        meaning: 'jdfksdjsl',
+        number: 3051
+    },'2025-08-22': {
+        word: 'GOTHA',
+        meaning: 'jdfksdjsl',
+        number: 3052
+    },'2025-08-23': {
+        word: 'PLUID',
+        meaning: 'jdfksdjsl',
+        number: 3053
+    },'2025-08-24': {
+        word: 'COLÚR',
+        meaning: 'jdfksdjsl',
+        number: 3054
+    },'2025-08-25': {
+        word: 'DÁIMH',
+        meaning: 'jdfksdjsl',
+        number: 3055
+    },'2025-08-26': {
+        word: 'SÍNIÚ',
+        meaning: 'jdfksdjsl',
+        number: 3056
+    },'2025-08-27': {
+        word: 'LIONN',
+        meaning: 'jdfksdjsl',
+        number: 3057
+    },'2025-08-28': {
+        word: 'FÁIDH',
+        meaning: 'jdfksdjsl',
+        number: 3058
+    },'2025-08-29': {
+        word: 'ATHRÁ',
+        meaning: 'jdfksdjsl',
+        number: 3059
     }
 }
 
