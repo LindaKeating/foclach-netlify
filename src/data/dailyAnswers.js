@@ -5725,6 +5725,10 @@ const dailyWord = {
         word: 'CAILC',
         meaning: 'jdfksdjsl',
         number: 3091
+    },'2025-10-01': {
+        word: 'LUAIL',
+        meaning: 'jdfksdjsl',
+        number: 3092
     }
 }
 
