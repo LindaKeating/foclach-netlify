@@ -5729,6 +5729,42 @@ const dailyWord = {
         word: 'LUAIL',
         meaning: 'jdfksdjsl',
         number: 3092
+    },'2025-10-02': {
+        word: 'LUAIL',
+        meaning: 'jdfksdjsl',
+        number: 3093
+    },'2025-10-03': {
+        word: 'CORDA',
+        meaning: 'jdfksdjsl',
+        number: 3094
+    },'2025-10-04': {
+        word: 'NUIGE',
+        meaning: 'jdfksdjsl',
+        number: 3095
+    },'2025-10-05': {
+        word: 'CLÚID',
+        meaning: 'jdfksdjsl',
+        number: 3096
+    },'2025-10-06': {
+        word: 'ÁIRID',
+        meaning: 'jdfksdjsl',
+        number: 3097
+    },'2025-10-07': {
+        word: 'GIÚIS',
+        meaning: 'jdfksdjsl',
+        number: 3098
+    },'2025-10-08': {
+        word: 'ÉIRIC',
+        meaning: 'jdfksdjsl',
+        number: 3099
+    },'2025-10-09': {
+        word: 'SEODA',
+        meaning: 'jdfksdjsl',
+        number: 3100
+    },'2025-10-10': {
+        word: 'CRUIT',
+        meaning: 'jdfksdjsl',
+        number: 3101
     }
 }
 
