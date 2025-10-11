@@ -5769,6 +5769,42 @@ const dailyWord = {
         word: 'BIÚRÓ',
         meaning: 'jdfksdjsl',
         number: 3102
+    },'2025-10-12': {
+        word: 'CHAON',
+        meaning: 'jdfksdjsl',
+        number: 3103
+    },'2025-10-13': {
+        word: 'SMEAR',
+        meaning: 'jdfksdjsl',
+        number: 3104
+    },'2025-10-14': {
+        word: 'MÓTAR',
+        meaning: 'jdfksdjsl',
+        number: 3105
+    },'2025-10-15': {
+        word: 'FIDIL',
+        meaning: 'jdfksdjsl',
+        number: 3106
+    },'2025-10-16': {
+        word: 'STRAC',
+        meaning: 'jdfksdjsl',
+        number: 3107
+    },'2025-10-17': {
+        word: 'PLOTA',
+        meaning: 'jdfksdjsl',
+        number: 3108
+    },'2025-10-18': {
+        word: 'CUÓTA',
+        meaning: 'jdfksdjsl',
+        number: 3109
+    },'2025-10-19': {
+        word: 'ÍOSTA',
+        meaning: 'jdfksdjsl',
+        number: 3110
+    },'2025-10-20': {
+        word: 'CLÓCA',
+        meaning: 'jdfksdjsl',
+        number: 3111
     }
 }
 
