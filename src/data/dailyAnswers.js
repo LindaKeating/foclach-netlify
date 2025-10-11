@@ -5765,6 +5765,10 @@ const dailyWord = {
         word: 'CRUIT',
         meaning: 'jdfksdjsl',
         number: 3101
+    },'2025-10-11': {
+        word: 'BIÚRÓ',
+        meaning: 'jdfksdjsl',
+        number: 3102
     }
 }
 
