@@ -5805,6 +5805,42 @@ const dailyWord = {
         word: 'CLÓCA',
         meaning: 'jdfksdjsl',
         number: 3111
+    },'2025-10-21': {
+        word: 'BLIGH',
+        meaning: 'jdfksdjsl',
+        number: 3112
+    },'2025-10-22': {
+        word: 'GASRA',
+        meaning: 'jdfksdjsl',
+        number: 3113
+    },'2025-10-23': {
+        word: 'LÚFAR',
+        meaning: 'jdfksdjsl',
+        number: 3114
+    },'2025-10-24': {
+        word: 'SÁINN',
+        meaning: 'jdfksdjsl',
+        number: 3115
+    },'2025-10-25': {
+        word: 'GEÁBH',
+        meaning: 'jdfksdjsl',
+        number: 3116
+    },'2025-10-26': {
+        word: 'CREIG',
+        meaning: 'jdfksdjsl',
+        number: 3117
+    },'2025-10-27': {
+        word: 'DRONG',
+        meaning: 'jdfksdjsl',
+        number: 3118
+    },'2025-10-28': {
+        word: 'CÁBLA',
+        meaning: 'jdfksdjsl',
+        number: 3119
+    },'2025-10-29': {
+        word: 'TIÚIN',
+        meaning: 'jdfksdjsl',
+        number: 3120
     }
 }
 
