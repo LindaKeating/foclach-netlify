@@ -5841,6 +5841,54 @@ const dailyWord = {
         word: 'TIÚIN',
         meaning: 'jdfksdjsl',
         number: 3120
+    },'2025-10-30': {
+        word: 'RUBAR',
+        meaning: 'jdfksdjsl',
+        number: 3121
+    },'2025-10-31': {
+        word: 'TEORA',
+        meaning: 'jdfksdjsl',
+        number: 3122
+    },'2025-11-01': {
+        word: 'IARLA',
+        meaning: 'jdfksdjsl',
+        number: 3123
+    },'2025-11-02': {
+        word: 'LADAR',
+        meaning: 'jdfksdjsl',
+        number: 3124
+    },'2025-11-03': {
+        word: 'GÉIRE',
+        meaning: 'jdfksdjsl',
+        number: 3125
+    },'2025-11-04': {
+        word: 'CEADÚ',
+        meaning: 'jdfksdjsl',
+        number: 3126
+    },'2025-11-05': {
+        word: 'PÉINE',
+        meaning: 'jdfksdjsl',
+        number: 3127
+    },'2025-11-06': {
+        word: 'LAGAR',
+        meaning: 'jdfksdjsl',
+        number: 3128
+    },'2025-11-07': {
+        word: 'TÁTAL',
+        meaning: 'jdfksdjsl',
+        number: 3129
+    },'2025-11-08': {
+        word: 'FEANN',
+        meaning: 'jdfksdjsl',
+        number: 3130
+    },'2025-11-09': {
+        word: 'DEILF',
+        meaning: 'jdfksdjsl',
+        number: 3131
+    },'2025-11-10': {
+        word: 'MACHA',
+        meaning: 'jdfksdjsl',
+        number: 3132
     }
 }
 
