@@ -5889,6 +5889,46 @@ const dailyWord = {
         word: 'MACHA',
         meaning: 'jdfksdjsl',
         number: 3132
+    },'2025-11-11': {
+        word: 'OISRE',
+        meaning: 'jdfksdjsl',
+        number: 3133
+    },'2025-11-12': {
+        word: 'BANDA',
+        meaning: 'jdfksdjsl',
+        number: 3134
+    },'2025-11-13': {
+        word: 'SMÚIT',
+        meaning: 'jdfksdjsl',
+        number: 3135
+    },'2025-11-14': {
+        word: 'BRÍCE',
+        meaning: 'jdfksdjsl',
+        number: 3136
+    },'2025-11-15': {
+        word: 'STÉIG',
+        meaning: 'jdfksdjsl',
+        number: 3137
+    },'2025-11-16': {
+        word: 'CÓGAS',
+        meaning: 'jdfksdjsl',
+        number: 3138
+    },'2025-11-17': {
+        word: 'BAGÚN',
+        meaning: 'jdfksdjsl',
+        number: 3139
+    },'2025-11-18': {
+        word: 'GAOIS',
+        meaning: 'jdfksdjsl',
+        number: 3140
+    },'2025-11-19': {
+        word: 'SEASC',
+        meaning: 'jdfksdjsl',
+        number: 3141
+    },'2025-11-20': {
+        word: 'DARNA',
+        meaning: 'jdfksdjsl',
+        number: 3142
     }
 }
 
