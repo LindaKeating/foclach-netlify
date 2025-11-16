@@ -110,46 +110,45 @@ export const EndGameModal = ({
       hoursMinsSecs={timeToMidnight()}/>
     
     <div className="endGameButtons">
-    <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
-                 target="_blank" rel="noopener noreferrer"
-                 className={`${getDisplayDefinition(
-                    gameState               
-                  )} `}>Brí an fhocail</a>
-    <a href={`http://www.potafocal.com/beo/?s=${answer}`} 
-             target="_blank" rel="noopener noreferrer"
-             className={`${getDisplayDefinition(
-                gameState               
-              )} `}>An focal beo</a>
+      <a href={`https://www.teanglann.ie/en/fb/${answer}`} 
+                   target="_blank" rel="noopener noreferrer"
+                   className={`${getDisplayDefinition(
+                      gameState               
+                    )} `}>Brí an fhocail</a>
+      <a href={`http://www.potafocal.com/beo/?s=${answer}`} 
+               target="_blank" rel="noopener noreferrer"
+               className={`${getDisplayDefinition(
+                  gameState               
+                )} `}>An focal beo</a>
     </div>
-
-  </div>
-          <div className="endGameModal-Share">
-            <div className="endGameButtons">
-              <a href="https://litreach.ie?utm_source=Foclach" className="endGameButton endGameButton-Litreach">Imir Litreach 
-              <LitreachSVG className="endGameButton-LitreachLogo"/>
-              </a>
-              <button className="endGameButton shareButton" 
-                disabled={!gameMode}
-                onClick={shareResults}>
-                 { dictionary['Share']} 
-                 <i className="fa-solid fa-share-nodes EndGameModal-Icon"></i>
-              </button>
-            </div>
-          </div>
-          <div className="endGameModal-ModeMessage">
-            <small>
-              {gameMode ? dictionary['ModeMessage'] : dictionary['PracticeModeMessage']}
-            </small>
-          </div>
-          <div className="endGameMode-GameModePicker">
-            <GameModePicker 
-              gameMode={gameMode}
-              toggleGameMode={toggleGameMode}
-            />
-          </div>
-          <div>
-            <small>leagan: {version}</small>
-          </div>
+    </div>
+      <div className="endGameModal-Share">
+        <div className="endGameButtons">
+          <a href="https://litreach.ie?utm_source=Foclach" className="endGameButton endGameButton-Litreach">Imir Litreach 
+          <LitreachSVG className="endGameButton-LitreachLogo"/>
+          </a>
+          <button className="endGameButton shareButton" 
+            disabled={!gameMode}
+            onClick={shareResults}>
+             { dictionary['Share']} 
+             <i className="fa-solid fa-share-nodes EndGameModal-Icon"></i>
+          </button>
+        </div>
+      </div>
+      <div className="endGameModal-ModeMessage">
+        <small>
+          {gameMode ? dictionary['ModeMessage'] : dictionary['PracticeModeMessage']}
+        </small>
+      </div>
+      <div className="endGameMode-GameModePicker">
+        <GameModePicker 
+          gameMode={gameMode}
+          toggleGameMode={toggleGameMode}
+        />
+      </div>
+      <div>
+        <small>leagan: {version}</small>
+      </div>
         </div> 
       </div>
     </Modal>

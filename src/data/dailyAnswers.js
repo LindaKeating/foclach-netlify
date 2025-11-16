@@ -5929,6 +5929,46 @@ const dailyWord = {
         word: 'DARNA',
         meaning: 'jdfksdjsl',
         number: 3142
+    },'2025-11-21': {
+        word: 'SCINN',
+        meaning: 'jdfksdjsl',
+        number: 3143
+    },'2025-11-22': {
+        word: 'DARNA',
+        meaning: 'jdfksdjsl',
+        number: 3144
+    },'2025-11-23': {
+        word: 'SCRIÚ',
+        meaning: 'jdfksdjsl',
+        number: 3145
+    },'2025-11-24': {
+        word: 'EORNA',
+        meaning: 'jdfksdjsl',
+        number: 3146
+    },'2025-11-25': {
+        word: 'GRÍOS',
+        meaning: 'jdfksdjsl',
+        number: 3147
+    },'2025-11-26': {
+        word: 'BOLTA',
+        meaning: 'jdfksdjsl',
+        number: 3148
+    },'2025-11-27': {
+        word: 'LASTA',
+        meaning: 'jdfksdjsl',
+        number: 3149
+    },'2025-11-28': {
+        word: 'ÁIRSE',
+        meaning: 'jdfksdjsl',
+        number: 3150
+    },'2025-11-29': {
+        word: 'EASNA',
+        meaning: 'jdfksdjsl',
+        number: 3151
+    },'2025-11-30': {
+        word: 'RIASC',
+        meaning: 'jdfksdjsl',
+        number: 3152
     }
 }
 
