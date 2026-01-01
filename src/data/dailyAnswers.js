@@ -6093,6 +6093,10 @@ const dailyWord = {
         word: 'LIRIC',
         meaning: 'jdfksdjsl',
         number: 3172
+    },'2026-01-01': {
+        word: 'SEANG',
+        meaning: 'jdfksdjsl',
+        number: 3173
     }
 }
 
