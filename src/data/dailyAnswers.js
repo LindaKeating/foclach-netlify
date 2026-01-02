@@ -6097,6 +6097,14 @@ const dailyWord = {
         word: 'SEANG',
         meaning: 'jdfksdjsl',
         number: 3173
+    },'2026-01-02': {
+        word: 'FRÍTH',
+        meaning: 'jdfksdjsl',
+        number: 3174
+    },'2026-01-03': {
+        word: 'CEALG',
+        meaning: 'jdfksdjsl',
+        number: 3175
     }
 }
 
