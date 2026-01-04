@@ -6109,6 +6109,10 @@ const dailyWord = {
         word: 'CEILP',
         meaning: 'jdfksdjsl',
         number: 3176
+    },'2026-01-05': {
+        word: 'GALÚN',
+        meaning: 'jdfksdjsl',
+        number: 3177
     }
 }
 
