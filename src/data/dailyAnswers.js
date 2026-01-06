@@ -6113,6 +6113,14 @@ const dailyWord = {
         word: 'GALÚN',
         meaning: 'jdfksdjsl',
         number: 3177
+    },'2026-01-06': {
+        word: 'CODÁN',
+        meaning: 'jdfksdjsl',
+        number: 3178
+    },'2026-01-07': {
+        word: 'TROSC',
+        meaning: 'jdfksdjsl',
+        number: 3179
     }
 }
 
