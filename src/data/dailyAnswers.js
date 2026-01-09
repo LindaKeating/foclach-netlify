@@ -6129,6 +6129,10 @@ const dailyWord = {
         word: 'FAOMH',
         meaning: 'jdfksdjsl',
         number: 3181
+    },'2026-01-10': {
+        word: 'LEICE',
+        meaning: 'jdfksdjsl',
+        number: 3182
     }
 }
 
