@@ -6137,6 +6137,18 @@ const dailyWord = {
         word: 'OCHTÚ',
         meaning: 'jdfksdjsl',
         number: 3183
+    },'2026-01-12': {
+        word: 'DÓLÁS',
+        meaning: 'jdfksdjsl',
+        number: 3184
+    },'2026-01-13': {
+        word: 'SCRÍN',
+        meaning: 'jdfksdjsl',
+        number: 3185
+    },'2026-01-14': {
+        word: 'SCEON',
+        meaning: 'jdfksdjsl',
+        number: 3186
     }
 }
 
