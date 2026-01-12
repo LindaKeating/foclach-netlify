@@ -6149,6 +6149,30 @@ const dailyWord = {
         word: 'SCEON',
         meaning: 'jdfksdjsl',
         number: 3186
+    },'2026-01-15': {
+        word: 'DIAIL',
+        meaning: 'jdfksdjsl',
+        number: 3187
+    },'2026-01-16': {
+        word: 'PIANÓ',
+        meaning: 'jdfksdjsl',
+        number: 3188
+    },'2026-01-17': {
+        word: 'SCÉIN',
+        meaning: 'jdfksdjsl',
+        number: 3190
+    },'2026-01-18': {
+        word: 'FLOSC',
+        meaning: 'jdfksdjsl',
+        number: 3191
+    },'2026-01-19': {
+        word: 'SOBAL',
+        meaning: 'jdfksdjsl',
+        number: 3192
+    },'2026-01-20': {
+        word: 'CROBH',
+        meaning: 'jdfksdjsl',
+        number: 3193
     }
 }
 
