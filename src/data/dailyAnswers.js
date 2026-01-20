@@ -6173,6 +6173,18 @@ const dailyWord = {
         word: 'CROBH',
         meaning: 'jdfksdjsl',
         number: 3193
+    },'2026-01-21': {
+        word: 'MÁNLA',
+        meaning: 'jdfksdjsl',
+        number: 3194
+    },'2026-01-22': {
+        word: 'DÉINE',
+        meaning: 'jdfksdjsl',
+        number: 3195
+    },'2026-01-23': {
+        word: 'PRÓIS',
+        meaning: 'jdfksdjsl',
+        number: 3196
     }
 }
 
