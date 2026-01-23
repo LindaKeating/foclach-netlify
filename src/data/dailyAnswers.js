@@ -6189,6 +6189,10 @@ const dailyWord = {
         word: 'TEARC',
         meaning: 'jdfksdjsl',
         number: 3197
+    },'2026-01-25': {
+        word: 'EASÓG',
+        meaning: 'jdfksdjsl',
+        number: 3198
     }
 }
 
