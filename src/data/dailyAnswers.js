@@ -6193,6 +6193,14 @@ const dailyWord = {
         word: 'EASÓG',
         meaning: 'jdfksdjsl',
         number: 3198
+    },'2026-01-26': {
+        word: 'BAILÍ',
+        meaning: 'jdfksdjsl',
+        number: 3199
+    },'2026-01-27': {
+        word: 'MARÓG',
+        meaning: 'jdfksdjsl',
+        number: 3200
     }
 }
 
