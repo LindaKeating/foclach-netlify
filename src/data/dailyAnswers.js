@@ -6201,6 +6201,18 @@ const dailyWord = {
         word: 'MARÓG',
         meaning: 'jdfksdjsl',
         number: 3200
+    },'2026-01-28': {
+        word: 'GOIMH',
+        meaning: 'jdfksdjsl',
+        number: 3201
+    },'2026-01-29': {
+        word: 'SCOLB',
+        meaning: 'jdfksdjsl',
+        number: 3202
+    },'2026-01-30': {
+        word: 'SONRÚ',
+        meaning: 'jdfksdjsl',
+        number: 3203
     }
 }
 
