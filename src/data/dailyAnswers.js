@@ -6213,6 +6213,10 @@ const dailyWord = {
         word: 'SONRÚ',
         meaning: 'jdfksdjsl',
         number: 3203
+    },'2026-01-31': {
+        word: 'MNAOI',
+        meaning: 'jdfksdjsl',
+        number: 3204
     }
 }
 
