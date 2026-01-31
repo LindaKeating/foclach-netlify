@@ -6217,6 +6217,10 @@ const dailyWord = {
         word: 'MNAOI',
         meaning: 'jdfksdjsl',
         number: 3204
+    },'2026-02-01': {
+        word: 'SRANN',
+        meaning: 'jdfksdjsl',
+        number: 3205
     }
 }
 
