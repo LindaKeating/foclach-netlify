@@ -6221,6 +6221,10 @@ const dailyWord = {
         word: 'SRANN',
         meaning: 'jdfksdjsl',
         number: 3205
+    },'2026-02-02': {
+        word: 'EITIC',
+        meaning: 'jdfksdjsl',
+        number: 3205
     }
 }
 
