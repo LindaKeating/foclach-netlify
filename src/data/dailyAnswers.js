@@ -6229,6 +6229,34 @@ const dailyWord = {
         word: 'BÁITH',
         meaning: 'jdfksdjsl',
         number: 3206
+    },'2026-02-04': {
+        word: 'TIGHE',
+        meaning: 'jdfksdjsl',
+        number: 3207
+    },'2026-02-05': {
+        word: 'CRÚCA',
+        meaning: 'jdfksdjsl',
+        number: 3208
+    },'2026-02-06': {
+        word: 'LEITE',
+        meaning: 'jdfksdjsl',
+        number: 3209
+    },'2026-02-07': {
+        word: 'SEARR',
+        meaning: 'jdfksdjsl',
+        number: 3210
+    },'2026-02-08': {
+        word: 'BAOTH',
+        meaning: 'jdfksdjsl',
+        number: 3211
+    },'2026-02-09': {
+        word: 'CALMA',
+        meaning: 'jdfksdjsl',
+        number: 3212
+    },'2026-02-10': {
+        word: 'FÁILÍ',
+        meaning: 'jdfksdjsl',
+        number: 3206
     }
 }
 
