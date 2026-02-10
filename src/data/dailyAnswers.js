@@ -6256,7 +6256,43 @@ const dailyWord = {
     },'2026-02-10': {
         word: 'FÁILÍ',
         meaning: 'jdfksdjsl',
-        number: 3206
+        number: 3213
+    },'2026-02-11': {
+        word: 'CURFÁ',
+        meaning: 'jdfksdjsl',
+        number: 3214
+    },'2026-02-12': {
+        word: 'SLINN',
+        meaning: 'jdfksdjsl',
+        number: 3215
+    },'2026-02-13': {
+        word: 'MÚNLÚ',
+        meaning: 'jdfksdjsl',
+        number: 3216
+    },'2026-02-14': {
+        word: 'CRÍON',
+        meaning: 'jdfksdjsl',
+        number: 3217
+    },'2026-02-15': {
+        word: 'TARRA',
+        meaning: 'jdfksdjsl',
+        number: 3218
+    },'2026-02-16': {
+        word: 'FÍOCH',
+        meaning: 'jdfksdjsl',
+        number: 3219
+    },'2026-02-17': {
+        word: 'BUACH',
+        meaning: 'jdfksdjsl',
+        number: 3220
+    },'2026-02-18': {
+        word: 'CORNA',
+        meaning: 'jdfksdjsl',
+        number: 3221
+    },'2026-02-19': {
+        word: 'BARDA',
+        meaning: 'jdfksdjsl',
+        number: 3222
     }
 }
 
