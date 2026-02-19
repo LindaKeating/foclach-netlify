@@ -6293,6 +6293,42 @@ const dailyWord = {
         word: 'BARDA',
         meaning: 'jdfksdjsl',
         number: 3222
+    },'2026-02-20': {
+        word: 'ÉIDIR',
+        meaning: 'jdfksdjsl',
+        number: 3223
+    },'2026-02-21': {
+        word: 'SNIGH',
+        meaning: 'jdfksdjsl',
+        number: 3224
+    },'2026-02-22': {
+        word: 'BEOGA',
+        meaning: 'jdfksdjsl',
+        number: 3225
+    },'2026-02-23': {
+        word: 'BÁSTA',
+        meaning: 'jdfksdjsl',
+        number: 3226
+    },'2026-02-24': {
+        word: 'FUÁIL',
+        meaning: 'jdfksdjsl',
+        number: 3227
+    },'2026-02-25': {
+        word: 'CAMAS',
+        meaning: 'jdfksdjsl',
+        number: 3228
+    },'2026-02-26': {
+        word: 'SPEAL',
+        meaning: 'jdfksdjsl',
+        number: 3229
+    },'2026-02-27': {
+        word: 'COISÍ',
+        meaning: 'jdfksdjsl',
+        number: 3230
+    },'2026-02-28': {
+        word: 'SCIÚR',
+        meaning: 'jdfksdjsl',
+        number: 3231
     }
 }
 
