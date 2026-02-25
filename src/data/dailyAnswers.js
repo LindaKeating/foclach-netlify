@@ -6329,6 +6329,50 @@ const dailyWord = {
         word: 'SCIÚR',
         meaning: 'jdfksdjsl',
         number: 3231
+    },'2026-03-01': {
+        word: 'TÓRAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3232
+    },'2026-03-02': {
+        word: 'DÍLEÁ',
+        meaning: 'jdfksdjsl',
+        number: 3233
+    },'2026-03-03': {
+        word: 'SPALP',
+        meaning: 'jdfksdjsl',
+        number: 3234
+    },'2026-03-04': {
+        word: 'CEANT',
+        meaning: 'jdfksdjsl',
+        number: 3235
+    },'2026-03-05': {
+        word: 'FÁNAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3236
+    },'2026-03-06': {
+        word: 'SAOBH',
+        meaning: 'jdfksdjsl',
+        number: 3237
+    },'2026-03-07': {
+        word: 'BRÁTH',
+        meaning: 'jdfksdjsl',
+        number: 3238
+    },'2026-03-08': {
+        word: 'SEARG',
+        meaning: 'jdfksdjsl',
+        number: 3239
+    },'2026-03-09': {
+        word: 'FALLA',
+        meaning: 'jdfksdjsl',
+        number: 3240
+    },'2026-03-10': {
+        word: 'DRÚIS',
+        meaning: 'jdfksdjsl',
+        number: 3241
+    },'2026-03-11': {
+        word: 'SLÍOC',
+        meaning: 'jdfksdjsl',
+        number: 3242
     }
 }
 
