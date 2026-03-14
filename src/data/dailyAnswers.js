@@ -6373,6 +6373,38 @@ const dailyWord = {
         word: 'SLÍOC',
         meaning: 'jdfksdjsl',
         number: 3242
+    },'2026-03-12': {
+        word: 'GRÁIG',
+        meaning: 'jdfksdjsl',
+        number: 3243
+    },'2026-03-13': {
+        word: 'OIBIR',
+        meaning: 'jdfksdjsl',
+        number: 3244
+    },'2026-03-14': {
+        word: 'FALSA',
+        meaning: 'jdfksdjsl',
+        number: 3245
+    },'2026-03-15': {
+        word: 'TRÉAS',
+        meaning: 'jdfksdjsl',
+        number: 3246
+    },'2026-03-16': {
+        word: 'RADAR',
+        meaning: 'jdfksdjsl',
+        number: 3247
+    },'2026-03-17': {
+        word: 'OIDHE',
+        meaning: 'jdfksdjsl',
+        number: 3248
+    },'2026-03-18': {
+        word: 'BREAB',
+        meaning: 'jdfksdjsl',
+        number: 3249
+    },'2026-03-19': {
+        word: 'MATAL',
+        meaning: 'jdfksdjsl',
+        number: 3250
     }
 }
 
