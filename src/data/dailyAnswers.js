@@ -6405,6 +6405,14 @@ const dailyWord = {
         word: 'MATAL',
         meaning: 'jdfksdjsl',
         number: 3250
+    },'2026-03-20': {
+        word: 'BAOIS',
+        meaning: 'jdfksdjsl',
+        number: 3251
+    },'2026-03-21': {
+        word: 'MARAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3252
     }
 }
 
