@@ -6413,6 +6413,38 @@ const dailyWord = {
         word: 'MARAÍ',
         meaning: 'jdfksdjsl',
         number: 3252
+    },'2026-03-22': {
+        word: 'BÁCÚS',
+        meaning: 'jdfksdjsl',
+        number: 3253
+    },'2026-03-23': {
+        word: 'EILIT',
+        meaning: 'jdfksdjsl',
+        number: 3254
+    },'2026-03-24': {
+        word: 'CNEAD',
+        meaning: 'jdfksdjsl',
+        number: 3255
+    },'2026-03-25': {
+        word: 'DRANN',
+        meaning: 'jdfksdjsl',
+        number: 3256
+    },'2026-03-26': {
+        word: 'SCUAD',
+        meaning: 'jdfksdjsl',
+        number: 3257
+    },'2026-03-27': {
+        word: 'BALÚN',
+        meaning: 'jdfksdjsl',
+        number: 3258
+    },'2026-03-28': {
+        word: 'GAIBH',
+        meaning: 'jdfksdjsl',
+        number: 3259
+    },'2026-03-29': {
+        word: 'ÁRACH',
+        meaning: 'jdfksdjsl',
+        number: 3260
     }
 }
 
