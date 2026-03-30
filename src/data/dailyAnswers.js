@@ -6445,6 +6445,10 @@ const dailyWord = {
         word: 'ÁRACH',
         meaning: 'jdfksdjsl',
         number: 3260
+    },'2026-03-30': {
+        word: 'BULAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3261
     }
 }
 
