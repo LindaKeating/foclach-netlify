@@ -6453,6 +6453,46 @@ const dailyWord = {
         word: 'SANAS',
         meaning: 'jdfksdjsl',
         number: 3262
+    },'2026-04-01': {
+        word: 'GUAIM',
+        meaning: 'jdfksdjsl',
+        number: 3263
+    },'2026-04-02': {
+        word: 'DUSTA',
+        meaning: 'jdfksdjsl',
+        number: 3264
+    },'2026-04-03': {
+        word: 'CUAIN',
+        meaning: 'jdfksdjsl',
+        number: 3265
+    },'2026-04-04': {
+        word: 'PLIMP',
+        meaning: 'jdfksdjsl',
+        number: 3266
+    },'2026-04-05': {
+        word: 'OCHÓN',
+        meaning: 'jdfksdjsl',
+        number: 3267
+    },'2026-04-06': {
+        word: 'STÁIR',
+        meaning: 'jdfksdjsl',
+        number: 3268
+    },'2026-04-07': {
+        word: 'IOMPÚ',
+        meaning: 'jdfksdjsl',
+        number: 3269
+    },'2026-04-08': {
+        word: 'BOIGE',
+        meaning: 'jdfksdjsl',
+        number: 3270
+    },'2026-04-09': {
+        word: 'SILÍN',
+        meaning: 'jdfksdjsl',
+        number: 3271
+    },'2026-04-10': {
+        word: 'DOIRE',
+        meaning: 'jdfksdjsl',
+        number: 3272
     }
 }
 
