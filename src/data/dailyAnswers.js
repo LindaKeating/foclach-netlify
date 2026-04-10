@@ -6493,6 +6493,10 @@ const dailyWord = {
         word: 'DOIRE',
         meaning: 'jdfksdjsl',
         number: 3272
+    },'2026-04-11': {
+        word: 'RANGÚ',
+        meaning: 'jdfksdjsl',
+        number: 3273
     }
 }
 
