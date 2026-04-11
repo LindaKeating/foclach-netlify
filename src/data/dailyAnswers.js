@@ -6497,6 +6497,10 @@ const dailyWord = {
         word: 'RANGÚ',
         meaning: 'jdfksdjsl',
         number: 3273
+    },'2026-04-12': {
+        word: 'LÉANA',
+        meaning: 'jdfksdjsl',
+        number: 3274
     }
 }
 
