@@ -6501,6 +6501,10 @@ const dailyWord = {
         word: 'LÉANA',
         meaning: 'jdfksdjsl',
         number: 3274
+    },'2026-04-13': {
+        word: 'CANTA',
+        meaning: 'jdfksdjsl',
+        number: 3275
     }
 }
 
