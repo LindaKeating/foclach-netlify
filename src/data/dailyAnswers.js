@@ -6509,6 +6509,10 @@ const dailyWord = {
         word: 'BÁINÍ',
         meaning: 'jdfksdjsl',
         number: 3276
+    },'2026-04-15': {
+        word: 'SEORT',
+        meaning: 'jdfksdjsl',
+        number: 3277
     }
 }
 
