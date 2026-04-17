@@ -6517,6 +6517,10 @@ const dailyWord = {
         word: 'DALBA',
         meaning: 'jdfksdjsl',
         number: 3277
+    },'2026-04-17': {
+        word: 'SEARC',
+        meaning: 'jdfksdjsl',
+        number: 3278
     }
 }
 
