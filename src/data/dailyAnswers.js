@@ -6521,6 +6521,18 @@ const dailyWord = {
         word: 'SEARC',
         meaning: 'jdfksdjsl',
         number: 3278
+    },'2026-04-18': {
+        word: 'CASÁN',
+        meaning: 'jdfksdjsl',
+        number: 3279
+    },'2026-04-19': {
+        word: 'TOILL',
+        meaning: 'jdfksdjsl',
+        number: 3280
+    },'2026-04-20': {
+        word: 'TRUNC',
+        meaning: 'jdfksdjsl',
+        number: 3281
     }
 }
 
