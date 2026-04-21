@@ -6537,6 +6537,42 @@ const dailyWord = {
         word: 'CUMAR',
         meaning: 'jdfksdjsl',
         number: 3282
+    },'2026-04-22': {
+        word: 'ANÁLÚ',
+        meaning: 'jdfksdjsl',
+        number: 3283
+    },'2026-04-23': {
+        word: 'SCÁIN',
+        meaning: 'jdfksdjsl',
+        number: 3284
+    },'2026-04-24': {
+        word: 'SCINE',
+        meaning: 'jdfksdjsl',
+        number: 3285
+    },'2026-04-25': {
+        word: 'CUILT',
+        meaning: 'jdfksdjsl',
+        number: 3286
+    },'2026-04-26': {
+        word: 'MUIRÍ',
+        meaning: 'jdfksdjsl',
+        number: 3287
+    },'2026-04-27': {
+        word: 'TRÚIG',
+        meaning: 'jdfksdjsl',
+        number: 3288
+    },'2026-04-28': {
+        word: 'LACHT',
+        meaning: 'jdfksdjsl',
+        number: 3289
+    },'2026-04-29': {
+        word: 'CÁITH',
+        meaning: 'jdfksdjsl',
+        number: 3290
+    },'2026-04-30': {
+        word: 'SOTAL',
+        meaning: 'jdfksdjsl',
+        number: 3291
     }
 }
 
