@@ -6573,6 +6573,42 @@ const dailyWord = {
         word: 'SOTAL',
         meaning: 'jdfksdjsl',
         number: 3291
+    },'2026-05-01': {
+        word: 'MÚISC',
+        meaning: 'jdfksdjsl',
+        number: 3292
+    },'2026-05-02': {
+        word: 'CURAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3293
+    },'2026-05-03': {
+        word: 'BUIRG',
+        meaning: 'jdfksdjsl',
+        number: 3294
+    },'2026-05-04': {
+        word: 'RACÁN',
+        meaning: 'jdfksdjsl',
+        number: 3295
+    },'2026-05-05': {
+        word: 'LÉIMT',
+        meaning: 'jdfksdjsl',
+        number: 3296
+    },'2026-05-06': {
+        word: 'BRÁCA',
+        meaning: 'jdfksdjsl',
+        number: 3297
+    },'2026-05-07': {
+        word: 'STRÓC',
+        meaning: 'jdfksdjsl',
+        number: 3298
+    },'2026-05-08': {
+        word: 'LÁBÁN',
+        meaning: 'jdfksdjsl',
+        number: 3299
+    },'2026-05-09': {
+        word: 'COLPA',
+        meaning: 'jdfksdjsl',
+        number: 3300
     }
 }
 
