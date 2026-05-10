@@ -6609,6 +6609,10 @@ const dailyWord = {
         word: 'COLPA',
         meaning: 'jdfksdjsl',
         number: 3300
+    },'2026-05-10': {
+        word: 'OGHAM',
+        meaning: 'jdfksdjsl',
+        number: 3301
     }
 }
 
