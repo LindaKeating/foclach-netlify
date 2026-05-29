@@ -6689,6 +6689,18 @@ const dailyWord = {
         word: 'PLUMA',
         meaning: 'jdfksdjsl',
         number: 3320
+    },'2026-05-30': {
+        word: 'BÓLAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3321
+    },'2026-06-01': {
+        word: 'BURLA',
+        meaning: 'jdfksdjsl',
+        number: 3322
+    },'2026-06-02': {
+        word: 'TEASC',
+        meaning: 'jdfksdjsl',
+        number: 3323
     }
 }
 
