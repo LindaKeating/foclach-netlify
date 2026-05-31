@@ -6693,11 +6693,11 @@ const dailyWord = {
         word: 'BÓLAÍ',
         meaning: 'jdfksdjsl',
         number: 3321
-    },'2026-06-01': {
+    },'2026-05-31': {
         word: 'BURLA',
         meaning: 'jdfksdjsl',
         number: 3322
-    },'2026-06-02': {
+    },'2026-06-01': {
         word: 'TEASC',
         meaning: 'jdfksdjsl',
         number: 3323
