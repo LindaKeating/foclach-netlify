@@ -6701,6 +6701,38 @@ const dailyWord = {
         word: 'TEASC',
         meaning: 'jdfksdjsl',
         number: 3323
+    },'2026-06-02': {
+        word: 'UASTA',
+        meaning: 'jdfksdjsl',
+        number: 3324
+    },'2026-06-03': {
+        word: 'DÍLSE',
+        meaning: 'jdfksdjsl',
+        number: 3325
+    },'2026-06-04': {
+        word: 'DRAID',
+        meaning: 'jdfksdjsl',
+        number: 3326
+    },'2026-06-05': {
+        word: 'DUINE',
+        meaning: 'jdfksdjsl',
+        number: 3327
+    },'2026-06-06': {
+        word: 'ABAIR',
+        meaning: 'jdfksdjsl',
+        number: 3328
+    },'2026-06-07': {
+        word: 'MAITH',
+        meaning: 'jdfksdjsl',
+        number: 3329
+    },'2026-06-08': {
+        word: 'FAIGH',
+        meaning: 'jdfksdjsl',
+        number: 3330
+    },'2026-06-09': {
+        word: 'TÉIGH',
+        meaning: 'jdfksdjsl',
+        number: 3331
     }
 }
 
