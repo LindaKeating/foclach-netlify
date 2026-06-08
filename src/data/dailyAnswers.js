@@ -6733,6 +6733,46 @@ const dailyWord = {
         word: 'TÉIGH',
         meaning: 'jdfksdjsl',
         number: 3331
+    },'2026-06-10': {
+        word: 'NUAIR',
+        meaning: 'jdfksdjsl',
+        number: 3332
+    },'2026-06-11': {
+        word: 'AMACH',
+        meaning: 'jdfksdjsl',
+        number: 3333
+    },'2026-06-12': {
+        word: 'CEANN',
+        meaning: 'jdfksdjsl',
+        number: 3334
+    },'2026-06-13': {
+        word: 'CAITH',
+        meaning: 'jdfksdjsl',
+        number: 3335
+    },'2026-06-14': {
+        word: 'CHOMH',
+        meaning: 'jdfksdjsl',
+        number: 3336
+    },'2026-06-15': {
+        word: 'CHUIG',
+        meaning: 'jdfksdjsl',
+        number: 3337
+    },'2026-06-16': {
+        word: 'OBAIR',
+        meaning: 'jdfksdjsl',
+        number: 3338
+    },'2026-06-17': {
+        word: 'TAOBH',
+        meaning: 'jdfksdjsl',
+        number: 3339
+    },'2026-06-18': {
+        word: 'ANOIS',
+        meaning: 'jdfksdjsl',
+        number: 3340
+    },'2026-06-19': {
+        word: 'CÉILE',
+        meaning: 'jdfksdjsl',
+        number: 3341
     }
 }
 
