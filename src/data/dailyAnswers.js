@@ -6773,6 +6773,14 @@ const dailyWord = {
         word: 'CÉILE',
         meaning: 'jdfksdjsl',
         number: 3341
+    },'2026-06-20': {
+        word: 'TEACH',
+        meaning: 'jdfksdjsl',
+        number: 3342
+    },'2026-06-21': {
+        word: 'CEART',
+        meaning: 'jdfksdjsl',
+        number: 3343
     }
 }
 
