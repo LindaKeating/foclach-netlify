@@ -6785,6 +6785,10 @@ const dailyWord = {
         word: 'SCÉAL',
         meaning: 'jdfksdjsl',
         number: 3344
+    },'2026-06-23': {
+        word: 'ROIMH',
+        meaning: 'jdfksdjsl',
+        number: 3345
     }
 }
 
