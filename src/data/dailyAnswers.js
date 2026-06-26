@@ -6797,6 +6797,10 @@ const dailyWord = {
         word: 'ANSIN',
         meaning: 'jdfksdjsl',
         number: 3347
+    },'2026-06-26': {
+        word: 'DÓIGH',
+        meaning: 'jdfksdjsl',
+        number: 3348
     }
 }
 
