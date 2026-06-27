@@ -6805,6 +6805,10 @@ const dailyWord = {
         word: 'POBAL',
         meaning: 'jdfksdjsl',
         number: 3349
+    },'2026-06-28': {
+        word: 'SCOIL',
+        meaning: 'jdfksdjsl',
+        number: 3350
     }
 }
 
