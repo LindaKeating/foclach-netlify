@@ -6809,6 +6809,14 @@ const dailyWord = {
         word: 'SCOIL',
         meaning: 'jdfksdjsl',
         number: 3350
+    },'2026-06-29': {
+        word: 'ROINN',
+        meaning: 'jdfksdjsl',
+        number: 3351
+    },'2026-06-30': {
+        word: 'ÚSÁID',
+        meaning: 'jdfksdjsl',
+        number: 3352
     }
 }
 
