@@ -6817,6 +6817,42 @@ const dailyWord = {
         word: 'ÚSÁID',
         meaning: 'jdfksdjsl',
         number: 3352
+    },'2026-07-01': {
+        word: 'LEITH',
+        meaning: 'jdfksdjsl',
+        number: 3353
+    },'2026-07-02': {
+        word: 'ANSEO',
+        meaning: 'jdfksdjsl',
+        number: 3354
+    },'2026-07-03': {
+        word: 'OÍCHE',
+        meaning: 'jdfksdjsl',
+        number: 3355
+    },'2026-07-04': {
+        word: 'BAILE',
+        meaning: 'jdfksdjsl',
+        number: 3356
+    },'2026-07-05': {
+        word: 'LUCHT',
+        meaning: 'jdfksdjsl',
+        number: 3357
+    },'2026-07-06': {
+        word: 'CÚRSA',
+        meaning: 'jdfksdjsl',
+        number: 3358
+    },'2026-07-07': {
+        word: 'EOLAS',
+        meaning: 'jdfksdjsl',
+        number: 3359
+    },'2026-07-08': {
+        word: 'IMIGH',
+        meaning: 'jdfksdjsl',
+        number: 3360
+    },'2026-07-09': {
+        word: 'CAINT',
+        meaning: 'jdfksdjsl',
+        number: 3361
     }
 }
 
