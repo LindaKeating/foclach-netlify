@@ -6853,6 +6853,46 @@ const dailyWord = {
         word: 'CAINT',
         meaning: 'jdfksdjsl',
         number: 3361
+    },'2026-07-10': {
+        word: 'ÁBHAR',
+        meaning: 'jdfksdjsl',
+        number: 3362
+    },'2026-07-11': {
+        word: 'FÉACH',
+        meaning: 'jdfksdjsl',
+        number: 3363
+    },'2026-07-12': {
+        word: 'SIÚIL',
+        meaning: 'jdfksdjsl',
+        number: 3364
+    },'2026-07-13': {
+        word: 'ÉIGIN',
+        meaning: 'jdfksdjsl',
+        number: 3365
+    },'2026-07-14': {
+        word: 'BUAIL',
+        meaning: 'jdfksdjsl',
+        number: 3366
+    },'2026-07-15': {
+        word: 'RIAMH',
+        meaning: 'jdfksdjsl',
+        number: 3367
+    },'2026-07-16': {
+        word: 'FOCAL',
+        meaning: 'jdfksdjsl',
+        number: 3368
+    },'2026-07-17': {
+        word: 'BEIRT',
+        meaning: 'jdfksdjsl',
+        number: 3369
+    },'2026-07-18': {
+        word: 'MEASC',
+        meaning: 'jdfksdjsl',
+        number: 3370
+    },'2026-07-19': {
+        word: 'CLOIS',
+        meaning: 'jdfksdjsl',
+        number: 3371
     }
 }
 
