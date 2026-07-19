@@ -6893,6 +6893,46 @@ const dailyWord = {
         word: 'CLOIS',
         meaning: 'jdfksdjsl',
         number: 3371
+    },'2026-07-20': {
+        word: 'CÓNAÍ',
+        meaning: 'jdfksdjsl',
+        number: 3372
+    },'2026-07-21': {
+        word: 'THART',
+        meaning: 'jdfksdjsl',
+        number: 3373
+    },'2026-07-22': {
+        word: 'MINIC',
+        meaning: 'jdfksdjsl',
+        number: 3374
+    },'2026-07-23': {
+        word: 'ANUAS',
+        meaning: 'jdfksdjsl',
+        number: 3375
+    },'2026-07-24': {
+        word: 'IONAD',
+        meaning: 'jdfksdjsl',
+        number: 3376
+    },'2026-07-25': {
+        word: 'UISCE',
+        meaning: 'jdfksdjsl',
+        number: 3377
+    },'2026-07-26': {
+        word: 'GEALL',
+        meaning: 'jdfksdjsl',
+        number: 3378
+    },'2026-07-27': {
+        word: 'CÚPLA',
+        meaning: 'jdfksdjsl',
+        number: 3379
+    },'2026-07-28': {
+        word: 'CÚIRT',
+        meaning: 'jdfksdjsl',
+        number: 3380
+    },'2026-07-29': {
+        word: 'DORAS',
+        meaning: 'jdfksdjsl',
+        number: 3381
     }
 }
 
