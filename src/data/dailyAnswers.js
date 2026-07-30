@@ -6937,6 +6937,46 @@ const dailyWord = {
         word: 'OIFIG',
         meaning: 'jdfksdjsl',
         number: 3382
+    },'2026-07-31': {
+        word: 'CÓRAS',
+        meaning: 'jdfksdjsl',
+        number: 3383
+    },'2026-08-01': {
+        word: 'MÓRÁN',
+        meaning: 'jdfksdjsl',
+        number: 3384
+    },'2026-08-02': {
+        word: 'SÁSTA',
+        meaning: 'jdfksdjsl',
+        number: 3385
+    },'2026-08-03': {
+        word: 'INNIU',
+        meaning: 'jdfksdjsl',
+        number: 3386
+    },'2026-08-04': {
+        word: 'SUIGH',
+        meaning: 'jdfksdjsl',
+        number: 3387
+    },'2026-08-05': {
+        word: 'BREIS',
+        meaning: 'jdfksdjsl',
+        number: 3388
+    },'2026-08-06': {
+        word: 'SRÁID',
+        meaning: 'jdfksdjsl',
+        number: 3389
+    },'2026-08-07': {
+        word: 'CAILL',
+        meaning: 'jdfksdjsl',
+        number: 3390
+    },'2026-08-08': {
+        word: 'GEARR',
+        meaning: 'jdfksdjsl',
+        number: 3391
+    },'2026-08-09': {
+        word: 'ÁFACH',
+        meaning: 'jdfksdjsl',
+        number: 3392
     }
 }
 
