@@ -6977,6 +6977,46 @@ const dailyWord = {
         word: 'ÁFACH',
         meaning: 'jdfksdjsl',
         number: 3392
+    },'2026-08-10': {
+        word: 'CREID',
+        meaning: 'jdfksdjsl',
+        number: 3393
+    },'2026-08-11': {
+        word: 'LUATH',
+        meaning: 'jdfksdjsl',
+        number: 3394
+    },'2026-08-12': {
+        word: 'GRÚPA',
+        meaning: 'jdfksdjsl',
+        number: 3395
+    },'2026-08-13': {
+        word: 'FADHB',
+        meaning: 'jdfksdjsl',
+        number: 3396
+    },'2026-08-14': {
+        word: 'SCÉIM',
+        meaning: 'jdfksdjsl',
+        number: 3397
+    },'2026-08-15': {
+        word: 'SEANS',
+        meaning: 'jdfksdjsl',
+        number: 3398
+    },'2026-08-16': {
+        word: 'BOCHT',
+        meaning: 'jdfksdjsl',
+        number: 3399
+    },'2026-08-17': {
+        word: 'THIAR',
+        meaning: 'jdfksdjsl',
+        number: 3400
+    },'2026-08-18': {
+        word: 'TUILL',
+        meaning: 'jdfksdjsl',
+        number: 3401
+    },'2026-08-19': {
+        word: 'LACHA',
+        meaning: 'jdfksdjsl',
+        number: 3402
     }
 }
 
