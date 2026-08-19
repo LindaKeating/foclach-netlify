@@ -7017,6 +7017,46 @@ const dailyWord = {
         word: 'LACHA',
         meaning: 'jdfksdjsl',
         number: 3402
+    },'2026-08-20': {
+        word: 'GAOTH',
+        meaning: 'jdfksdjsl',
+        number: 3403
+    },'2026-08-21': {
+        word: 'DREAM',
+        meaning: 'jdfksdjsl',
+        number: 3404
+    },'2026-08-22': {
+        word: 'CUMAS',
+        meaning: 'jdfksdjsl',
+        number: 3405
+    },'2026-08-23': {
+        word: 'TRÁTH',
+        meaning: 'jdfksdjsl',
+        number: 3406
+    },'2026-08-24': {
+        word: 'CLANN',
+        meaning: 'jdfksdjsl',
+        number: 3407
+    },'2026-08-25': {
+        word: 'STAIR',
+        meaning: 'jdfksdjsl',
+        number: 3408
+    },'2026-08-26': {
+        word: 'CÚRAM',
+        meaning: 'jdfksdjsl',
+        number: 3409
+    },'2026-08-27': {
+        word: 'ATHRÚ',
+        meaning: 'jdfksdjsl',
+        number: 3410
+    },'2026-08-28': {
+        word: 'TOISC',
+        meaning: 'jdfksdjsl',
+        number: 3411
+    },'2026-08-29': {
+        word: 'CRANN',
+        meaning: 'jdfksdjsl',
+        number: 3412
     }
 }
 
