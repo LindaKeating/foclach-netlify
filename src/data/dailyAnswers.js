@@ -7057,6 +7057,14 @@ const dailyWord = {
         word: 'CRANN',
         meaning: 'jdfksdjsl',
         number: 3412
+    },'2026-08-30': {
+        word: 'PÁIRT',
+        meaning: 'jdfksdjsl',
+        number: 3413
+    },'2026-08-31': {
+        word: 'CLOCH',
+        meaning: 'jdfksdjsl',
+        number: 3414
     }
 }
 
