@@ -7105,6 +7105,42 @@ const dailyWord = {
         word: 'UASAL',
         meaning: 'jdfksdjsl',
         number: 3424
+    },'2026-09-11': {
+        word: 'CONAS',
+        meaning: 'jdfksdjsl',
+        number: 3425
+    },'2026-09-12': {
+        word: 'LÉIGH',
+        meaning: 'jdfksdjsl',
+        number: 3426
+    },'2026-09-13': {
+        word: 'GRIAN',
+        meaning: 'jdfksdjsl',
+        number: 3427
+    },'2026-09-14': {
+        word: 'DÓCHA',
+        meaning: 'jdfksdjsl',
+        number: 3428
+    },'2026-09-15': {
+        word: 'PÍOSA',
+        meaning: 'jdfksdjsl',
+        number: 3429
+    },'2026-09-16': {
+        word: 'THÍOS',
+        meaning: 'jdfksdjsl',
+        number: 3430
+    },'2026-09-17': {
+        word: 'FÓILL',
+        meaning: 'jdfksdjsl',
+        number: 3431
+    },'2026-09-18': {
+        word: 'TURAS',
+        meaning: 'jdfksdjsl',
+        number: 3432
+    },'2026-09-19': {
+        word: 'LUIGH',
+        meaning: 'jdfksdjsl',
+        number: 3433
     }
 }
 
