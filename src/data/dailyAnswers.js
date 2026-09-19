@@ -7141,6 +7141,46 @@ const dailyWord = {
         word: 'LUIGH',
         meaning: 'jdfksdjsl',
         number: 3433
+    },'2026-09-20': {
+        word: 'BEITH',
+        meaning: 'jdfksdjsl',
+        number: 3434
+    },'2026-09-21': {
+        word: 'RIAIL',
+        meaning: 'jdfksdjsl',
+        number: 3435
+    },'2026-09-22': {
+        word: 'FÓGRA',
+        meaning: 'jdfksdjsl',
+        number: 3436
+    },'2026-09-23': {
+        word: 'THUAS',
+        meaning: 'jdfksdjsl',
+        number: 3437
+    },'2026-09-24': {
+        word: 'BEART',
+        meaning: 'jdfksdjsl',
+        number: 3438
+    },'2026-09-25': {
+        word: 'LÉAMH',
+        meaning: 'jdfksdjsl',
+        number: 3439
+    },'2026-09-26': {
+        word: 'DEARA',
+        meaning: 'jdfksdjsl',
+        number: 3440
+    },'2026-09-27': {
+        word: 'SIOPA',
+        meaning: 'jdfksdjsl',
+        number: 3441
+    },'2026-09-28': {
+        word: 'LEABA',
+        meaning: 'jdfksdjsl',
+        number: 3442
+    },'2026-09-29': {
+        word: 'DEICH',
+        meaning: 'jdfksdjsl',
+        number: 3434
     }
 }
 
