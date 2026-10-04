@@ -7201,6 +7201,10 @@ const dailyWord = {
         word: 'DRÁMA',
         meaning: 'jdfksdjsl',
         number: 3439
+    },'2026-10-05': {
+        word: 'FICHE',
+        meaning: 'jdfksdjsl',
+        number: 3440
     }
 }
 
