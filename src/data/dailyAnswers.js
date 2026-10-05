@@ -7205,6 +7205,26 @@ const dailyWord = {
         word: 'FICHE',
         meaning: 'jdfksdjsl',
         number: 3440
+    },'2026-10-06': {
+        word: 'LUACH',
+        meaning: 'jdfksdjsl',
+        number: 3441
+    },'2026-10-07': {
+        word: 'RÉIDH',
+        meaning: 'jdfksdjsl',
+        number: 3442
+    },'2026-10-08': {
+        word: 'NEART',
+        meaning: 'jdfksdjsl',
+        number: 3443
+    },'2026-10-09': {
+        word: 'TRIÚR',
+        meaning: 'jdfksdjsl',
+        number: 3444
+    },'2026-10-10': {
+        word: 'AONAR',
+        meaning: 'jdfksdjsl',
+        number: 3445
     }
 }
 
