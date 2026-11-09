@@ -7345,6 +7345,50 @@ const dailyWord = {
         word: 'BALLA',
         meaning: 'jdfksdjsl',
         number: 3475
+    },'2026-11-10': {
+        word: 'MEALL',
+        meaning: 'jdfksdjsl',
+        number: 3476
+    },'2026-11-11': {
+        word: 'ANÍOS',
+        meaning: 'jdfksdjsl',
+        number: 3477
+    },'2026-11-12': {
+        word: 'BILLE',
+        meaning: 'jdfksdjsl',
+        number: 3477
+    },'2026-11-13': {
+        word: 'NOCHT',
+        meaning: 'jdfksdjsl',
+        number: 3478
+    },'2026-11-14': {
+        word: 'AIDHM',
+        meaning: 'jdfksdjsl',
+        number: 3479
+    },'2026-11-15': {
+        word: 'GÁIRE',
+        meaning: 'jdfksdjsl',
+        number: 3480
+    },'2026-11-16': {
+        word: 'SPÉIR',
+        meaning: 'jdfksdjsl',
+        number: 3481
+    },'2026-11-17': {
+        word: 'BREAC',
+        meaning: 'jdfksdjsl',
+        number: 3482
+    },'2026-11-18': {
+        word: 'EASPA',
+        meaning: 'jdfksdjsl',
+        number: 3483
+    },'2026-11-19': {
+        word: 'GALAR',
+        meaning: 'jdfksdjsl',
+        number: 3484
+    },'2026-11-20': {
+        word: 'GASÚR',
+        meaning: 'jdfksdjsl',
+        number: 3485
     }
 }
 
